@@ -1,0 +1,58 @@
+
+.chart-echart-line-areaStyle{
+    width: 100%;
+    height: 300px;
+}
+
+.card-rowStyle{
+    border-bottom: 1px solid #f1f1f1;
+}
+.card-headerStyle{
+    border-bottom: none;
+}
+.card-AreaChartStyle{
+    display: none;
+}
+.chart-echart-line-basicStyle{
+    width: 100%; height: 300px;
+}
+.rounded-circleStyle{
+    width: 40px;
+}
+
+.displayNoneStyle{
+    display: none;
+}
+
+/* header.js css */
+.sticky-header{
+    position: sticky;
+}
+.sticky-header-container{
+    position: relative;
+    width: 100%;
+}
+.widthStyle{
+    width: 100%;
+}
+/* 
+.pcoded-navbar.theme-horizontal {
+    top:0%;
+} */
+
+/* grade_gradebook.js css */
+.table-responsive-tdStyle{
+    vertical-align: middle;
+}
+
+.breadcrumb-itemStyle{
+    color:#888;
+}
+
+.viewSection{
+    padding-left: 30px;
+}
+
+.widthStyle85{
+    width: 85%;
+}

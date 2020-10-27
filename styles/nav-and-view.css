@@ -1,0 +1,10 @@
+
+.level2Active {
+    color: #ffffff !important;
+    background: #04a9f5;
+}
+
+.level2Inactive {
+    color: #555555;
+    background: #ffffff
+}

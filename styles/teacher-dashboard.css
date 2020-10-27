@@ -1,0 +1,58 @@
+.pcoded-header{
+    width: 320px;
+}
+
+#navbar-wdt-ht{
+    height: 433px !important;
+    background-color: rgb(63, 77, 103);
+}
+
+@media(min-width:800px){
+  
+    .pcoded-header{
+        position: sticky;
+        width: 100%;
+        height: 70px;
+        background-color: #ffffff;
+    }
+    
+    .ylabel {
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        position: absolute;
+        top: 200px;
+        left: 40px;
+    }
+
+    .headerborder{
+        position: absolute;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        top: 61px;
+        left: -30px;
+    }
+    .headerborderinner{
+        border-top: 1px solid #bbb;
+        margin: auto;
+        width: 58px;
+        border-radius: 50%;
+        padding: 16px;
+    }
+.rbc-time-view .rbc-label {
+    display: none;
+}
+
+.rbc-time-content .rbc-timeslot-group {
+    display: none;
+}
+
+.rbc-allday-cell {
+    display: none;
+}
+
+.rbc-event {
+    height: max-content !important;
+    font-size: 12px;
+}
+}
