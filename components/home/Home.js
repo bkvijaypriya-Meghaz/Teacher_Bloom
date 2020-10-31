@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-//comment to test pipeline run - Jilan - 2020-11-01
+//change 2 - comment to test pipeline run - Jilan - 2020-11-01
 function Home() {
     
     
