@@ -1,0 +1,230 @@
+.standardModalTitle {
+    color: #4c4c4c;
+    border-bottom: 1px solid #f7f7f7;
+    padding-bottom: 3px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.modal-close-button {
+ border: 0;
+ background: none;
+ box-shadow: none;
+ border-radius: 0px;
+}
+
+.teacher-setup-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teacher-setup-next-step-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 20px 20px 0;
+}
+
+.teacher-setup-content {
+    width: 400px;
+}
+
+.teacher-setup-input-group{
+    width: 100%;
+    /* background-color: lightblue; */
+    padding: 0 20px;
+}
+
+.teacher-setup-input-field {
+    width: 100%;
+    background-color: lightgray;
+    border-radius: 3px;
+}
+
+
+.teacher-setup-select-group{
+    width: 100%;
+    /* background-color: green;
+    border: yellow 1px solid; */
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.teacher-setup-select-field {
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+.finish-screen-first-column, .finish-screen-second-column {
+    width:50%;
+    /* border: red solid 2px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.teacher-setup-screen .finish-screen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* background-color: yellow; */
+}
+
+.teacher-setup-bloom-logo {
+    border: solid red 1px;
+    box-sizing: border-box;
+    padding: 30px 30px;
+}
+
+.action-button {
+    color: #fff;
+    background-color: #038fcf;
+    border-color: #0386c3;
+    /* box-shadow: 0 10px 18px 0 rgba(62, 57, 107, 0.2); */
+
+    padding: 10px 20px;
+    border-radius: 0.25rem;
+    font-size: 14px;
+    /* margin-bottom: 5px; */
+    margin-right: 10px;
+    /* -webkit-transition: all 0.3s ease-in-out; */
+    transition: all 0.3s ease-in-out;
+
+    /* from btn class */
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    line-height: 1.5;
+}
+
+.overlay {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4c4c4c26;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    animation: overlayFadein;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay::-webkit-scrollbar {
+    display: none;
+}
+
+.overlayBeforeClose {
+    animation: overlayFadeout;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+}
+
+.modalBase {
+    z-index: 100000001;
+    position: relative;
+    border-radius: 3px;
+    background-color: #ffffff;
+    outline: 0;
+    padding: 5px;
+}
+
+.modalBase:focus {
+    outline: 0;
+}
+
+.modalAfterOpen {
+    z-index: 1001;
+    animation: openModal;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+}
+
+.modalBeforeClose {
+    animation: closeModal;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+}
+
+.bodyScroll {
+    box-sizing: border-box;
+    overflow: scroll;
+}
+
+.bodyStopScroll {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.closeButtonContainer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+.closeButtonContainer > img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@keyframes openModal {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes closeModal {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(350ms);
+    }
+}
+
+@keyframes overlayFadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes overlayFadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

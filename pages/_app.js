@@ -11,6 +11,7 @@ import '../public/assets/fonts/simple-line-icons/css/simple-line-icons.css';
 import '../public/assets/fonts/themify/themify.css';
 import '../styles/teacher-dashboard.css'
 import '../styles/nav-and-view.css'    
+import '../styles/teacher-setup-modal.css'    
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
 function MyApp({ Component, pageProps }) {

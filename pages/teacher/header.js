@@ -193,7 +193,7 @@ function Header  () {
                                             </div>
                                         </div>
                                         <div className="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe">
-                                            <a class="media-left" href="#!"><img className="media-object img-radius" src="../assets/images/user/avatar-2.jpg" alt="Generic placeholder image"/>
+                                            <a className="media-left" href="#!"><img className="media-object img-radius" src="../assets/images/user/avatar-2.jpg" alt="Generic placeholder image"/>
                                                 <div className="live-status">1</div>
                                             </a>
                                             <div className="media-body">
@@ -337,14 +337,14 @@ function Header  () {
                                         <div className="h-list-header">
                                             <h6>Josephin Doe</h6>
                                             <a href="#!" className="h-back-user-list" onClick={chatboxTextClose}>
-                                                <i class="feather icon-chevron-left"></i></a>
+                                                <i className="feather icon-chevron-left"></i></a>
                                         </div>
                                         <div className="h-list-body">
                                             <div className="main-chat-cont scroll-div">
                                                 <div className="main-friend-chat">
                                                     <div className="media chat-messages">
                                                         <a className="media-left photo-table" href="#!">
-                                                          <img class="media-object img-radius img-radius m-t-5" src="../assets/images/user/avatar-2.jpg" alt="Generic placeholder image"/></a>
+                                                          <img className="media-object img-radius img-radius m-t-5" src="../assets/images/user/avatar-2.jpg" alt="Generic placeholder image"/></a>
                                                         <div className="media-body chat-menu-content">
                                                             <div className="">
                                                                 <p className="chat-cont">hello Datta! Will you tell me something</p>
@@ -363,7 +363,7 @@ function Header  () {
                                                     </div>
                                                     <div className="media chat-messages">
                                                         <a className="media-left photo-table" href="#!">
-                                                        <img class="media-object img-radius img-radius m-t-5" src="../assets/images/user/avatar-2.jpg" alt="Generic placeholder image"/></a>
+                                                        <img className="media-object img-radius img-radius m-t-5" src="../assets/images/user/avatar-2.jpg" alt="Generic placeholder image"/></a>
                                                         <div className="media-body chat-menu-content">
                                                             <div className="">
                                                                 <p className="chat-cont">can you help me?</p>

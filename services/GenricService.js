@@ -1,5 +1,12 @@
-export async function saveInfo(url, data) {
+export async function dummyInvocation(url, data) {
+    console.log("Received url is: ", url)
+    console.log("Received data is: ", data)
+    return new Promise((resolve)=>{
+        resolve({"message": "API invocation is success"})
+    })
+}
 
+export async function saveInfo(url, data) {
     const response = await fetch(`${url}`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},

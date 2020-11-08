@@ -5,6 +5,8 @@ import echarts from 'echarts';
 import TeacherLayout from '../../layout/TeacherLayout';
 import {FiLock} from 'react-icons/fi';
 import BigCalendar from './calendar_big';
+import Modal from '../../components/modal/Modal'
+import {TeacherSetup} from '../../components/TeacherSetup'
 
 
 
@@ -14,7 +16,11 @@ export default function Dashboard (props){
         return () => {
             console.log("After loading load---------------------")
         }
-    })
+    }, [])
+
+    useEffect(() => {
+        showTeacherSetupModal1();   
+    }, []);
 
     const loadLineChart = () =>{
         // [ line-chart ] start
@@ -242,8 +248,29 @@ export default function Dashboard (props){
         // [ bar-chart ] end
     }
 
+    const [bloomTeacherSetupScreen1Visibility, setBloomTeacherSetupScreen1Visibility] = useState(false);
+
+    const showTeacherSetupModal1 = () => {
+        setBloomTeacherSetupScreen1Visibility(true);
+    };
+
+    const hideTeacherSetupModal1 = () => {
+        console.log("hiding teacher setup modal")
+        setBloomTeacherSetupScreen1Visibility(false);
+    };
+
+
     return(
         <TeacherLayout {...props}>
+        
+        <Modal
+            isOpen={bloomTeacherSetupScreen1Visibility}
+            hideModal={hideTeacherSetupModal1}
+            modalTitle="Bloom Teacher Setup"
+        >
+            <TeacherSetup hideModal={hideTeacherSetupModal1}/>
+        </Modal>
+
         <Form name="dashboardFrm">
         <div className="pcoded-main-container">
 		<div className="pcoded-wrapper">

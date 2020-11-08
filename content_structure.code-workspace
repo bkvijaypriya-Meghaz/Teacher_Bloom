@@ -1,0 +1,471 @@
+{
+    "Essentials":{
+        "Teacher Background": {
+            "Explanation": {},
+            "Key Concept 1": {},
+            "Key Concept 2": {},
+            "Key Concept 3": {}
+        },
+        "Standards Unwrapped": {
+            "The Verbs: What should students be doing?": [
+                "first",
+                "second"
+            ],
+            "The Nouns: What concrete words should students know?": [
+                "first",
+                "second"
+            ],
+            "Implications for Instruction and Student Misconceptions": [
+                "first",
+                "second"
+            ]
+        },
+        "Materials List": [
+            {},
+            {}
+        ],
+        "Answer Keys": {
+            "Section: Essentials": {},
+            "Section: Engage": {
+                "Engage Teacher Instructions": {}
+            },
+            "Section: Explore": {
+                "Explore Teacher Guide11111": {},
+                "Explore Student Materials": {}
+            },
+            "Section: Explain": {
+                "Linking Literacy": {},
+                "STEMscopedia": {},
+                "Progress Monitoring Assessment": {},
+                "TEST Content Connections Video 1": {},
+                "TEST Content Connections Video 2": {}
+            },
+            "Section: Elaborate": {
+                "Reading Science A": {},
+                "Reading Science B": {},
+                "Reading Science C": {},
+                "Maths Connections A": {},
+                "Maths Connections B": {},
+                "Maths Connections C": {},
+                "Engineering Connections": {},
+                "Science Today - Watch It!": {}
+            },
+            "Section: Evaluate": {
+                "Claim-Evidence-Reasoning": {},
+                "Open-Ended Response Assessment": {},
+                "Post-Assessment": {},
+                "Writing Science": {}
+            },
+            "Section: Intervention": {
+                "CLOZE-ing in on Science": {},
+                "Concept Attainment Quiz": {}
+            },
+            "Section: Acceleration": {
+                "Project Based Learning": {},
+            }
+        },
+        "Scope Summary": {
+            "Essentials": {
+                "Pre-Assessment":{}
+            },
+            "Engage": {
+                "Starters": {}
+            },
+            "Explore": {},
+            "Explain": {
+                "Question Prompts": {},
+                "Vocabulary": {},
+                "Progress Monitoring Assessment": {},
+                "Science Rock": {},
+                "Science Rock Interactive": {},
+                "Content Connections": {},
+                "STEMscopedia": {}
+            },
+            "Elaborate": {
+                "Next Step Inquiry": {},
+                "Reading Science": {},
+                "Math Connections": {},
+                "Books on Topic": {},
+                "Extensions": {},
+                "Engineering Connections": {}
+            },
+            "Evaluate": {
+                "Post-Assessment": {},
+                "Open-Ended Response": {},
+                "Scope Review Game": {},
+                "Concept Builder": {},
+                "Writing Science": {}
+            },
+            "Intervention":{
+                "Guided Practice": {},
+                "Concept Attainment Quiz": {},
+                "CLOZE-ing in on Science": {}
+            },
+            "Acceleration":{
+                "Science Applied": {},
+                "Science Art": {},
+                "Project-Based Learning": {}
+            }
+        },
+        "Standards Correlations": {
+            "Texas Essential Knowledge and Skills (TEKS)":{
+                "Science": {},
+                "Prior Grade(s): Science Connection": {},
+                "Reading/English Language Arts": {},
+                "Math": {},
+                "Technology": {},
+                "College and Career Readiness Standards (CCRS)": {},
+                "English Language Proficiency Standards (ELPS)": {}
+            }
+        }
+    },
+    "Engage":{
+        "Engage Teacher Instructions": {
+            "Description": {},
+            "Materials": {
+                "Printed Material": {},
+                "Reusable": {},
+                "Consumable": {}
+            },
+            "Preparation": {},
+            "Procedure and Facilitation": {},
+            "Slideshow": {},
+            "ELPS Strategy": {}
+        },
+        "Starters": {}
+    },
+    "Explore":{
+        "Explore Teacher Guide11111": {
+            "Setup Video": {},
+            "Description": {},
+            "Materials": {
+                "Printed Material": {},
+                "Reusable": {},
+                "Consumable": {}
+            },
+            "Preparation": {
+                "Part I": {},
+                "Part II": {},
+                "Part III": {},
+                "Part IV": {}
+            },
+            "Procedure and Facilitation": {
+                "Part I": {},
+                "Part II": {},
+                "Part III": {},
+                "Part IV": {}
+            },
+            "Student Journal Answer Key": {
+                "Part I": {},
+                "Part II": {},
+                "Part III": {},
+                "Part IV": {}
+            },
+            "Slideshow": {},
+            "ELPS Strategy": {}
+        }
+    },
+    "Explain":{
+        "Question Prompts": {
+            "Remember/Recall": {},
+            "Understand/Skill and Concept": {},
+            "Apply/Skill and Concept": {},
+            "Analyze/Strategic Thinking": {},
+            "Evaluate/Extended Thinking": {},
+            "Create/Extended Thinking": {}
+        },
+        "Picture Vocabulary": {
+            "Slidshow": {}
+        },
+        "Linking Literacy": {
+            "Materials": {
+                "Printed Material": {},
+                "Reusable": {},
+                "Consumable": {}
+            },
+            "Pre-Reading Instructions": {},
+            "During-Reading Instructions": {},
+            "Post-Reading Instructions": {}
+        },
+        "STEMscopedia": {
+            "Reflect": {},
+            "What Do You Think?": {},
+            "Try Now": {},
+            "Look Out!": {},
+            "Connecting with Your Child": {}
+        },
+        "Communicate Science": {
+            "Description": {},
+            "Driving Question": {},
+            "Materials": {
+                "Printed Material": {},
+                "Reusable": {},
+                "Consumable": {}
+            },
+            "Facilitation Points": {},
+            "Procedure": {},
+            "Procedure and Facilitation Points": {},
+            "Preparation": {}
+        },
+        "Science Rock": {
+            // This is just a video
+        },
+        "eScopedia": {
+            // This is just a video
+        },
+        "Progress Monitoring Assessment": {
+            // This is list of questions
+        },
+        "TEST Content Connections Video - Topic1": {
+            // This is a video and questions & answers
+        },
+        "TEST Content Connections Video - Topic2": {
+            // This is a video and questions & answers
+        },
+        "TEST Content Connections Video - Topic3": {
+
+        }
+    },
+    "Elaborate":{
+        "Next Step Inquiry": {
+            "Purpose": {
+                "Examples of Student Questions": {
+                    "Descritive": {},
+                    "Comparative": {}
+                }
+            },
+            "Next Step Inquiry": {
+                "Where do these student questions come from?": {
+
+                },
+                "What is the role of the teacher?": {
+
+                },
+                "Where can these questions be collected and recorded?": {
+
+                },
+                "What does an NSI look like?": {
+
+                },
+                "How can students answer their question?": {
+
+                },
+                "What kinds of investigations can students do? There are three kinds of investigations that help us explain our world:": {
+
+                },
+                "When could student investigations be implemented?": {
+
+                },
+                "How else might students share their completed investigations?": {
+
+                },
+                "An NSI is not:": {
+
+                }
+            }
+        },
+        "Extensions": [{
+            // This is list of objects topic headings & a paragraph
+        },{},{}],
+        "Reading Science A": {
+            // This is bullet points. And Questions & Answers following those bullet points.
+        },
+        "Reading Science B": {
+            // This is bullet points. And Questions & Answers following those bullet points.
+        },
+        "Reading Science C": {
+            // This is bullet points. And Questions & Answers following those bullet points.
+        },
+        "Math Connections A": {
+            "Activity": {},
+            "Materials": {},
+            "Preparation": {},
+            "Math Standards": {}
+            // questions & answers following above section
+        },
+        "Math Connections B": {
+            "Activity": {},
+            "Materials": {},
+            "Preparation": {},
+            "Math Standards": {}
+            // questions & answers following above section
+        },
+        "Math Connections C": {
+            "Activity": {},
+            "Materials": {},
+            "Preparation": {},
+            "Math Standards": {}
+            // questions & answers following above section
+        },
+        "Engineering Connections": {
+            "The Challenge": {},
+            "Materials": {
+                "Printed Material": {},
+                "Reusable": {},
+                "Consumable": {},
+                "Possible Materials for Constructing the Case": {}
+            },
+            "Preparation": {},
+            "Procedure and Facilitation Points": {
+                "1) Introduce the challenge and define the problem.": {},
+                "Criteria": {},
+                "2) Research and explore the problem.": {},
+                "Ask the following questions:": {},
+                "3) Brainstorm and design a solution to the problem.": {},
+                "4) Build, test, and analyze the solution.": {},
+                "5) Improve or redesign and retest the solution.": {},
+                "6) Present and share the results.": {},
+                "If necessary, ask these questions:": {}
+            }
+        },
+        "Books on Topic": [
+            // this is array of external link type components
+            "External link"
+        ],
+        "Science Today - Watch It": {
+            "Description": {
+                // This is a paragraph
+            },
+            "Facilitation Points": {
+                // This is a paragraph
+            },
+            "Procedure": {
+                // This is a video
+            },
+            "Questions & Answers": [
+                // This list of 2-3 different types of questions & their answers.
+            ]
+        },
+        "Concept Review Game": {
+            // this is interactive content... you'll select answers and click on next to get next question.. finally result is displayed (with retry)
+        },
+        "Simulation Practice": {
+            // this page has a single content, you have to drag and drop correct item to target place... if wrongly dragged retry is shown else success is shown
+        },
+        "Virtual Investigation": {
+            // some animated content. only one thing on the page.
+        }
+    },
+    "Evaluate":{
+        "Claim-Evidence-Reasoning": {
+            "Scenario": {},
+            "Prompt": {},
+            "Claim": {},
+            "Evidence": {},
+            "Reasoning": {}
+        },
+        "Open-Ended Response Assessment": [
+            // This is list of short answer questions (with an image)
+        ],
+        "Post-Assessment": [
+            // This is list of MCQs multichoice questions
+        ],
+        "Writing Science": {
+            "LOOK at the picture": {},
+            "READ": {},
+            "WRITE": {},
+            "Short Answer Question": {}
+        },
+        "Concept Builder": {
+            "Description": {},
+            "Mission Instructions": {},
+            "Materials": {}
+        },
+        "Science Rock": {
+            // This is a video content
+        }
+    },
+    "Intervention":{
+        "Guided Practice": {
+            "Description": {},
+            "Materials": {
+                "Printed Material": {},
+                "Reusable": {},
+                "Consumable": {},
+                "Possible Materials for Constructing the Case": {}
+            },
+            "Procedure": {},
+            "Guiding Points": {},
+            "Guiding Questions": {}
+        },
+        "CLOZE-ing in on Science": [
+            // This is a list of Key Concepts associated with a question
+            {
+                "Key Concept 1": {},
+                "Question": {}
+            },
+            {
+                "Key Concept 2": {},
+                "Question": {}
+            },
+            {
+                "Key Concept 3": {},
+                "Question": {}
+            },
+        ],
+        "Concept Attainment Quiz": {
+            "I. Vocabulary Matching": [
+                // List of MCQs
+            ],
+            "II. Identification": [
+                // List of Fill in the blanks with dropdown options.
+            ]
+        }
+    },
+    "Acceleration":{
+        "Science Art": {
+            "Description": {},
+            "Materials": {
+                "Printed Material": {},
+                "Reusable": {},
+                "Consumable": {},
+                "Possible Materials for Constructing the Case": {}
+            },
+            "Procedure": {}
+        },
+        "Project Based Learning": {
+            "Description": {},
+            "Materials": {
+                "Printed Material": {},
+                "Reusable": {},
+                "Consumable": {},
+                "Possible Materials for Constructing the Case": {}
+            },
+            "Possible Student Deliverables": {},
+            "21st Century Skill: Integration of Technology": {},
+            "Preparation": {},
+            "Facilitation Points": {
+                "1. Group Designation and Team Forming": {},
+                "2. The Problem (Entry Document)": {
+                    "Entry Document": {
+                        "PBL Expert Roles": {
+                            "Team Leader": {},
+                            "Multimedia Specialist": {},
+                            "Researcher": {},
+                            "Instructor": {},
+                            "Suggested Know and Need to Know responses": {}
+                        }
+                    }
+                },
+                "3. Whole-Class Workshops": {
+                    "21stCentury Skill and Individual Student Rubric":{}
+                },
+                "4. Expert Group Workshop Facilitation": {
+
+                },
+                "5. Team Facilitation and Design Process": {},
+                "6. Team Presentation and Evaluations": {}
+            },
+            "Sample Student Deliverables": {}
+        },
+        "Science Applied": {
+            "Background": {},
+            "Guiding Points": {},
+            "Research": {},
+            "Fun Fact": {}
+        },
+        "Advanced Effects": [
+            // This is list of various questions
+        ]
+    }
+}
