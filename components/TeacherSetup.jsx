@@ -73,7 +73,9 @@ export class TeacherSetup extends React.Component{
                 <div className="">
                     <div className="teacher-setup-screen welcome-screen">
                         <h4>Welcome to Bloom</h4> <br />
-                        <div className="teacher-setup-bloom-logo">Bloom logo here</div> <br />
+                        <div className="teacher-setup-bloom-logo">
+                            <img src="../assets/images/bloom-logo.png" className="bloomlogo"/>
+                        </div> <br />
                         <h4>Click Next step to continue</h4>
                     </div>
                         <hr />
@@ -112,58 +114,56 @@ export class TeacherSetup extends React.Component{
                             <h4>STEP2: CONFIRM YOUR PROFILE</h4>
                             <div className="finish-screen">
                                 <div className="finish-screen-first-column">
-                                    {/* <h6>Section</h6> */}
                                     Section
                                     <div className="teacher-setup-select-group">
                                         <select className="teacher-setup-select-field" onChange={this.handleChange} name="section1" id="section1">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="mercedes">Mercedes</option>
-                                            <option value="audi">Audi</option>
+                                            <option value="Section 1 - a">Section 1 - a</option>
+                                            <option value="Section 1 - b">Section 1 - b</option>
+                                            <option value="Section 1 - c">Section 1 - c</option>
+                                            <option value="Section 1 - d">Section 1 - d</option>
                                         </select>
                                     </div>
                                     <div className="teacher-setup-select-group">
                                         <select className="teacher-setup-select-field" onChange={this.handleChange} name="section2" id="section2">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="mercedes">Mercedes</option>
-                                            <option value="audi">Audi</option>
+                                            <option value="Section 2 - a">Section 2 - a</option>
+                                            <option value="Section 2 - b">Section 2 - b</option>
+                                            <option value="Section 2 - c">Section 2 - c</option>
+                                            <option value="Section 2 - d">Section 2 - d</option>
                                         </select>
                                     </div>
                                     <div className="teacher-setup-select-group">
                                         <select className="teacher-setup-select-field" onChange={this.handleChange} name="section3" id="section3">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="mercedes">Mercedes</option>
-                                            <option value="audi">Audi</option>
+                                            <option value="Section 3 - a">Section 3 - a</option>
+                                            <option value="Section 3 - b">Section 3 - b</option>
+                                            <option value="Section 3 - c">Section 3 - c</option>
+                                            <option value="Section 3 - d">Section 3 - d</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div className="finish-screen-second-column">
-                                    {/* <h6>Grade</h6> */}
                                     Grade
                                     <div className="teacher-setup-select-group">
                                         <select className="teacher-setup-select-field" onChange={this.handleChange} name="grade1" id="grade1">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="mercedes">Mercedes</option>
-                                            <option value="audi">Audi</option>
+                                            <option value="Kindergarten">Kindergarten</option>
+                                            <option value="Grade-1">Grade-1</option>
+                                            <option value="Grade-2">Grade-2</option>
+                                            <option value="Grade-3">Grade-3</option>
                                         </select>
                                     </div>
                                     <div className="teacher-setup-select-group">
                                         <select className="teacher-setup-select-field" onChange={this.handleChange} name="grade2" id="grade2">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="mercedes">Mercedes</option>
-                                            <option value="audi">Audi</option>
+                                            <option value="Kindergarten">Kindergarten</option>
+                                            <option value="Grade-1">Grade-1</option>
+                                            <option value="Grade-2">Grade-2</option>
+                                            <option value="Grade-3">Grade-3</option>
                                         </select>
                                     </div>
                                     <div className="teacher-setup-select-group">
                                         <select className="teacher-setup-select-field" onChange={this.handleChange} name="grade3" id="grade3">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="mercedes">Mercedes</option>
-                                            <option value="audi">Audi</option>
+                                            <option value="Kindergarten">Kindergarten</option>
+                                            <option value="Grade-1">Grade-1</option>
+                                            <option value="Grade-2">Grade-2</option>
+                                            <option value="Grade-3">Grade-3</option>
                                         </select>
                                     </div>
                                 </div>
