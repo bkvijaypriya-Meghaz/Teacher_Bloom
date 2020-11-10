@@ -8,7 +8,7 @@ import BigCalendar from './calendar_big';
 import Modal from '../../components/modal/Modal'
 import {TeacherSetup} from '../../components/TeacherSetup'
 import {StudentActivity} from './StudentActivity'
-
+import DashboardClassAverage from './dashboardClassAverage';
 
 export default function Dashboard (props){
     useEffect(() => {
@@ -314,9 +314,11 @@ export default function Dashboard (props){
 										</div>
 									</div>
 								</div>
+
 								
 								<div className="col-md-6 col-xl-8">
-									<div className="card">
+                                 <DashboardClassAverage/> 
+								{/*	<div className="card">
 										<div className="row card-rowStyle" >
 											<div className="col-12 col-md-7">
 												<div className="card-header card-headerStyle">
@@ -371,8 +373,8 @@ export default function Dashboard (props){
 												</div>
 											</div>
 										</div>
-									</div>
-								</div>
+    </div>*/}
+    </div>
 								<div className="col-xl-6 col-md-12 card-AreaChartStyle" >
 									<div className="card">
 										<div className="card-header">
