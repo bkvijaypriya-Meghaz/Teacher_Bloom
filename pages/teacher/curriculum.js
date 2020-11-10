@@ -1,8 +1,21 @@
 import TeacherLayout from '../../layout/TeacherLayout';
 import CurriculumCard from './curriculum-card'
+import {useState, useEffect} from 'react'
+import {getInfo} from '../../services/GenricService';
+
 import React from 'react'
 
 export default function curiculum(props) {
+    const [section, setSection] = useState(0);
+    const [sectionList, setSectionList] = useState([]);
+
+    useEffect(() => {
+        getInfo("https://bloomlms.azure-api.net/teacher/v1/23423424/sections").then((data) => {
+            console.log('bloom data is : ',data);
+            setSection(data);
+            setSectionList(data.sections);
+        })
+    }, [])
 
 
 
@@ -26,18 +39,11 @@ export default function curiculum(props) {
                                                 <div className="pagedropdown">
                                                     <label style={{ fontWeight: 'bold', fontSize: '17px' }}>Select Grade</label>
                                                     <select className="form-control" style={{ background: '#fff', borderRadius: '0px' }}>
-                                                        <option value="1st Grade" disabled>1st Grade</option>
-                                                        <option value="2nd Grade" disabled>2nd Grade</option>
-                                                        <option value="3rd Grade" disabled>3rd Grade</option>
-                                                        <option value="4th Grade" defaultValue>4th Grade</option>
-                                                        <option value="5th Grade" disabled>5th Grade</option>
-                                                        <option value="6th Grade" disabled>6th Grade</option>
-                                                        <option value="7th Grade" disabled>7th Grade</option>
-                                                        <option value="8th Grade" disabled>8th Grade</option>
-                                                        <option value="9th Grade" disabled>9th Grade</option>
-                                                        <option value="10th Grade" disabled>10th Grade</option>
-                                                        <option value="11th Grade" disabled>11th Grade</option>
-                                                        <option value="12th Grade" disabled>12th Grade</option>
+                                                    {sectionList.map((sectionItem) => (
+                                                     <option key={sectionItem.id} value={sectionItem.name}>
+                                                         {sectionItem.name}
+                                                            </option>
+                                                        ))}
                                                     </select>
                                                 </div>
                                             </div>
