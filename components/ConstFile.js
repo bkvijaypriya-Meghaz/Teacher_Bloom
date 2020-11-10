@@ -1,0 +1,1 @@
+export const CLASS_AVERAGE = "https://bloomlms.azure-api.net/teacher/v1/34242443/34535535/class/average"
