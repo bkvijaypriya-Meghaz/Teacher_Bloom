@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import {getInfo} from '../../services/GenricService';
 import {STUDENT_ACTIVITY} from '../../components/ConstFile';
 
-function StudentActivity()  {
+export function StudentActivity()  {
 
     const [stuActivityList, setstuActivityList] = useState(0);
     const[activityList,setActivityList]=useState([])
@@ -60,4 +60,4 @@ function StudentActivity()  {
      </div>             
     )   ; 
 }
-export {StudentActivity}
+export default StudentActivity

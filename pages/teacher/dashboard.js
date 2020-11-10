@@ -7,7 +7,7 @@ import {FiLock} from 'react-icons/fi';
 import BigCalendar from './calendar_big';
 import Modal from '../../components/modal/Modal'
 import {TeacherSetup} from '../../components/TeacherSetup'
-import {StudentActivity} from './StudentActivity'
+import StudentActivity from './StudentActivity'
 import DashboardClassAverage from './dashboardClassAverage';
 
 export default function Dashboard (props){
