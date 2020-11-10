@@ -7,7 +7,7 @@ import {FiLock} from 'react-icons/fi';
 import BigCalendar from './calendar_big';
 import Modal from '../../components/modal/Modal'
 import {TeacherSetup} from '../../components/TeacherSetup'
-
+import {StudentActivity} from './StudentActivity'
 
 
 export default function Dashboard (props){
@@ -145,6 +145,7 @@ export default function Dashboard (props){
         };
         myChart.setOption(option, true);
         // [ area-chart ] end
+
     }
 
     const loadBarChart = () =>{
@@ -425,6 +426,7 @@ export default function Dashboard (props){
                                                         <div className="col-xl-12 col-md-12">
                                                             <div id='calendar' className='calendar'>
                                                                 <BigCalendar/>
+                                                                
                                                             </div>
                                                         </div>
                                                     </div>
@@ -513,124 +515,11 @@ export default function Dashboard (props){
                                             <div className="card Recent-Users">
                                                 <div className="card-header">
                                                     <h5>4th Grade Science Student Activity</h5>
-                                                    <div className="card-header-right">
-                                                        <div className="btn-group card-option">
-                                                            <button type="button" className="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i className="feather icon-more-horizontal"></i>
-                                                            </button>
-                                                            <ul className="list-unstyled card-option dropdown-menu dropdown-menu-right">
-                                                                <li className="dropdown-item full-card"><a href="#!"><span><i className="feather icon-maximize"></i> maximize</span><span className="displayNoneStyle"><i className="feather icon-minimize"></i> Restore</span></a>
-                                                                </li>
-                                                                <li className="dropdown-item minimize-card"><a href="#!"><span><i className="feather icon-minus"></i> collapse</span><span className="displayNoneStyle"><i className="feather icon-plus"></i> expand</span></a>
-                                                                </li>
-                                                                <li className="dropdown-item reload-card"><a href="#!"><i className="feather icon-refresh-cw"></i> reload</a>
-                                                                </li>
-                                                                <li className="dropdown-item close-card"><a href="#!"><i className="feather icon-trash"></i> remove</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
+                                                    
                                                 </div>
-                                                <div className="card-block px-0 py-3">
-                                                    <div className="table-responsive">
-                                                        <table className="table table-hover">
-                                                            <tbody>
-                                                                {/* <?php
-                                                                if($_SESSION['assignmentval'])
-                                                                {
-                                                                ?> */}
-                                                                {/* <tr className="unread">
-                                                                    <td>
-                                                                        <img className="rounded-circle rounded-circleStyle" src="../assets/images/user/avatar-1.jpg" alt="activity-user"/>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="mb-1">Ann Doe</h6>
-                                                                        <p className="m-0">Turned In Energy Assessment</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="text-muted">4th Grade Science</h6>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="text-muted"><i className="fas fa-circle text-c-green f-10 m-r-15"></i>11 MAY 12:56</h6>
-                                                                    </td>
-                                                                    <td><a href="#!" className="label theme-bg2 text-white f-12">Clear</a><a href="energy_assignment.php" className="label theme-bg text-white f-12">View</a>
-                                                                    </td>
-                                                                </tr> */}
-                                                                
-                                                                {/* <?php
-                                                                }
-                                                                ?> */}
-                                                                <tr className="unread">
-                                                                    <td>
-                                                                        <img className="rounded-circle rounded-circleStyle"  src="../assets/images/user/avatar-2.jpg" alt="activity-user"/>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="mb-1">Mathilde Andersen</h6>
-                                                                        <p className="m-0">Started Rock Science</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="text-muted">4th Grade Science</h6>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="text-muted"><i className="fas fa-circle text-c-red f-10 m-r-15"></i>11 MAY 10:35</h6>
-                                                                    </td>
-                                                                    <td><a href="#!" className="label theme-bg2 text-white f-12">Clear</a><a href="#!" className="label theme-bg text-white f-12">View</a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr className="unread">
-                                                                    <td>
-                                                                        <img className="rounded-circle rounded-circleStyle" src="../assets/images/user/avatar-3.jpg" alt="activity-user"/>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="mb-1">Karla Sorensen</h6>
-                                                                        <p className="m-0">Sent Message</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="text-muted">4th Grade Science</h6>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="text-muted"><i className="fas fa-circle text-c-green f-10 m-r-15"></i>9 MAY 17:38</h6>
-                                                                    </td>
-                                                                    <td><a href="#!" className="label theme-bg2 text-white f-12">Clear</a><a href="#!" className="label theme-bg text-white f-12">View</a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr className="unread">
-                                                                    <td>
-                                                                        <img className="rounded-circle rounded-circleStyle" src="../assets/images/user/avatar-1.jpg" alt="activity-user"/>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="mb-1">Ida Jorgensen</h6>
-                                                                        <p className="m-0">Viewed AC/DC Circuit Videos</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="text-muted">4th Grade Science</h6>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="text-muted f-w-300"><i className="fas fa-circle text-c-red f-10 m-r-15"></i>19 MAY 12:56</h6>
-                                                                    </td>
-                                                                    <td><a href="#!" className="label theme-bg2 text-white f-12">Clear</a><a href="#!" className="label theme-bg text-white f-12">View</a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr className="unread">
-                                                                    <td>
-                                                                        <img className="rounded-circle rounded-circleStyle" src="../assets/images/user/avatar-2.jpg" alt="activity-user"/>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="mb-1">Albert Andersen</h6>
-                                                                        <p className="m-0">Turned In Energy Assessment</p>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="text-muted">4th Grade Science</h6>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="text-muted"><i className="fas fa-circle text-c-green f-10 m-r-15"></i>21 July 12:56</h6>
-                                                                    </td>
-                                                                    <td><a href="#!" className="label theme-bg2 text-white f-12">Clear</a><a href="#!" className="label theme-bg text-white f-12">View</a>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
+                                                
+                                                
+                                                <StudentActivity/>
                                             </div>
                                         </div>
                                         {/* // <!-- [ Recent Users ] end --> */}
