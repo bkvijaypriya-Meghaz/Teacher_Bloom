@@ -1,5 +1,5 @@
-import Header from '../pages/teacher/header'
-import Footer from '../pages/teacher/footer'
+import Header from '../pages/header'
+import Footer from '../pages/footer'
 
 const TeacherLayout = ({children}) => {
     
