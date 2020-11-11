@@ -432,7 +432,7 @@ function Header  () {
                              <div className="navbar-content sidenav-horizontal" id="layout-sidenav">  
                                <ul className="nav pcoded-inner-navbar sidenav-inner menucenter">
                                     <li className="nav-item ">
-                                        <a href="my-classes" className="nav-link">
+                                        <a href="./my-classes" className="nav-link">
                                             <span className="pcoded-micon">
                                                 <i className="mdi mdi-teach"></i>
                                             </span>
@@ -441,7 +441,7 @@ function Header  () {
                                     </li>
                                     
                                     <li className="nav-item ">                                    
-                                         <a href="lessonplans" className="nav-link">
+                                         <a href="./lessonplans" className="nav-link">
                                                 <span className="pcoded-micon">
                                                     <i className="mdi mdi-clipboard-text-outline"></i>
                                                 </span>
@@ -459,7 +459,7 @@ function Header  () {
                                     </li>
 
                                      <li className="nav-item ">
-                                         <a href="grade_gradebook" className="nav-link">
+                                         <a href="./grade_gradebook" className="nav-link">
                                              <span className="pcoded-micon">
                                                  <i className="mdi mdi-file-document-outline"></i>
                                              </span>
@@ -468,12 +468,12 @@ function Header  () {
                                      </li>
                                      
                                      <li className="nav-item ">
-                                            <a href="resources" className="nav-link">
-                                                <span className="pcoded-micon">
-                                                    <i className="mdi mdi-toolbox"></i>
-                                                </span>
-                                                <span className="pcoded-mtext">Resources</span>
-                                            </a>
+                                        <a href="./resources" className="nav-link">
+                                            <span className="pcoded-micon">
+                                                <i className="mdi mdi-toolbox"></i>
+                                            </span>
+                                            <span className="pcoded-mtext">Resources</span>
+                                        </a>
                                      </li>
                                 </ul>
                             </div> 

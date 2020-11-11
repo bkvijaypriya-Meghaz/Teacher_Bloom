@@ -10,6 +10,9 @@ import {TeacherSetup} from '../components/TeacherSetup'
 import StudentActivity from './StudentActivity'
 import DashboardClassAverage from './dashboardClassAverage';
 
+import CurrentAssignment from './dashboardCurrentAssignment';
+import AssignmentToBeGraded from './dashboardAssignmentGraded';
+
 export default function Dashboard (props){
     useEffect(() => {
         loadAreaChart()
@@ -260,6 +263,14 @@ export default function Dashboard (props){
         setBloomTeacherSetupScreen1Visibility(false);
     };
 
+    const openPopup = ()  =>{
+        //console.log(document.getElementById("popupBtn").getAttributeNames());
+        if(document.getElementById("popup").classList.contains("show")){
+            document.getElementById("popup").classList.remove("show")
+        }
+        else
+            document.getElementById("popup").classList.add("show");
+    }
 
     return(
         <TeacherLayout {...props}>
@@ -283,98 +294,51 @@ export default function Dashboard (props){
 						<div className="page-wrapper">
 							{/* <!-- [ Main Content ] start --> */}
 							<div className="row">
-								<div className="col-xl-4 col-md-6">
-									<div className="card Recent-Users">
-										<div className="card-header">
-											<h5>Upcoming Class</h5>
-										</div>
-										<div className="card-block px-0 py-3">
-											<div className="table-responsive">
-												<table className="table table-hover">
-													<tbody>
-														<tr className="unread">
-															<td>
-																<h6 className="mb-1">4th Grade Science</h6>
-																<p className="m-0">Topic : Energy</p>
-															</td>
-															<td><a href="startlesson" className="label theme-bg text-white f-12">Start Class</a>
-															</td>
-														</tr>
-														<tr className="unread disablecursoronly">
-															<td>
-																<h6 className="mb-1">5th Grade Science</h6>
-																<p className="m-0">Topic : Classfying Matter</p>
-															</td>
-															<td><a href="#!" className="label theme-bg text-white f-12">Start Class</a><i className="feather f-20 tablelockicon m-l-20"><FiLock/></i>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-										</div>
-									</div>
+                                <div class="col-md-12">                                    
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item dashtopname"><h5>Ms Jane Doe's Science Class</h5></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-12">		
+									<div class="card cardbreadcrum"> 
+										<div class="card-block nopadding">  
+											<div class="row nomargin">		
+												<div class="col text-right">	
+													<div class="card-header card-headerStyle">
+														<div class="card-header-right displayblock threedot">		
+															<div class="btn-group card-option">			
+																<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																	<i class="feather icon-more-horizontal"></i>		
+																</button>									
+																<ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+																	<li class="dropdown-item disablecursoronly"><a href="#!"><span>2nd Grade <i class="feather icon-lock rytdropdownicon"></i></span></a></li>															
+																	<li class="dropdown-item disablecursoronly"><a href="#!"><span>3rd Grade <i class="feather icon-lock rytdropdownicon"></i></span></a></li>															
+																	<li class="dropdown-item"><a href="#!"><span>4th Grade</span></a></li>	
+																	<li class="dropdown-item disablecursoronly"><a href="#!"><span>5th Grade <i class="feather icon-lock rytdropdownicon"></i></span></a></li>
+																</ul>											
+															</div>									
+														</div>									
+													</div>									
+												</div>                             
+											</div>                            
+										</div>                           
+									</div>                          
 								</div>
-
-								
-								<div className="col-md-6 col-xl-8">
-                                 <DashboardClassAverage/> 
-								{/*	<div className="card">
-										<div className="row card-rowStyle" >
-											<div className="col-12 col-md-7">
-												<div className="card-header card-headerStyle">
-													<h5>4th Grade Science Class Average</h5>	
-												</div>
-											</div>
-											<div className="col-12 col-md-5 text-right">
-												<div className="card-header card-headerStyle" >
-												<div className="card-header-right">
-													<div className="btn-group card-option">
-														<button type="button" className="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-															<i className="feather icon-more-horizontal"></i>
-														</button>
-														<ul className="list-unstyled card-option dropdown-menu dropdown-menu-right">
-															
-															<li className="dropdown-item disablecursoronly"><a href="#!"><span>2nd Grade <i className="feather icon-lock rytdropdownicon"><FiLock/></i></span></a></li>
-															<li className="dropdown-item disablecursoronly"><a href="#!"><span>3rd Grade <i className="feather icon-lock rytdropdownicon"><FiLock/></i></span></a></li>
-															<li className="dropdown-item"><a href="#!"><span>4th Grade</span></a></li>
-															<li className="dropdown-item disablecursoronly"><a href="#!"><span>5th Grade <i className="feather icon-lock rytdropdownicon"><FiLock/></i></span></a></li>
-															
-														</ul>
-													</div>
-												</div>
-												</div>
-											</div>
-										</div>
-										<div className="card-block">
-											<div className="row dashgradebar">
-												<div className="col-12 col-md-2 text-center">
-													<div data-label="20%" className="radial-bar radial-bar-20 radial-bar-md radial-bar-success gradecircle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="William Johnson<br>Denise Coso<br>Tanya Sharma<br>John Nokes"></div>
-													<div className="gradename">A</div>
-												</div>
-												<div className="col-12 col-md-2 text-center">
-													<div data-label="30%" className="radial-bar radial-bar-30 radial-bar-md radial-bar-success gradecircle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Ava Dolan<br>Mason Logan"></div>
-													<div className="gradename">B</div>
-												</div>
-												<div className="col-12 col-md-2 text-center">
-													<div data-label="25%" className="radial-bar radial-bar-25 radial-bar-md radial-bar-success gradecircle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Brian Michaelis"></div>
-													<div className="gradename">C</div>
-												</div>
-												<div className="col-12 col-md-2 text-center">
-													<div data-label="15%" className="radial-bar radial-bar-15 radial-bar-md radial-bar-success gradecircle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Evelyn Oliver"></div>
-													<div className="gradename">D</div>
-												</div>
-												<div className="col-12 col-md-2 text-center">
-													<div data-label="10%" className="radial-bar radial-bar-10 radial-bar-md radial-bar-success gradecircle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Eric Betteli<br>Sophia Brown"></div>
-													<div className="gradename">F</div>
-												</div>
-												<div className="col-12 col-md-2 text-center">
-													<div data-label="10" className="radial-bar radial-bar-100 radial-bar-md radial-bar-success dashgradefullbar"></div>
-													<div className="totalgradename">Total Students</div>
-												</div>
-											</div>
-										</div>
-    </div>*/}
-    </div>
+								<div class="col-xl-4 col-md-12 col-sm-12 col-xs-12">
+                                    {/* <Component1/> */}
+                                    <CurrentAssignment/>
+                                </div>
+                                <div class="col-xl-4 col-md-12 col-sm-12 col-xs-12">
+                                    {/* <Component2/> */}
+                                    <AssignmentToBeGraded/>
+                                </div>
+                                <div class="col-xl-4 col-md-12 col-sm-12 col-xs-12">
+                                    {/* <Component3/> */}
+                                    <AssignmentToBeGraded/>
+                                </div>
+								<div class="col-md-12 col-sm-12 col-xs-12 col-xl-12">
+                                    <DashboardClassAverage/> 
+                                </div>
 								<div className="col-xl-6 col-md-12 card-AreaChartStyle" >
 									<div className="card">
 										<div className="card-header">
@@ -398,9 +362,9 @@ export default function Dashboard (props){
 												<div className="card-header-right">
 													<div className="btn-group card-option">
 														<button type="button" className="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-															<i className="feather icon-more-horizontal"></i>
+															<i className="feather icon-more-horizontal" onClick={openPopup}></i>
 														</button>
-														<ul className="list-unstyled card-option dropdown-menu dropdown-menu-right">
+														<ul id="popup" className="list-unstyled card-option dropdown-menu dropdown-menu-right">
 															
 															<li className="dropdown-item disablecursoronly"><a href="#!"><span>2nd Grade <i className="feather icon-lock rytdropdownicon"><FiLock/></i></span></a></li>
 															<li className="dropdown-item disablecursoronly"><a href="#!"><span>3rd Grade <i className="feather icon-lock rytdropdownicon"><FiLock/></i></span></a></li>
@@ -436,82 +400,6 @@ export default function Dashboard (props){
                                             </div>
                                         </div>
                                         {/* <!-- [ Recent Users ] start --> */}
-                                        <div className="col-xl-12 col-md-6">
-                                            <div className="card Recent-Users">
-                                                <div className="card-header">
-                                                    <h5>Assignments To Be Graded</h5>
-                                                </div>
-                                                <div className="card-block px-0 py-3">
-                                                    <div className="table-responsive">
-                                                        <table className="table table-hover">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <th>Assignment</th>
-                                                                    <th>Class</th>
-                                                                    <th>Due Date</th>
-                                                                    <th>Action</th>
-                                                                </tr>
-                                                                <tr className="unread">
-                                                                    <td>Energy Assessment</td>
-                                                                    <td>
-                                                                        <h6 className="text-muted">4th Grade</h6>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="text-muted"><i className="fas fa-circle text-c-green f-10 m-r-15"></i>31 Aug 2020</h6>
-                                                                    </td>
-                                                                    <td><a href="" target="_blank" className="label theme-bg2 text-white f-12">View</a><a href="#!" className="label theme-bg text-white f-12"><i className="feather icon-lock m-r-3"><FiLock/></i> Grade</a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr className="unread">
-                                                                    <td>Classifying Matter</td>
-                                                                    <td>
-                                                                        <h6 className="text-muted">2nd Grade</h6>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="text-muted"><i className="fas fa-circle text-c-green f-10 m-r-15"></i>01 Sep 2020</h6>
-                                                                    </td>
-                                                                    <td><a href="#!" className="label theme-bg2 text-white f-12">View</a><a href="#!" className="label theme-bg text-white f-12">Grade</a><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr className="unread">
-                                                                    <td>Forms Of Energy</td>
-                                                                    <td>
-                                                                        <h6 className="text-muted">3rd Grade</h6>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="text-muted"><i className="fas fa-circle text-c-green f-10 m-r-15"></i>04 Sep 2020</h6>
-                                                                    </td>
-                                                                    <td><a href="#!" className="label theme-bg2 text-white f-12">View</a><a href="#!" className="label theme-bg text-white f-12">Grade</a><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr className="unread">
-                                                                    <td>Light & Heat Assessment</td>
-                                                                    <td>
-                                                                        <h6 className="text-muted">5th Grade</h6>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="text-muted"><i className="fas fa-circle text-c-green f-10 m-r-15"></i>07 Sep 2020</h6>
-                                                                    </td>
-                                                                    <td><a href="#!" className="label theme-bg2 text-white f-12">View</a><a href="#!" className="label theme-bg text-white f-12">Grade</a><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr className="unread">
-                                                                    <td>Changing Properties Of..</td>
-                                                                    <td>
-                                                                        <h6 className="text-muted">4th Grade</h6>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h6 className="text-muted"><i className="fas fa-circle text-c-green f-10 m-r-15"></i>10 Sep 2020</h6>
-                                                                    </td>
-                                                                    <td><a href="#!" className="label theme-bg2 text-white f-12">View</a><a href="#!" className="label theme-bg text-white f-12">Grade</a><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         {/* <!-- [ Recent Users ] start --> */}
                                         <div className="col-xl-12 col-md-12">
                                             <div className="card Recent-Users">

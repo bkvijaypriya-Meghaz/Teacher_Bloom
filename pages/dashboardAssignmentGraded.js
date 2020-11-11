@@ -13,6 +13,7 @@ function assignmentGraded(){
     })
 	}, [])
 	return(
+		<div>
 		<div className="card Recent-Users dashfirstrowheight">
 			<div className="card-header">
 				<h5>Assignment to be Graded</h5>
@@ -31,13 +32,13 @@ function assignmentGraded(){
 								</tr>
 								)
 							}
-				
 							)
 						}
 						</tbody>
 					</table>
 				</div>
 			</div>
+		</div>
 		</div>
 	)
 }

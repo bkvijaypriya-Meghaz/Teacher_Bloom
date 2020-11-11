@@ -56,3 +56,24 @@
 .widthStyle85{
     width: 85%;
 }
+
+/* New UI Implementation */
+.dashfirstrowheight {
+    height: 250px;
+    overflow-y: scroll;
+}
+.dashfirstrowheight::-webkit-scrollbar, .dashfirstrowheight1::-webkit-scrollbar {
+    width: 6px;
+}
+.dashfirstrowheight::-webkit-scrollbar-thumb, .dashfirstrowheight1::-webkit-scrollbar-thumb {
+    background: #6fc9f2;
+}
+.dashfirstrowheight::-webkit-scrollbar-track, .dashfirstrowheight1::-webkit-scrollbar-track {
+    background: #bbb;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
