@@ -41,3 +41,4 @@ function assignmentGraded(){
 		</div>
 	)
 }
+export default  assignmentGraded
