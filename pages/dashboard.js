@@ -12,8 +12,19 @@ import DashboardClassAverage from './dashboardClassAverage';
 
 import CurrentAssignment from './dashboardCurrentAssignment';
 import AssignmentToBeGraded from './dashboardAssignmentGraded';
+import {getInfo} from '../services/GenricService';
+import {TEACHER_SECTIONS} from '../components/ConstFile';
 
 export default function Dashboard (props){
+    
+    const[sectionsList,setSectionsList]=useState([])
+    useEffect(() => {
+        getInfo(TEACHER_SECTIONS).then((data) => {
+            console.log('bloom data is : ',data.sections);
+            setSectionsList(data.sections)
+        })
+    }, [])
+  
     useEffect(() => {
         loadAreaChart()
         return () => {
@@ -294,10 +305,12 @@ export default function Dashboard (props){
 						<div className="page-wrapper">
 							{/* <!-- [ Main Content ] start --> */}
 							<div className="row">
-                                <div class="col-md-12">                                    
+                                <div class="col-md-12">
+                                <div class="col text-right">                                    
                                     <ul class="breadcrumb">
                                         <li class="breadcrumb-item dashtopname"><h5>Ms Jane Doe's Science Class</h5></li>
                                     </ul>
+                                    </div>
                                 </div>
                                 <div class="col-md-12">		
 									<div class="card cardbreadcrum"> 
@@ -308,14 +321,16 @@ export default function Dashboard (props){
 														<div class="card-header-right displayblock threedot">		
 															<div class="btn-group card-option">			
 																<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-																	<i class="feather icon-more-horizontal"></i>		
-																</button>									
-																<ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
-																	<li class="dropdown-item disablecursoronly"><a href="#!"><span>2nd Grade <i class="feather icon-lock rytdropdownicon"></i></span></a></li>															
-																	<li class="dropdown-item disablecursoronly"><a href="#!"><span>3rd Grade <i class="feather icon-lock rytdropdownicon"></i></span></a></li>															
-																	<li class="dropdown-item"><a href="#!"><span>4th Grade</span></a></li>	
-																	<li class="dropdown-item disablecursoronly"><a href="#!"><span>5th Grade <i class="feather icon-lock rytdropdownicon"></i></span></a></li>
-																</ul>											
+																	<i class="feather icon-more-horizontal" onClick={openPopup}></i>		
+																</button>	
+                                                                <ul id="popup" class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                                {sectionsList && sectionsList.map((sections)=>{
+                                                                 return (								
+																
+																	<li class="dropdown-item disablecursoronly"><a href="#!"><span>{sections.name} <i class="feather icon-lock rytdropdownicon"></i></span></a></li>															
+                                                               
+                                                                )}	)}
+                                                                 </ul>										
 															</div>									
 														</div>									
 													</div>									
