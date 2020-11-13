@@ -10,6 +10,7 @@ export default function curiculum(props) {
     const [sectionList, setSectionList] = useState([]);
     const [curriculumCard, setCurriculumCard] = useState(0);
     const [topicList, setTopicList] = useState([]);
+    const [value,setValue]=useState('');
     
 
     useEffect(() => {
@@ -26,6 +27,11 @@ export default function curiculum(props) {
             setTopicList(card.topics);
         })
     }, [])
+
+
+    function handleChange(value){
+        console.log(value);
+    }
 
 
 
@@ -51,7 +57,7 @@ export default function curiculum(props) {
                                             <div className="col-md-4 col-xl-4 col-sm-12 col-xs-12">
                                                 <div className="pagedropdown">
                                                     <label style={{ fontWeight: 'bold', fontSize: '17px' }}>Select Grade</label>
-                                                    <select className="form-control" style={{ background: '#fff', borderRadius: '0px' }}>
+                                                    <select className="form-control" style={{ background: '#fff', borderRadius: '0px' }} onChange={e=>handleChange(e.target.value)}>
                                                     {sectionList.map((sectionItem) => (
                                                      <option key={sectionItem.id} value={sectionItem.name}>
                                                          {sectionItem.name}
