@@ -18,6 +18,8 @@ import {TEACHER_SECTIONS} from '../components/ConstFile';
 export default function Dashboard (props){
     
     const[sectionsList,setSectionsList]=useState([])
+   // here you have to pass default sectionid
+    const [refresh, doRefresh] = useState('2342342');
     useEffect(() => {
         getInfo(TEACHER_SECTIONS).then((data) => {
             console.log('bloom data is : ',data.sections);
@@ -320,15 +322,23 @@ export default function Dashboard (props){
 													<div class="card-header card-headerStyle">
 														<div class="card-header-right displayblock threedot">		
 															<div class="btn-group card-option">			
-																<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  >
 																	<i class="feather icon-more-horizontal" onClick={openPopup}></i>		
 																</button>	
                                                                 <ul id="popup" class="list-unstyled card-option dropdown-menu dropdown-menu-right">
                                                                 {sectionsList && sectionsList.map((sections)=>{
+                                                                     let  clickevent  = (event) => {
+                                                                         const section = event.currentTarget.getAttribute("sectionid")
+                                                                        //  Todo : we have to assign section to refresh
+                                                                         doRefresh(refresh => section) 
+                                                                         console.log("refresh value",section)
+                                                                    
+                                                                        
+                                                                      };
                                                                  return (								
 																
-																	<li class="dropdown-item disablecursoronly"><a href="#!"><span>{sections.name} <i class="feather icon-lock rytdropdownicon"></i></span></a></li>															
-                                                               
+																	<li class="dropdown-item disablecursoronly"><a href="#!" sectionid ={sections.id}  onClick={clickevent} ><span>{sections.name}  <i class="feather icon-lock rytdropdownicon"></i></span> </a> </li>															
+                                                                    // doRefresh(refresh => {handleClick}) 
                                                                 )}	)}
                                                                  </ul>										
 															</div>									
@@ -341,18 +351,18 @@ export default function Dashboard (props){
 								</div>
 								<div class="col-xl-4 col-md-12 col-sm-12 col-xs-12">
                                     {/* <Component1/> */}
-                                    <CurrentAssignment/>
+                                    <CurrentAssignment refresh={refresh} />
                                 </div>
                                 <div class="col-xl-4 col-md-12 col-sm-12 col-xs-12">
                                     {/* <Component2/> */}
-                                    <AssignmentToBeGraded/>
+                                    <AssignmentToBeGraded refresh={refresh}/>
                                 </div>
                                 <div class="col-xl-4 col-md-12 col-sm-12 col-xs-12">
                                     {/* <Component3/> */}
-                                    <AssignmentToBeGraded/>
+                                    <AssignmentToBeGraded refresh={refresh}/>
                                 </div>
 								<div class="col-md-12 col-sm-12 col-xs-12 col-xl-12">
-                                    <DashboardClassAverage/> 
+                                    <DashboardClassAverage refresh={refresh}/> 
                                 </div>
 								<div className="col-xl-6 col-md-12 card-AreaChartStyle" >
 									<div className="card">
@@ -424,7 +434,7 @@ export default function Dashboard (props){
                                                 </div>
                                                 
                                                 
-                                                <StudentActivity/>
+                                                <StudentActivity refresh={refresh}/>
                                             </div>
                                         </div>
                                         {/* // <!-- [ Recent Users ] end --> */}

@@ -2,16 +2,18 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import {getInfo} from '../services/GenricService';
 import {ASSIGNMENT_TO_BE_GRADED} from '../components/ConstFile';
-function assignmentGraded(){
+function assignmentGraded(props){
     const [assignment, setAssignment] = useState(0);
     const[assignmentList,setAssignmentList]=useState([])
-    useEffect(() => { getInfo(ASSIGNMENT_TO_BE_GRADED).then((data) => {
+    useEffect(() => { getInfo(`${ASSIGNMENT_TO_BE_GRADED}/786868/assignments/to-be-graded`).then((data) => {
+		//Todo : we have to assign refresh(sessionid) to dynamic URL
+        console.log("ASSIGNMENT_TO_BE_GRADED:section id",props.refresh)
         console.log('bloom data is : ',data);
         setAssignment(data);
         setAssignmentList(data.assignments)
 
     })
-	}, [])
+	}, [props.refresh])
 	return(
 		<div>
 		<div className="card Recent-Users dashfirstrowheight">

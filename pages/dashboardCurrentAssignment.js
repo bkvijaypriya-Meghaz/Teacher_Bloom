@@ -3,19 +3,21 @@ import { useState, useEffect } from 'react';
 import {getInfo} from '../services/GenricService';
 import {CURRENT_RESPONSE} from '../components/ConstFile';
 
-function dashboardCurrentAssignment() {
+function dashboardCurrentAssignment(props) {
 
     const [responseList,setResponseList] = useState(0);
     const[assigmentList,setAssignmentList]=useState([]);
     const[progressList,setProgressList]=useState([]);
     useEffect(() => {
-        getInfo(CURRENT_RESPONSE).then((data) => {
+          //Todo : we have to assign refresh(sessionid) to dynamic URL
+        console.log("dashboardCurrentAssignment :section id",props.refresh)
+        getInfo(`${CURRENT_RESPONSE}/2342342/assignments/current`).then((data) => {
             console.log('RESPONSE data is : ',data);
             setResponseList(data);
             setAssignmentList(data.assignments)
             
             let temp=[];
-
+            console.log("refreshed",props.refresh)
             data.assignments.map((progressitem,i)=>{
             temp[i] = "{{width:"+`"${progressitem.progress}%"`+"}}"
              progressitem.progress = progressitem.progress+"%"
@@ -29,7 +31,7 @@ function dashboardCurrentAssignment() {
             
 
         })
-    }, [])
+    }, [props.refresh])
 
     
     return (

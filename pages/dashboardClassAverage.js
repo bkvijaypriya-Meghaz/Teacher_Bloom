@@ -7,7 +7,7 @@ import {CLASS_AVERAGE} from '../components/ConstFile';
 
 
 
-function dashboardClassAverage() {
+function dashboardClassAverage(props) {
 
 
 	const [classAverage, setClassAverage] = useState(0);
@@ -17,6 +17,8 @@ function dashboardClassAverage() {
 	
 	
     useEffect(() => {
+		//Todo :CLASS_AVERAGE: we have to assign refresh(sessionid) to dynamic URL
+        console.log("CLASS_AVERAGE:section id",props.refresh)
         getInfo(CLASS_AVERAGE).then((data) => {
                console.log('bloom data is : ',data.teacherid);
                console.log('Total students is : ',data.totalStudents);
@@ -50,7 +52,7 @@ function dashboardClassAverage() {
                 
         
             
-	}, [])
+	},[props.refresh])
 	
 	console.log('totalstudents:',totalStudent)
 	console.log('classAverage.totalStudents:',classAverage.totalStudents)
