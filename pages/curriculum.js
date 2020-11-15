@@ -10,7 +10,7 @@ export default function curiculum(props) {
     const [sectionList, setSectionList] = useState([]);
     const [curriculumCard, setCurriculumCard] = useState(0);
     const [topicList, setTopicList] = useState([]);
-    const [value,setValue]=useState('');
+    const [selectedSelectionId,setSelectedSelectionId]=useState('');
     
 
     useEffect(() => {
@@ -21,20 +21,29 @@ export default function curiculum(props) {
         })
    
          
+        // getInfo(CURRICULUM_CARDS).then((card)=>{
+        //     console.log('curriculum data is : ',card);
+        //     setCurriculumCard(card);
+        //     setTopicList(card.topics);
+        // })
+    }, [])
+
+
+    function handleChange(selectedId){
+        console.log("selected Id : ",selectedId);
+        setSelectedSelectionId(selectedId);
+    }
+
+
+    useEffect(()=>{
+        console.log("API invoked for the selected sectionid : ",selectedSelectionId)
+        //Todo : need to change the URL depends on the selected selection id after the backend api works properly
         getInfo(CURRICULUM_CARDS).then((card)=>{
             console.log('curriculum data is : ',card);
             setCurriculumCard(card);
             setTopicList(card.topics);
         })
-    }, [])
-
-
-    function handleChange(value){
-        console.log(value);
-    }
-
-
-
+    },[selectedSelectionId])
 
 
 
@@ -59,7 +68,7 @@ export default function curiculum(props) {
                                                     <label style={{ fontWeight: 'bold', fontSize: '17px' }}>Select Grade</label>
                                                     <select className="form-control" style={{ background: '#fff', borderRadius: '0px' }} onChange={e=>handleChange(e.target.value)}>
                                                     {sectionList.map((sectionItem) => (
-                                                     <option key={sectionItem.id} value={sectionItem.name}>
+                                                     <option key={sectionItem.id} value={sectionItem.id}>
                                                          {sectionItem.name}
                                                             </option>
                                                         ))}
