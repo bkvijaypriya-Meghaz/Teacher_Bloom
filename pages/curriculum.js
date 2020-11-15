@@ -1,13 +1,17 @@
 import TeacherLayout from '../layout/TeacherLayout';
 import CurriculumCard from './curriculum-card'
 import {useState, useEffect} from 'react'
-import {getInfo} from '../services/GenricService';
-
+import {getInfo} from '../services/GenricService'
+import {CURRICULUM_CARDS} from '../components/ConstFile';
 import React from 'react'
 
 export default function curiculum(props) {
     const [section, setSection] = useState(0);
     const [sectionList, setSectionList] = useState([]);
+    const [curriculumCard, setCurriculumCard] = useState(0);
+    const [topicList, setTopicList] = useState([]);
+    const [value,setValue]=useState('');
+    
 
     useEffect(() => {
         getInfo("https://bloomlms.azure-api.net/teacher/v1/23423424/sections").then((data) => {
@@ -15,7 +19,22 @@ export default function curiculum(props) {
             setSection(data);
             setSectionList(data.sections);
         })
+   
+         
+        getInfo(CURRICULUM_CARDS).then((card)=>{
+            console.log('curriculum data is : ',card);
+            setCurriculumCard(card);
+            setTopicList(card.topics);
+        })
     }, [])
+
+
+    function handleChange(value){
+        console.log(value);
+    }
+
+
+
 
 
 
@@ -38,7 +57,7 @@ export default function curiculum(props) {
                                             <div className="col-md-4 col-xl-4 col-sm-12 col-xs-12">
                                                 <div className="pagedropdown">
                                                     <label style={{ fontWeight: 'bold', fontSize: '17px' }}>Select Grade</label>
-                                                    <select className="form-control" style={{ background: '#fff', borderRadius: '0px' }}>
+                                                    <select className="form-control" style={{ background: '#fff', borderRadius: '0px' }} onChange={e=>handleChange(e.target.value)}>
                                                     {sectionList.map((sectionItem) => (
                                                      <option key={sectionItem.id} value={sectionItem.name}>
                                                          {sectionItem.name}
@@ -54,34 +73,26 @@ export default function curiculum(props) {
 
                                         </div>
                                         <div className="row m-t-20">
-                                            <div className="col-md-6 col-xl-4">
-                                                <CurriculumCard title='4.5A Classifying Matter' grade='Fourth Grade' icon="feather icon-shopping-cart f-30 text-white rides-icon" status="visible" />
-                                            </div>
+                                        {
+                                            topicList && topicList.map((topicItem)=>{
+						                    return(
+                                                    <div className="col-md-6 col-xl-4">
+
+                                                    <CurriculumCard title={topicItem.name} grade={curriculumCard.name} icon="feather icon-shopping-cart f-30 text-white rides-icon" status="visible" />
+                                                     </div>
+                                            ) 
+                                            }
+                                            )
+                                       }         
 
 
-                                            <div className="col-md-6 col-xl-4">
-                                                <CurriculumCard title='4.5B Changes from Heat' grade='Fourth Grade' icon="feather icon-command f-30 text-white rides-icon" status="visible" />
-                                            </div>
-                                            <div className="col-md-6 col-xl-4">
-                                                <CurriculumCard title='4.5C Mixtures' grade='Fourth Grade' icon="mdi mdi-atom f-30 text-white rides-icon" status="visible" />
-                                            </div>
-                                            <div className="col-md-6 col-xl-4">
-                                                <CurriculumCard title='4.6A Forms of Energy' grade='Fourth Grade' icon="ti-panel f-30 text-white rides-icon" status="visible" />
-                                            </div>
-                                            <div className="col-md-6 col-xl-4">
-                                                <CurriculumCard title='4.6BC Electricity, Conductors, & Insulators' grade='Fourth Grade' icon="icon-chemistry f-30 text-white rides-icon" status="visible" />
-                                            </div>
-                                            <div className="col-md-6 col-xl-4">
-                                                <CurriculumCard title='4.6D Experimenting with Forces' grade='Fourth Grade' icon="ti-view-list-alt f-30 text-white rides-icon" status="visible" />
-                                            </div>
-                                            <div className="col-md-6 col-xl-4">
-                                                <CurriculumCard title='4.7A Properties of Soil' grade='Fourth Grade' icon="ti-view-list-alt f-30 text-white rides-icon" status="visible" />
-                                            </div>
-                                            <div className="col-md-6 col-xl-4">
+                                          
+                                                
+                                           
+                                    {/* <div className="col-md-6 col-xl-4">
                                                 <CurriculumCard title='4.7B Changes to Land' grade='Fourth Grade' icon="ti-view-list-alt f-30 text-white rides-icon" status="visible" />
                                             </div>
-                                            <div className="col-md-6 col-xl-4">
-                                            <div className="card rides-bar">
+                                            <div className="col-md-6 col-xl-4">         <div className="card rides-bar">
                                             <div className="card-block">
                                                 <a href="startlesson">
                                                     <div className="row d-flex align-items-center">
@@ -106,7 +117,7 @@ export default function curiculum(props) {
                                             </div>
                                             <div className="col-md-6 col-xl-4">
                                                 <CurriculumCard title='4.8C Patters on Earth' grade='Fourth Grade' icon="ti-view-list-alt f-30 text-white rides-icon" status="visible" />
-                                            </div>
+                                            </div> */}
                                         </div>
                                         {/* [ Main Content ] end */}
                                     </div>
@@ -150,6 +161,10 @@ export default function curiculum(props) {
         // <script src="../assets/js/pages/form-select-custom.js"></script>
     )
 }
+
+
+
+
 
 
 
