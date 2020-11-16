@@ -291,7 +291,7 @@ export default function Dashboard (props){
         <Modal
             isOpen={bloomTeacherSetupScreen1Visibility}
             hideModal={hideTeacherSetupModal1}
-            modalTitle="Bloom Teacher Setup"
+            modalTitle= "Bloom Teacher Setup"
         >
             <TeacherSetup hideModal={hideTeacherSetupModal1}/>
         </Modal>

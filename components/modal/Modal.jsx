@@ -27,8 +27,8 @@ const Modal = (props) => {
             isOpen={props.isOpen}
             onRequestClose={props.hideModal}
             className={{
-                base: "modalBase",
-                afterOpen: "modalAfterOpen",
+                base: "",
+                afterOpen: "modal-dialog",
                 beforeClose: "modalBeforeClose",
             }}
             overlayClassName={{
@@ -39,12 +39,18 @@ const Modal = (props) => {
             shouldCloseOnOverlayClick={false}
             closeTimeoutMS={parseInt("animationDuration", 10)}
         >
-            <div className={"closeButtonContainer"}>
+            <div className="modal-content">
+            <div className="modal-header">
+            <div className="modal-title font-h5">{props.modalTitle ? props.modalTitle : "Modal title"}</div>
+            <div className={""}>
                 {/* <img role="close" onClick={props.hideModal} src={exit} alt="Close" /> */}
-                <button className="modal-close-button" onClick={props.hideModal}>X</button>
+                <button className="close" aria-label="Close" data-dismiss="modal" onClick={props.hideModal}>
+                <span aria-hidden='true'>x</span>    
+                </button>
             </div>
-            <div className="modalTitleStyle">{props.modalTitle ? props.modalTitle : "Modal title"}</div>
+            </div>
             {props.children}
+            </div>
         </ReactModal>
     );
 };
