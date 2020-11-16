@@ -67,107 +67,96 @@ export class TeacherSetup extends React.Component{
 
     render(){
         return (
-            <div className="teacher-setup-content">
-                <hr />
+            <div className="modal-body">
                { this.state.whichScreen === 1 ?
                 <div className="">
-                    <div className="teacher-setup-screen welcome-screen">
-                        <h4>Welcome to Bloom</h4> <br />
-                        <div className="teacher-setup-bloom-logo">
-                            <img src="../assets/images/bloom-logo.png" className="bloomlogo"/>
-                        </div> <br />
-                        <h4>Click Next step to continue</h4>
-                    </div>
+                    <div className="step1txt">Welcome to </div>
+                        <div className="step1img">
+                            <img src="../assets/images/bloom-logo.png"/>
+                        </div> 
+                    <div className="step1txt">Click Next step to continue</div>
                         <hr />
                         <div className="teacher-setup-next-step-container">
-                            <button className="action-button" onClick={this.nextStep1}>Next step</button>
+                            <button className="action-button btn btn-primary" onClick={this.nextStep1}>Next step</button>
                         </div>
                 </div>
                 : (
                     this.state.whichScreen ===2 ? 
                     <div>
-                        <div className="teacher-setup-screen second-screen">
-                            <h4>STEP1: CONFIRM YOUR PROFILE</h4>
-                            <div className="teacher-setup-input-group">
+                        <div className="step1txt">STEP1: CONFIRM YOUR PROFILE</div>
+                            <div className="form-group">
                                 <label htmlFor="firstName">First Name</label>
                                 <br/>
-                                <input className="teacher-setup-input-field" type="text" onChange={this.handleChange} name="firstName" id="firstName"/>
+                                <input className="form-control fromtotxtbox" type="text" onChange={this.handleChange} name="firstName" id="firstName"/>
                             </div>
-                            <div className="teacher-setup-input-group">
+                            <div className="form-group">
                                 <label htmlFor="lastName">Last Name</label>
                                 <br/>
-                                <input className="teacher-setup-input-field" type="text" onChange={this.handleChange} name="lastName" id="lastName"/>
+                                <input className="form-control fromtotxtbox" type="text" onChange={this.handleChange} name="lastName" id="lastName"/>
                             </div>
-                            <div className="teacher-setup-input-group">
+                            <div className="form-group">
                                 <label htmlFor="displayName">Display Name</label>
                                 <br/>
-                                <input className="teacher-setup-input-field" type="text" onChange={this.handleChange} name="displayName" id="displayName"/>
+                                <input className="form-control fromtotxtbox" type="text" onChange={this.handleChange} name="displayName" id="displayName"/>
                             </div>
-                        </div> 
                             <hr />
                             <div className="teacher-setup-next-step-container">
                                 <button className="action-button" onClick={this.nextStep2}>Next Step</button>
                             </div>
                     </div> :
                     <div>
-                        <div className="teacher-setup-screen">
-                            <h4>STEP2: CONFIRM YOUR PROFILE</h4>
-                            <div className="finish-screen">
-                                <div className="finish-screen-first-column">
-                                    Section
-                                    <div className="teacher-setup-select-group">
-                                        <select className="teacher-setup-select-field" onChange={this.handleChange} name="section1" id="section1">
-                                            <option value="Section 1 - a">Section 1 - a</option>
-                                            <option value="Section 1 - b">Section 1 - b</option>
-                                            <option value="Section 1 - c">Section 1 - c</option>
-                                            <option value="Section 1 - d">Section 1 - d</option>
-                                        </select>
-                                    </div>
-                                    <div className="teacher-setup-select-group">
-                                        <select className="teacher-setup-select-field" onChange={this.handleChange} name="section2" id="section2">
-                                            <option value="Section 2 - a">Section 2 - a</option>
-                                            <option value="Section 2 - b">Section 2 - b</option>
-                                            <option value="Section 2 - c">Section 2 - c</option>
-                                            <option value="Section 2 - d">Section 2 - d</option>
-                                        </select>
-                                    </div>
-                                    <div className="teacher-setup-select-group">
-                                        <select className="teacher-setup-select-field" onChange={this.handleChange} name="section3" id="section3">
-                                            <option value="Section 3 - a">Section 3 - a</option>
-                                            <option value="Section 3 - b">Section 3 - b</option>
-                                            <option value="Section 3 - c">Section 3 - c</option>
-                                            <option value="Section 3 - d">Section 3 - d</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="finish-screen-second-column">
-                                    Grade
-                                    <div className="teacher-setup-select-group">
-                                        <select className="teacher-setup-select-field" onChange={this.handleChange} name="grade1" id="grade1">
-                                            <option value="Kindergarten">Kindergarten</option>
-                                            <option value="Grade-1">Grade-1</option>
-                                            <option value="Grade-2">Grade-2</option>
-                                            <option value="Grade-3">Grade-3</option>
-                                        </select>
-                                    </div>
-                                    <div className="teacher-setup-select-group">
-                                        <select className="teacher-setup-select-field" onChange={this.handleChange} name="grade2" id="grade2">
-                                            <option value="Kindergarten">Kindergarten</option>
-                                            <option value="Grade-1">Grade-1</option>
-                                            <option value="Grade-2">Grade-2</option>
-                                            <option value="Grade-3">Grade-3</option>
-                                        </select>
-                                    </div>
-                                    <div className="teacher-setup-select-group">
-                                        <select className="teacher-setup-select-field" onChange={this.handleChange} name="grade3" id="grade3">
-                                            <option value="Kindergarten">Kindergarten</option>
-                                            <option value="Grade-1">Grade-1</option>
-                                            <option value="Grade-2">Grade-2</option>
-                                            <option value="Grade-3">Grade-3</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="step1txt">STEP2: ASSIGN GRADE LEVEL TO SECTIONS</div>
+                         <div className="row">
+                            <div className="col-md-6 col-sm-12 col-xs-12">
+                                 <div className="form-group">
+                                     <label for>Section</label>
+                                     <select className="form-control fromtotxtbox">
+                                            <option value="Section 1 - a">Science 10234 - Period 1</option>
+                                            <option value="Section 1 - b">Science 2232 - Period 2</option>
+                                            <option value="Section 1 - c">Science 2335 - Period 3</option>
+                                     </select>
+                                 </div>
+                             </div>
+                             <div className="col-md-6 col-sm-12 col-xs-12">
+                                 <div className="form-group">
+                                     <label for>Grade Level</label>
+                                     <select className="form-control fromtotxtbox">
+                                            <option value="Section 1 - a">Kindergarten</option>   
+                                     </select>
+                                 </div>
+                             </div>
+                             <div className="col-md-6 col-sm-12 col-xs-12">
+                                 <div className="form-group">
+                                     <select className="form-control fromtotxtbox">
+                                            <option value="Section 1 - a">Science 10234 - Period 1</option>
+                                            <option value="Section 1 - b" selected>Science 2232 - Period 2</option>
+                                            <option value="Section 1 - c">Science 2335 - Period 3</option>
+                                     </select>
+                                 </div>
+                             </div>
+                             <div className="col-md-6 col-sm-12 col-xs-12">
+                                 <div className="form-group">
+                                     <select className="form-control fromtotxtbox">
+                                            <option value="Section 1 - a">Kindergarten</option>   
+                                     </select>
+                                 </div>
+                             </div>
+                             <div className="col-md-6 col-sm-12 col-xs-12">
+                                 <div className="form-group">
+                                     <select className="form-control fromtotxtbox">
+                                            <option value="Section 1 - a">Science 10234 - Period 1</option>
+                                            <option value="Section 1 - b">Science 2232 - Period 2</option>
+                                            <option value="Section 1 - c" selected>Science 2335 - Period 3</option>
+                                     </select>
+                                 </div>
+                             </div>
+                             <div className="col-md-6 col-sm-12 col-xs-12">
+                                 <div className="form-group">
+                                     <select className="form-control fromtotxtbox">
+                                            <option value="Section 1 - a">Kindergarten</option>   
+                                     </select>
+                                 </div>
+                             </div>
                         </div>
                         <hr />
                         <div className="teacher-setup-next-step-container">
