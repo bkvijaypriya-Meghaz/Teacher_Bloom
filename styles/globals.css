@@ -77,3 +77,24 @@
 *, ::after, ::before {
     box-sizing: border-box;
 }
+
+.progres.progressStyle {
+    height: 12px;
+    font-size: 10px;
+    background-color: #f4f7fa;
+    border-radius: 0;
+    overflow: visible;
+}
+.progress-bar.progress-barStyle {
+    background-color: #29cde3;
+    -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+}
+.progressdiv.progressdivStyle {
+    margin-top: 9px;
+    border: 1px solid #29cde3;
+    border-radius: 7px;
+}
+.icon-calendar:before {
+    content: "\e83a";
+}
