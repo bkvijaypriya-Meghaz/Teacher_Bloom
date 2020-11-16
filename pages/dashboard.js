@@ -15,6 +15,8 @@ import AssignmentToBeGraded from './dashboardAssignmentGraded';
 import {getInfo} from '../services/GenricService';
 import {TEACHER_SECTIONS} from '../components/ConstFile';
 
+import BarChart from './dashboardBarChart';
+
 export default function Dashboard (props){
     
     const[sectionsList,setSectionsList]=useState([])
@@ -27,12 +29,12 @@ export default function Dashboard (props){
         })
     }, [])
   
-    useEffect(() => {
-        loadAreaChart()
-        return () => {
-            console.log("After loading load---------------------")
-        }
-    }, [])
+    // useEffect(() => {
+    //     loadAreaChart()
+    //     return () => {
+    //         console.log("After loading load---------------------")
+    //     }
+    // }, [])
 
     useEffect(() => {
         showTeacherSetupModal1();   
@@ -376,13 +378,13 @@ export default function Dashboard (props){
 								</div>
 								<div className="col-xl-12 col-md-12">
 									<div className="card">
-										<div className="row card-rowStyle">
-											<div className="col-12 col-md-7">
+										{/* <div className="row card-rowStyle"> */}
+											 {/* <div className="col-12 col-md-7">
 												<div className="card-header card-headerStyle" >
 													<h5>4th Grade Science Attendance</h5>	
 												</div>
-											</div>
-											<div className="col-12 col-md-5 text-right">
+											</div> */}
+											{/* <div className="col-12 col-md-5 text-right">
 												<div className="card-header card-headerStyle" >
 												<div className="card-header-right">
 													<div className="btn-group card-option">
@@ -400,14 +402,11 @@ export default function Dashboard (props){
 													</div>
 												</div>
 												</div>
-											</div>
-										</div>
-										<div className="card-block  text-center">
-											<div className="ylabel">Students</div>
-											<div id="chart-echart-line-area" className="chart-echart-line-areaStyle"></div>
-											<div className="xlabel">Days Of Months</div>
-										</div>
-                                        <div className="col-md-12 col-xl-12">
+											</div> */}
+										{/* </div>  */}
+										
+                                        <BarChart/>
+										<div className="col-md-12 col-xl-12">
                                             <div className="card fullcalendar-card">
                                                 <div className="card-header">
                                                     <h5>Class Schedule</h5>
