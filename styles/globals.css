@@ -56,6 +56,16 @@
 .widthStyle85{
     width: 85%;
 }
+.card-headerStyle{
+    background: #fff;
+}
+.createassessment {
+    font-size: 23px;
+    text-transform: uppercase;
+    color: #05bcc5;
+    padding: 22px 0px 43px 0px;
+    padding: 33px 0px;
+}
 
 /* New UI Implementation */
 .dashfirstrowheight {
