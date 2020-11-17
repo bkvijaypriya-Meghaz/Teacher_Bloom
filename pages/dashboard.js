@@ -15,6 +15,8 @@ import AssignmentToBeGraded from './dashboardAssignmentGraded';
 import {getInfo} from '../services/GenricService';
 import {TEACHER_SECTIONS} from '../components/ConstFile';
 
+import BarChart from './dashboardBarChart';
+
 export default function Dashboard (props){
     
     const[sectionsList,setSectionsList]=useState([])
@@ -27,12 +29,12 @@ export default function Dashboard (props){
         })
     }, [])
   
-    useEffect(() => {
-        loadAreaChart()
-        return () => {
-            console.log("After loading load---------------------")
-        }
-    }, [])
+    // useEffect(() => {
+    //     loadAreaChart()
+    //     return () => {
+    //         console.log("After loading load---------------------")
+    //     }
+    // }, [])
 
     useEffect(() => {
         showTeacherSetupModal1();   
@@ -291,7 +293,7 @@ export default function Dashboard (props){
         <Modal
             isOpen={bloomTeacherSetupScreen1Visibility}
             hideModal={hideTeacherSetupModal1}
-            modalTitle="Bloom Teacher Setup"
+            modalTitle= "Bloom Teacher Setup"
         >
             <TeacherSetup hideModal={hideTeacherSetupModal1}/>
         </Modal>
@@ -307,25 +309,25 @@ export default function Dashboard (props){
 						<div className="page-wrapper">
 							{/* <!-- [ Main Content ] start --> */}
 							<div className="row">
-                                <div class="col-md-12">
-                                <div class="col text-right">                                    
-                                    <ul class="breadcrumb">
-                                        <li class="breadcrumb-item dashtopname"><h5>Ms Jane Doe's Science Class</h5></li>
+                                <div className="col-md-12">
+                                <div className="col text-right">                                    
+                                    <ul className="breadcrumb">
+                                        <li className="breadcrumb-item dashtopname"><h5>Ms Jane Doe's Science Class</h5></li>
                                     </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-12">		
-									<div class="card cardbreadcrum"> 
-										<div class="card-block nopadding">  
-											<div class="row nomargin">		
-												<div class="col text-right">	
-													<div class="card-header card-headerStyle">
-														<div class="card-header-right displayblock threedot">		
-															<div class="btn-group card-option">			
-																<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  >
-																	<i class="feather icon-more-horizontal" onClick={openPopup}></i>		
+                                <div className="col-md-12">		
+									<div className="card cardbreadcrum"> 
+										<div className="card-block nopadding">  
+											<div className="row nomargin">		
+												<div className="col text-right">	
+													<div className="card-header card-headerStyle">
+														<div className="card-header-right displayblock threedot">		
+															<div className="btn-group card-option">			
+																<button type="button" className="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  >
+																	<i className="feather icon-more-horizontal" onClick={openPopup}></i>		
 																</button>	
-                                                                <ul id="popup" class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                                <ul id="popup" className="list-unstyled card-option dropdown-menu dropdown-menu-right">
                                                                 {sectionsList && sectionsList.map((sections)=>{
                                                                      let  clickevent  = (event) => {
                                                                          const section = event.currentTarget.getAttribute("sectionid")
@@ -337,7 +339,7 @@ export default function Dashboard (props){
                                                                       };
                                                                  return (								
 																
-																	<li class="dropdown-item disablecursoronly"><a href="#!" sectionid ={sections.id}  onClick={clickevent} ><span>{sections.name}  <i class="feather icon-lock rytdropdownicon"></i></span> </a> </li>															
+																	<li className="dropdown-item disablecursoronly"><a href="#!" sectionid ={sections.id}  onClick={clickevent} ><span>{sections.name}  <i className="feather icon-lock rytdropdownicon"></i></span> </a> </li>															
                                                                     // doRefresh(refresh => {handleClick}) 
                                                                 )}	)}
                                                                  </ul>										
@@ -349,19 +351,19 @@ export default function Dashboard (props){
 										</div>                           
 									</div>                          
 								</div>
-								<div class="col-xl-4 col-md-12 col-sm-12 col-xs-12">
+								<div className="col-xl-4 col-md-12 col-sm-12 col-xs-12">
                                     {/* <Component1/> */}
                                     <CurrentAssignment refresh={refresh} />
                                 </div>
-                                <div class="col-xl-4 col-md-12 col-sm-12 col-xs-12">
+                                <div className="col-xl-4 col-md-12 col-sm-12 col-xs-12">
                                     {/* <Component2/> */}
                                     <AssignmentToBeGraded refresh={refresh}/>
                                 </div>
-                                <div class="col-xl-4 col-md-12 col-sm-12 col-xs-12">
+                                <div className="col-xl-4 col-md-12 col-sm-12 col-xs-12">
                                     {/* <Component3/> */}
                                     <AssignmentToBeGraded refresh={refresh}/>
                                 </div>
-								<div class="col-md-12 col-sm-12 col-xs-12 col-xl-12">
+								<div className="col-md-12 col-sm-12 col-xs-12 col-xl-12">
                                     <DashboardClassAverage refresh={refresh}/> 
                                 </div>
 								<div className="col-xl-6 col-md-12 card-AreaChartStyle" >
@@ -376,13 +378,13 @@ export default function Dashboard (props){
 								</div>
 								<div className="col-xl-12 col-md-12">
 									<div className="card">
-										<div className="row card-rowStyle">
-											<div className="col-12 col-md-7">
+										{/* <div className="row card-rowStyle"> */}
+											 {/* <div className="col-12 col-md-7">
 												<div className="card-header card-headerStyle" >
 													<h5>4th Grade Science Attendance</h5>	
 												</div>
-											</div>
-											<div className="col-12 col-md-5 text-right">
+											</div> */}
+											{/* <div className="col-12 col-md-5 text-right">
 												<div className="card-header card-headerStyle" >
 												<div className="card-header-right">
 													<div className="btn-group card-option">
@@ -400,14 +402,11 @@ export default function Dashboard (props){
 													</div>
 												</div>
 												</div>
-											</div>
-										</div>
-										<div className="card-block  text-center">
-											<div className="ylabel">Students</div>
-											<div id="chart-echart-line-area" className="chart-echart-line-areaStyle"></div>
-											<div className="xlabel">Days Of Months</div>
-										</div>
-                                        <div className="col-md-12 col-xl-12">
+											</div> */}
+										{/* </div>  */}
+										
+                                        <BarChart/>
+										<div className="col-md-12 col-xl-12">
                                             <div className="card fullcalendar-card">
                                                 <div className="card-header">
                                                     <h5>Class Schedule</h5>

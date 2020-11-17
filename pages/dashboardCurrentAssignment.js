@@ -2,6 +2,8 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import {getInfo} from '../services/GenricService';
 import {CURRENT_RESPONSE} from '../components/ConstFile';
+import {FiCalendar, FiCheck} from 'react-icons/fi';
+//import {FiSearch, FiBook} from 'react-icons/fi';
 
 function dashboardCurrentAssignment(props) {
 
@@ -49,16 +51,26 @@ function dashboardCurrentAssignment(props) {
 						<tbody>
                         {
                            assigmentList && assigmentList.map((assignmentitem,i)=>{
+                               //Todo : Need to check for the icon depends on the item
+                            //    var compValue = ""
+                            //    if(i==0)
+                            //     compValue="<FiCheck/>"
+                            //    if (i==1)
+                            //     compValue="<FiSearch/>"
+                            //     if(i==2)
+                            //         compValue="<FiBook/>"
                            return(    
 
                             <tr className="unread">
                                 <td>
                            <h6 className="mb-1">{assignmentitem.name}</h6>
-                                    <p className="m-0 f-12"><i className="feather icon-check currassicon"></i> {assignmentitem.subtitle}</p>
+                                    <p className="m-0 f-12"><i className="feather icon-check currassicon">
+                                            {/* {{compValue}} */} <FiCheck/>
+                                        </i> {assignmentitem.subtitle}</p>
                                 </td> 
-                                <td className="text-right">{assignmentitem.dueDate} <i className="feather icon-calendar calendericon"></i>
-                                    <div className="progress progressdiv">
-                                    <div className="progress-bar" role="progressbar" style={{'width':assignmentitem.progress}}  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{assignmentitem.progress} </div>
+                                <td className="text-right">{assignmentitem.dueDate} <i className="feather icon-calendar"><FiCalendar className="icon-calendar"/></i>
+                                    <div className="progress progressdiv progressStyle progressdivStyle">
+                                    <div className="progress-bar progress-barStyle" role="progressbar" style={{'width':assignmentitem.progress}}  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{assignmentitem.progress} </div>
                                     </div>
                                 </td>
                             </tr>
