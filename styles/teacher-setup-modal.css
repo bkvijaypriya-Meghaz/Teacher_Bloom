@@ -1,3 +1,5 @@
+
+
 .standardModalTitle {
     color: #4c4c4c;
     border-bottom: 1px solid #f7f7f7;
@@ -226,4 +228,30 @@
     to {
         opacity: 0;
     }
+}
+
+.step1txt {
+    text-align: center;
+    font-size: 21px;
+    text-transform: uppercase;
+    margin-top: 13px;
+    margin-bottom: 20px;
+}
+
+.step1img {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
+.fromtotxtbox {
+    padding: 3px 8px;
+}
+
+.font-h5{
+    font-size: 18px;
+    color: black;
+    font-weight: 400;
+    font-family: inherit;
+    width: 466px;
 }

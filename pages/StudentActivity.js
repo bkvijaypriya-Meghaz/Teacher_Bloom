@@ -4,18 +4,20 @@ import { useState, useEffect } from 'react';
 import {getInfo} from '../services/GenricService';
 import {STUDENT_ACTIVITY} from '../components/ConstFile';
 
-export function StudentActivity()  {
+export function StudentActivity(props)  {
 
     const [stuActivityList, setstuActivityList] = useState(0);
     const[activityList,setActivityList]=useState([])
     useEffect(() => {
-        getInfo(STUDENT_ACTIVITY).then((data) => {
+        //Todo : we have to assign refresh(sessionid) to dynamic URL
+        console.log("STUDENT_ACTIVITY:section id",props.refresh)
+        getInfo(`${STUDENT_ACTIVITY}/2342344/5675677/activity`).then((data) => {
             console.log('bloom data is : ',data);
             setstuActivityList(data);
             setActivityList(data.activities)
 
         })
-    }, [])
+    }, [props.refresh])
   
 //     {items && items.map(item => {
 //         return <div key={item.id}>{item.title}</div>;
