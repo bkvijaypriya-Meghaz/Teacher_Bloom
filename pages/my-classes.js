@@ -107,20 +107,20 @@ export default function myClasses(props){
                                                              <i className="feather"><FiUser/></i> <br/>Students</label></a>
                                                 </div>
 												<div className="col-3">
-                                                    <a href="assessments"><label className="label f-12 f-w-400 gradeitem"> <i className="feather icon-file-text"></i> <br/>Assessments</label></a>
+                                                    <a href="grade_assignment"><label className="label f-12 f-w-400 gradeitem"> <i className="feather icon-file-text"></i> <br/>Assessments</label></a>
                                                 </div>
 												<div className="col-3">
                                                     <a href="grade_startclass"><label className="label f-12 f-w-400 gradeitem"> <i className="feather icon-play"></i> <br/>Start Class</label></a>
                                                 </div>
 												<div className="col-3">
-                                                    <a href="attendanceTracking"><label className="label f-12 f-w-400 gradeitem"> 
+                                                    <a href="grade_gradebook"><label className="label f-12 f-w-400 gradeitem"> 
                                                     <i className="icon-book-open"></i> <br/>Attendance Tracking</label></a>
                                                 </div>
                                                 
                                             </div>
                                         </div>
                                     </div>
-                                </div>								<div className="col-md-12 col-xl-1">								</div>
+                                </div><div className="col-md-12 col-xl-1"></div>
 								
 								
 								{/* <!--

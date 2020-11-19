@@ -1,4 +1,5 @@
 import React from 'react'
+import { FiLock } from 'react-icons/fi'
 
 export default function CurriculumCard({ title, grade, icon,status }) {
     return (
@@ -14,7 +15,7 @@ export default function CurriculumCard({ title, grade, icon,status }) {
                             <h6 className="fourthgrade">{grade}</h6>
                         </div>
                         <div className="col-auto text-right">
-                            <i className="feather icon-lock f-20 lockicon"></i>
+                            <i className="feather icon-lock f-20 lockicon"><FiLock/></i>
                         </div>
                         <div className="curricumnotavail" style = {{visibility: status }}>not available in preview</div>
                     </div>

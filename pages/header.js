@@ -32,21 +32,21 @@ function Header  () {
      document.getElementById("toggleDisplay1").setAttribute("aria-expanded", x);
      }
 
-       const chatboxDisplay = () => {
-        document.getElementById("chatboxDisplay").classList.add("open");
-       }
+    //    const chatboxDisplay = () => {
+    //     document.getElementById("chatboxDisplay").classList.add("open");
+    //    }
    
-       const chatboxClose = () => {
-        document.getElementById("chatboxDisplay").classList.remove("open");
-       } 
+    //    const chatboxClose = () => {
+    //     document.getElementById("chatboxDisplay").classList.remove("open");
+    //    } 
 
-       const chatboxTextDisplay =() => {
-        document.getElementById("textChatDisplay").classList.add("open");
-       }
+    //    const chatboxTextDisplay =() => {
+    //     document.getElementById("textChatDisplay").classList.add("open");
+    //    }
 
-       const chatboxTextClose =() => {
-        document.getElementById("textChatDisplay").classList.remove("open");
-       }
+    //    const chatboxTextClose =() => {
+    //     document.getElementById("textChatDisplay").classList.remove("open");
+    //    }
             
     return(
         <>
