@@ -83,14 +83,14 @@ export default function (props){
                                                              <i className="feather"><FiUser/></i> <br/>Students</label></a>
                                                 </div>
 												<div className="col-3">
-                                                    <a href="grade_assignment"><label className="label f-12 f-w-400 gradeitem"> <i className="feather icon-file-text"></i> <br/>Assignments</label></a>
+                                                    <a href="grade_assignment"><label className="label f-12 f-w-400 gradeitem"> <i className="feather icon-file-text"></i> <br/>Assessments</label></a>
                                                 </div>
 												<div className="col-3">
                                                     <a href="grade_startclass"><label className="label f-12 f-w-400 gradeitem"> <i className="feather icon-play"></i> <br/>Start Class</label></a>
                                                 </div>
 												<div className="col-3">
                                                     <a href="grade_gradebook"><label className="label f-12 f-w-400 gradeitem"> 
-                                                    <i className="icon-book-open"></i> <br/>Grade Book</label></a>
+                                                    <i className="icon-book-open"></i> <br/>Attendance Tracking</label></a>
                                                 </div>
                                                 
                                             </div>
