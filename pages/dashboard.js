@@ -12,7 +12,7 @@ import DashboardClassAverage from './dashboardClassAverage';
 
 import CurrentAssignment from './dashboardCurrentAssignment';
 import AssignmentToBeGraded from './dashboardAssignmentGraded';
-import {Topics} from './dashboardTopics'
+import Topics from './dashboardTopics'
 
 import {getInfo} from '../services/GenricService';
 import {TEACHER_SECTIONS} from '../components/ConstFile';

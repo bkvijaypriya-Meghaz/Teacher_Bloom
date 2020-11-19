@@ -2,7 +2,7 @@ import React from 'react'
 import TopicsAndView from '../components/nav-and-view/TopicsAndView'
 import View from './View'
 
-export function Topics(props)  {
+export default function Topics(props)  {
 
     const viewsList = [
         { name: "Class Topics", id: "topics" },
