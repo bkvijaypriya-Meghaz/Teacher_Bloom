@@ -1,10 +1,22 @@
+import { useState, useEffect } from 'react';
 import TeacherLayout from '../layout/TeacherLayout';
 // import GradeAssignment  from './GradeAssignment';
 // import GradeStartClass from './GradeStartClass';
 import {FiUser, FiLock} from 'react-icons/fi';
-
-export default function (props){
-
+//import assessments from './assessments'
+//import attendanceTracking from './attendanceTracking'
+import {TEACHER_SECTIONS} from '../components/ConstFile';
+import {getInfo} from '../services/GenricService';
+export default function myClasses(props){
+    const[sectionsList,setSectionsList]=useState([])
+    const [sectionName, setSectionName] = useState('4th Grade');
+    const [refresh, doRefresh] = useState('2342342');
+    useEffect(() => {
+        getInfo(TEACHER_SECTIONS).then((data) => {
+            console.log('bloom data is : ',data.sections);
+            setSectionsList(data.sections)
+        })
+    }, [])
    
     const openPopup = ()  =>{
         //console.log(document.getElementById("popupBtn").getAttributeNames());
@@ -51,23 +63,35 @@ export default function (props){
                                             <div className="row">
                                                 <div className="col-auto"> 
 													<h3>Science</h3>
-                                                    <h5 className="text-c-green mb-0">4<sup>th</sup> Grade</h5>
+                                                   <h5 className="text-c-green mb-0">{sectionName}</h5>
                                                 </div>
 												<div className="col text-right">
 												<div className="card-header card-headerStyle">
 												<div className="card-header-right">
 													<div className="btn-group card-option">
-														<button type="button" id="popupBtn" className="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-															<i className="feather icon-more-horizontal" onClick={openPopup} ></i>
-														</button>
-														<ul id="popup" className="list-unstyled card-option dropdown-menu dropdown-menu-right">
-															
-															<li className="dropdown-item disablecursoronly"><a href="#!"><span>2nd Grade <i className="rytdropdownicon"><FiLock/></i></span></a></li>
-															<li className="dropdown-item disablecursoronly"><a href="#!"><span>3rd Grade <i className="rytdropdownicon"><FiLock/></i></span></a></li>
-															<li className="dropdown-item"><a href="#!"><span>4th Grade</span></a></li>
-															<li className="dropdown-item disablecursoronly"><a href="#!"><span>5th Grade <i className="rytdropdownicon"><FiLock/></i></span></a></li>
-															
-														</ul>
+                                                    <button type="button" className="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  >
+																	<i className="feather icon-more-horizontal" onClick={openPopup}></i>		
+																</button>	
+
+                                                        <ul id="popup" className="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                                {sectionsList && sectionsList.map((sections)=>{
+                                                                     let  clickevent  = (event) => {
+                                                                         const sectionid = event.currentTarget.getAttribute("sectionid")
+                                                                         const section= event.currentTarget.getAttribute("section")
+                                                                        //  Todo : we have to assign section to refresh
+                                                                         doRefresh(refresh => sectionid) 
+                                                                         setSectionName(sectionName =>section)
+                                                                         console.log("refresh value",sectionid)
+                                                                    
+                                                                        
+                                                                      };
+                                                                 return (								
+																    
+																	<li className="dropdown-item disablecursoronly"><a href="#!" sectionid ={sections.id} section={sections.name}  onClick={clickevent} ><span>{sections.name}  <i className="feather icon-lock rytdropdownicon"></i></span> </a> </li>															
+                                                                    // doRefresh(refresh => {handleClick}) 
+                                                                )}	)}
+                                                                 </ul>			
+														
 													</div>
 												</div>
 												</div>
@@ -83,20 +107,20 @@ export default function (props){
                                                              <i className="feather"><FiUser/></i> <br/>Students</label></a>
                                                 </div>
 												<div className="col-3">
-                                                    <a href="grade_assignment"><label className="label f-12 f-w-400 gradeitem"> <i className="feather icon-file-text"></i> <br/>Assignments</label></a>
+                                                    <a href="grade_assignment"><label className="label f-12 f-w-400 gradeitem"> <i className="feather icon-file-text"></i> <br/>Assessments</label></a>
                                                 </div>
 												<div className="col-3">
                                                     <a href="grade_startclass"><label className="label f-12 f-w-400 gradeitem"> <i className="feather icon-play"></i> <br/>Start Class</label></a>
                                                 </div>
 												<div className="col-3">
                                                     <a href="grade_gradebook"><label className="label f-12 f-w-400 gradeitem"> 
-                                                    <i className="icon-book-open"></i> <br/>Grade Book</label></a>
+                                                    <i className="icon-book-open"></i> <br/>Attendance Tracking</label></a>
                                                 </div>
                                                 
                                             </div>
                                         </div>
                                     </div>
-                                </div>								<div className="col-md-12 col-xl-1">								</div>
+                                </div><div className="col-md-12 col-xl-1"></div>
 								
 								
 								{/* <!--

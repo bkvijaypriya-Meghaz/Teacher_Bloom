@@ -1,6 +1,8 @@
 import TeacherLayout from '../layout/TeacherLayout';
 import Modal from 'react-modal';
 
+import {FiPlus, FiLock} from 'react-icons/fi';
+
 const customStyles = {
     content : {
       top : '25%',
@@ -68,7 +70,7 @@ export default function Grade_Student (props){
                                                 </div>
                                                 <div className="col-5">
                                                     <div className="headrytbtn">
-                                                        <button type="button" className="btn btn-success" data-toggle="modal" data-target="#addstudentpopup" onClick={openModal}><i className="feather icon-plus"></i>Add Student</button>
+                                                        <button type="button" className="btn btn-success" data-toggle="modal" data-target="#addstudentpopup" onClick={openModal}><i className="feather icon-plus"><FiPlus/></i>Add Student</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -88,71 +90,71 @@ export default function Grade_Student (props){
                                                                     <h6 className="m-0"><img className="rounded-circle  rounded-circleStyle m-r-10"  src="assets/images/user/avatar-1.jpg" alt="activity-user"/>Ann Doe</h6>
                                                                 </td>
                                                                 <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success" data-toggle="modal" data-target="#gradepopup"><i className="feather icon-bar-chart student_tableicon"></i></button> <i className="f-20 tablelockicon m-l-20"></i></td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>
                                                                     <h6 className="m-0"><img className="rounded-circle  rounded-circleStyle m-r-10"  src="assets/images/user/avatar-2.jpg" alt="activity-user"/>Johnson William</h6>
                                                                 </td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
                                                             </tr>
                                                             
                                                             <tr>
                                                                 <td>
                                                                     <h6 className="m-0"><img className="rounded-circle  rounded-circleStyle m-r-10"  src="assets/images/user/avatar-2.jpg" alt="activity-user"/>Nokes John</h6>
                                                                 </td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>
                                                                     <h6 className="m-0"><img className="rounded-circle  rounded-circleStyle m-r-10"  src="assets/images/user/avatar-2.jpg" alt="activity-user"/>Michaelis Brian</h6>
                                                                 </td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>
                                                                     <h6 className="m-0"><img className="rounded-circle  rounded-circleStyle m-r-10"  src="assets/images/user/avatar-1.jpg" alt="activity-user"/>Oliver Evelyn</h6>
                                                                 </td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>
                                                                     <h6 className="m-0"><img className="rounded-circle  rounded-circleStyle m-r-10"  src="assets/images/user/avatar-1.jpg" alt="activity-user"/>Brown Sophia</h6>
                                                                 </td>
-                                                                <td className="textcenter"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
-                                                                <td className="textcenter"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
+                                                                <td className="textcenter"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
+                                                                <td className="textcenter"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>
                                                                     <h6 className="m-0"><img className="rounded-circle  rounded-circleStyle m-r-10"  src="assets/images/user/avatar-2.jpg" alt="activity-user"/>Betteli Eric</h6>
                                                                 </td>
-                                                                <td className="textcenter"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
+                                                                <td className="textcenter"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>
                                                                     <h6 className="m-0"><img className="rounded-circle  rounded-circleStyle m-r-10"  src="assets/images/user/avatar-1.jpg" alt="activity-user"/>Coso Denise</h6>
                                                                 </td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>
                                                                     <h6 className="m-0"><img className="rounded-circle  rounded-circleStyle m-r-10"  src="assets/images/user/avatar-2.jpg" alt="activity-user"/>Logan Mason</h6>
                                                                 </td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>
                                                                     <h6 className="m-0"><img className="rounded-circle  rounded-circleStyle m-r-10"  src="assets/images/user/avatar-1.jpg" alt="activity-user"/>Sharma Tanya</h6>
                                                                 </td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
-                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="feather icon-bar-chart student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
+                                                                <td  className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success disablecursoronly"><i className="ti-write student_tableicon"></i></button><i className="feather icon-lock f-20 tablelockicon m-l-20"><FiLock/></i></td>
                                                             </tr>
                                                         </tbody>
                                                     </table>

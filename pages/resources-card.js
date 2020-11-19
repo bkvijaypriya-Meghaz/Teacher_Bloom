@@ -1,3 +1,5 @@
+import { FiLock } from "react-icons/fi";
+
 export default function ResourcesCard({title, imageUrl}) {
     //console.log("\nResourcesCard ----------- ",title, imageUrl);
     return(
@@ -8,7 +10,7 @@ export default function ResourcesCard({title, imageUrl}) {
                     <h2 className="mb-2 f-w-300 f-33 resourceitem"><span>{title}</span></h2>
                 </div>
                 <div className="col text-right">
-                <i className="feather icon-lock f-20 text-white text-white lockicon"></i>
+                <i className="feather icon-lock f-20 text-white text-white lockicon"><FiLock/></i>
                 </div>
             </div>
             <div className="resourcenotavail">not available in preview</div>

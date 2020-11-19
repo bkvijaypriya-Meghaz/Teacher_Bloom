@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react'
 import {getInfo} from '../services/GenricService'
 import {CURRICULUM_CARDS} from '../components/ConstFile';
 import React from 'react'
+import { FiLock } from 'react-icons/fi';
 
 export default function curiculum(props) {
     const [section, setSection] = useState(0);
@@ -76,7 +77,7 @@ export default function curiculum(props) {
                                                 </div>
                                             </div>
                                             <div className="col-md-5 col-xl-5 col-sm-12 col-xs-12">
-                                                <button type="button" className="btn btn-success btnmargintop disabled"><i className="feather icon-lock text-white"></i> Benchmark</button>
+                                                <button type="button" className="btn btn-success btnmargintop disabled"><i className="feather icon-lock text-white"><FiLock/></i> Benchmark</button>
                                             </div>
 
 
@@ -96,7 +97,7 @@ export default function curiculum(props) {
 
 
                                           
-                                                
+                                            
                                            
                                     {/* <div className="col-md-6 col-xl-4">
                                                 <CurriculumCard title='4.7B Changes to Land' grade='Fourth Grade' icon="ti-view-list-alt f-30 text-white rides-icon" status="visible" />

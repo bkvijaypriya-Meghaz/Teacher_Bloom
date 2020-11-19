@@ -1,3 +1,5 @@
+import { FiLock } from "react-icons/fi";
+
 export default function UserCard({title, imageUrl}) {
     //console.log(title, imageUrl);
     return(
@@ -8,7 +10,7 @@ export default function UserCard({title, imageUrl}) {
                         <h5 className="m-b-15 text-uppercase text-white lessonplanhead text-white">{title}</h5>
                     </div>
                     <div className="col text-right">
-                    <i className="feather icon-lock f-20 text-white text-white lockicon"></i>
+                    <i className="feather icon-lock f-20 text-white text-white lockicon"><FiLock/></i>
                     </div>
                 </div>
                 <span className="text-white">

@@ -1,4 +1,5 @@
 
+import { FiPlus } from 'react-icons/fi';
 import TeacherLayout from '../layout/TeacherLayout';
 import UserCard from './lessonplans-usercard';
 
