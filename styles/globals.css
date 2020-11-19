@@ -117,3 +117,32 @@
 /* .icon-calendar:before {
     content: "\e83a";
 } */
+
+/*
+lessonplan styles*/
+
+.createlesson {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #05bcc5;
+    padding: 2px 0px 12px 0px;
+}
+
+.lessonplanform {
+   
+    position: absolute;
+    z-index: 9;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 26px 22px;
+}
+
+.lessonplanform h6 {
+    text-align: center;
+    font-weight: 600;
+    color: #05bcc5;
+}
+
+.icon-plus:before {
+    content: "\e8b1";
+}
