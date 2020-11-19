@@ -87,6 +87,9 @@
 *, ::after, ::before {
     box-sizing: border-box;
 }
+*, ::after, ::before {
+    box-sizing: border-box;
+}
 
 .progres.progressStyle {
     height: 12px;
@@ -105,6 +108,12 @@
     border: 1px solid #29cde3;
     border-radius: 7px;
 }
+.leftweight {
+    position: absolute;
+    right: 20px;
+    top: -8px;
+}
+
 /* .icon-calendar:before {
     content: "\e83a";
 } */
