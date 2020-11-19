@@ -12,6 +12,8 @@ import DashboardClassAverage from './dashboardClassAverage';
 
 import CurrentAssignment from './dashboardCurrentAssignment';
 import AssignmentToBeGraded from './dashboardAssignmentGraded';
+import {Topics} from './dashboardTopics'
+
 import {getInfo} from '../services/GenricService';
 import {TEACHER_SECTIONS} from '../components/ConstFile';
 
@@ -361,7 +363,7 @@ export default function Dashboard (props){
                                 </div>
                                 <div className="col-xl-4 col-md-12 col-sm-12 col-xs-12">
                                     {/* <Component3/> */}
-                                    <AssignmentToBeGraded refresh={refresh}/>
+                                    <Topics refresh={refresh}/>
                                 </div>
 								<div className="col-md-12 col-sm-12 col-xs-12 col-xl-12">
                                     <DashboardClassAverage refresh={refresh}/> 
