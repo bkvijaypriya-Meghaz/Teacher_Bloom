@@ -81,22 +81,6 @@ export default function Lessonplan(props){
 								<div className="col-md-12 col-xl-3">
 									<UserCard title='Electricity' imageUrl="url('assets/images/lesson/electricity.png');"/>
                                 </div>
-                               
-                               <div className=" col-md-12 col-xl-3">
-                               <div className="card user-card">
-                               <div className="card-block disablecursoronly lessonbg" style={{background:'white'}} >
-                            <div className="row align-items-center justify-content-center">
-                            <div className="createlesson">
-                               <i>
-                                   <FiPlus/>
-                               </i>
-                               "create lesson"
-                                </div>
-                                </div>
-                            </div>
-                               </div>
-                               </div>
-                               
                             </div>
                             {/* <!-- [ Main Content ] end --> */}
                         </div>
