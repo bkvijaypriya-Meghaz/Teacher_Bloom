@@ -11434,3 +11434,859 @@ text-align: right;
 {
 	margin-bottom:25px;
 }
+.rocketicon1
+{
+	    font-size: 32px;
+    border: 1px solid #bbb;
+    background: #fff;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    z-index: 9999999;
+    text-align: center;
+    color: #1dcae2;
+    padding: 21px;
+}
+.rocketicondiv1
+{    position: absolute;
+    text-align: center;
+    top: 85px;
+    z-index: 9999;
+    left: 45%;
+}
+
+.dashactive
+{
+	border: 3px solid #1dcae2;
+}
+.rytplusicon
+{
+	
+	    position: fixed;
+    right: 15px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 7px 9px;
+    bottom: 24px;
+}
+.rytplusicon img
+{
+	    width: 30px;
+}
+.highlightrow
+{
+	    color: #0ebfbb;
+    font-weight: 700;
+    font-size: 16px;
+}
+.cleartoast
+{
+	text-align: center;
+    color: #1dd0da;
+    font-size: 16px;
+}
+
+.cleartoast i
+{
+	font-size: 20px;
+    margin-right: 10px;
+}
+
+.fc-day-grid-event .fc-content {
+white-space: normal;
+}
+.headerborder
+{
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    top: 61px;
+    left: -30px;
+}
+.headerborderinner
+{
+border-top: 1px solid #bbb;
+    margin: auto;
+    width: 58px;
+    border-radius: 50%;
+    padding: 16px;
+	
+}
+.launchpad
+{
+	display:none !important;
+}
+.launchpad a
+{
+	font-size:17px;
+}
+.landscapepopupdiv
+{
+	display:none;
+}
+.rotateicon img
+{
+	    width: 81px;
+}
+.parentdashhead .card-header h5:after
+{
+	background:none;
+}
+.parentdash .table
+{
+	margin-bottom:0px;
+}
+.legendlabel span
+{
+	    background: #04a9f5;
+    padding: 0px 10px;
+    margin-right: 9px;
+    position: relative;
+    top: 2px;
+}
+.legendlabel b
+{
+	margin-right: 26px;
+    font-weight: normal;
+    font-size: 14px;
+}
+.st_boxshadow
+{
+	    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.09);
+    margin-top: 15px;
+    padding: 18px 18px;
+}
+.vst_tab .nav-pills .nav-link.active, .vst_tab .nav-pills .show > .nav-link
+{
+	color: #04a9f5;
+    background: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.st_menu .dropdown-item
+{
+	font-size:14px;
+}
+.plantitlehead
+{
+	padding: 13px 25px;
+}
+
+.headrytbtn1 {
+    text-align: right;
+    padding-top: 16px;
+}
+.planleftbar .nav-pills 
+{
+    padding: 10px;
+}
+.planleftbar .nav-pills > li > a
+{
+	    padding: 11px 5px;
+}
+.dashcurrentass td
+{
+	    padding: 11px 15px;
+    border-bottom: 1px solid #f1f1f1;
+}
+.dashfirstrowheight
+{
+	    height: 250px;
+    overflow-y: scroll;
+}
+.dashfirstrowheight::-webkit-scrollbar, .dashfirstrowheight1::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.dashfirstrowheight::-webkit-scrollbar-track, .dashfirstrowheight1::-webkit-scrollbar-track {
+  background: #bbb; 
+}
+ 
+/* Handle */
+.dashfirstrowheight::-webkit-scrollbar-thumb, .dashfirstrowheight1::-webkit-scrollbar-thumb {
+  background: #6fc9f2; 
+}
+
+/* Handle on hover */
+.dashfirstrowheight::-webkit-scrollbar-thumb:hover, .dashfirstrowheight1::-webkit-scrollbar-thumb:hover {
+  background: #04a9f5; 
+}
+.lpviewbtn
+{
+    padding: 0px 0px;
+    background: transparent;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-right: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+.lpbtn
+{
+text-transform: uppercase;
+    margin-top: 5px;
+    position: absolute;
+    width: 91%;
+    color: #fff;
+}
+.lessonplanslide
+{
+	display:none;
+	position: absolute;
+    z-index: 9;
+	    margin-top: 30px;
+}
+
+.lpsedate span
+{
+	    background: #ccf7f4;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 1px 6px;
+    border: 1px solid #ccf7f4;
+    margin-right: 7px;
+	
+}
+.lpviewbtn:hover
+{
+	color:#fff;
+}
+.greysedate span
+{
+	    background: #eee;
+    border-color: #eee;
+}
+.createlesson
+{
+	font-size: 25px;
+    text-transform: uppercase;
+    color: #05bcc5;
+    padding: 2px 0px 12px 0px;
+}
+.createlesson i
+{
+	    font-size: 46px;
+    position: relative;
+    top: 9px;
+    margin-right: 6px;
+}
+.lessonplanform
+{
+	display:none;
+	position: absolute;
+    z-index: 9;
+	    background: #fff;
+		margin-bottom: 20px;
+    padding: 26px 22px;
+}
+.lessonplanform h6
+{
+	    text-align: center;
+    font-weight: 600;
+    color: #05bcc5;
+}
+.lessonplanform label
+{
+	    font-size: 13px;
+}
+.lessonfielddiv
+{
+	    margin-top: 17px;
+}
+.slsubmenuhead
+{
+	    background: #ffffff;
+    width: 100%;
+    margin: auto;
+    padding: 9px 4px 3px 4px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.09);
+    border-bottom: 1px solid #ddd;
+}
+.addlpbtn
+{
+	    text-align: right;
+    font-size: 14px;
+    color: #0fbfba;
+}
+.addlpbtn i
+{
+	    margin-right: 6px;
+}
+.addlppublishbtn
+{
+	    text-align: center;
+    margin-top: 68px;
+    margin-bottom: 11px;
+}
+.addlppublishbtn input
+{
+	width: 38%;
+}
+.lphide
+{
+	display:none;
+}
+.publishform
+{
+}
+.publishform h6
+{
+	font-weight:bold;
+}
+.publishform input
+{
+	    padding: 6px 10px;
+    font-size: 13px;
+}
+.publishform label
+{
+    font-size: 13px;
+}
+.dashtopic img
+{
+	    width: 70px;
+    height: 55px;
+}
+.dashfirstrowheight1 {
+    height: 141px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.disableopacity
+{
+	    opacity: 0.5;
+    cursor: not-allowed;
+}
+.currassicon
+{
+	    color: #0dbebd;
+    font-weight: bold;
+    margin-right: 2px;
+}
+.calendericon
+{
+	color: #bbb;
+    margin-left: 4px;
+}
+.progressdiv
+{
+	    margin-top: 9px;
+    border: 1px solid #29cde3;
+    border-radius: 7px;
+}
+.errordiv
+{
+	font-size: 12px;
+    color: #ff1717;
+    margin-top: 4px;
+}
+.dashtopname
+{
+	    width: 90%;
+    text-align: right;
+    position: relative;
+    top: 10px;
+}
+.fromtotxtbox
+{
+	    padding: 3px 8px;
+}
+.charthead
+{
+	    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.topichead
+{
+	    font-weight: bold;
+    text-transform: uppercase;
+    color: #000 !important;
+}
+.step1txt
+{
+	    text-align: center;
+    font-size: 21px;
+    text-transform: uppercase;
+    margin-top: 13px;
+    margin-bottom: 20px;
+}
+.step1img
+{
+	    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+.step1img img
+{
+	    width: 132px;
+}
+.assessquesimg img
+{
+    width: 75%;
+    padding: 10px 10px;
+}
+.assquesimg img
+{
+	    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.b2
+{
+	display:none;
+}
+.dashtab .nav-link {
+    padding: 10px 18px;
+}
+.dashcurrbtn button
+{
+	    padding: 0px 13px;
+    text-transform: uppercase;
+    color: #1dcae2;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.dashcurrbtn
+{
+	text-align:right;
+}
+.bodypadding
+{
+	padding-right:0px !important;
+}
+.asstxt
+{
+	
+    text-align: center;
+    font-size: 12px;
+}
+.assicon
+{
+	    text-align: center;
+    font-size: 15px;
+}
+.assesstxt1
+{
+	    text-transform: uppercase;
+    font-size: 12px;
+    position: relative;
+    top: -6px;
+}
+.createassessment
+{
+	    font-size: 23px;
+    text-transform: uppercase;
+    color: #05bcc5;
+    padding: 22px 0px 43px 0px;
+    padding: 33px 0px;
+}
+.createassessment i
+{
+
+    font-size: 46px;
+    position: relative;
+    top: 9px;
+    margin-right: 6px;
+}
+.gameimg img
+{
+	    width: 100%;
+    height: 100px;
+}
+.gameitem
+{
+	    margin-bottom: 25px;
+    border: 1px solid #ddd;
+}
+.gametitle
+{
+	    padding: 8px 10px;
+    font-size: 13px;
+   
+    font-weight: 600;
+}
+.weightdiv
+{
+	    position: absolute;
+    right: 20px;
+        margin-top: -38px;
+		display:none;
+}
+.weightdiv .form-control
+{
+	    width: 71px;
+		    display: inline-block;
+}
+.leftweight
+{
+	    position: absolute;
+    right: 20px;
+    top: -8px;
+	
+}
+.leftweight .form-control
+{
+	    width: 71px;
+		    display: inline-block;
+}
+.popuptxt
+{
+	margin-bottom:50px;
+}
+.weightdisnone
+{
+	display:none;
+}
+.profileeditpic
+{
+	    color: #333;
+    background: #fff;
+    font-size: 16px;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    padding: 5px;
+    position: absolute;
+    top: 84px;
+    margin-left: -35px;
+    font-weight: bold;
+}
+.settingtxtarea
+{
+	    height: 80px !important;
+    overflow: hidden;
+}
+.themediv
+{
+	    border: 1px solid #bbb;
+    padding: 13px 18px;
+}
+.assigngradetxt b
+{
+    font-weight: 600;
+    color: #08bdc2;
+    margin-right: 6px;
+    text-transform: uppercase;
+}
+.asstxt1 {
+    text-align: center;
+    font-size: 12px;
+}
+.assicon1 {
+text-align: center;
+    font-size: 18px;
+}
+
+/* Grade text slider css */
+
+/* Slides */
+.mySlides {
+  display: none;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.gradeslider .prev, .gradeslider .next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  margin-top: -30px;
+  padding: 5px 30px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.gradeslider .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.gradeslider .prev {
+  left: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.gradeslider .prev:hover, .gradeslider .next:hover {
+
+}
+
+.gradebtn
+{
+	margin-top: 34px;
+	    text-align: center;
+}
+.gradebtn input
+{
+	    margin-right: 3px;
+}
+.gradefiltertable th
+{
+        transform: rotate(-90.0deg);
+    white-space: nowrap;
+    text-align: left;
+    padding: 77px 0px;
+    vertical-align: middle !important;
+}
+.gradefiltertable td
+{
+    
+    text-align: center;
+    vertical-align: middle;
+	font-size:14px;
+	    padding: 10px 2px;
+    white-space: normal;
+}
+.gradefiltertable
+{
+	    table-layout: fixed;
+}
+.gradesettingicon
+{
+	    text-align: center;
+    padding-top: 13px;
+    font-size: 24px;
+}
+.gradetickicon
+{
+	font-size: 20px;
+    color: #22d022;
+    font-weight: bold;
+}
+.redicon
+{
+	    color: #ef0b0b;
+}
+.gradingfrtth
+{
+	    width: 85%;
+    margin: auto;
+    font-size: 14px;
+}
+.gradingfrtth .input-group {
+    background: #fff;
+}
+.gradesearch
+{
+	    border-radius: 15px 0px 0px 15px;
+    border-right: none;
+}
+.gradesearchicon
+{
+	    border-radius: 0px 15px 15px 0px;
+    background: #f4f7fa !important;
+}
+.gradesort
+{
+	
+    height: auto !important;
+    border-radius: 15px;
+    background: #149da7;
+    color: #fff;
+
+}
+.gradetablesidehead
+{
+	    font-weight: bold;
+    font-size: 15px !important;
+}
+
+
+@media (min-width: 1024px) and (max-width: 1230px)
+{
+	.card .card-header h5 {
+    font-size: 13px;
+}
+.assignmentryt .float-right
+{
+    width: 100%;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.assignmentryt .stuasshead {
+    border-bottom: none;
+}
+}	
+@media (min-width: 768px) and (max-width: 1023px)
+{
+.landscapepopupdiv
+{
+	display:block;
+}	
+.headerborder, .displaynone
+{
+	display:none !important;
+}
+.dashmenuiconactive {
+    top: 174px;
+}
+.displayblock
+{
+	display:block !important;
+}
+.profiletxt {
+    font-size: 11px;
+}
+.prolock {
+    margin-left: 1px;
+    font-size: 11px;
+}
+.studenticon {
+    font-size: 14px;
+    position: relative;
+    top: 3px;
+}
+.card .card-header h5 {
+    font-size: 13px;
+}
+.assignmentryt .float-right
+{
+    width: 100%;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.xs10
+{
+	width:80%;
+}
+.xs2
+{
+	width:20%;
+}
+.assignmentryt .stuasshead
+{
+	border-bottom: none;
+}
+.stuprofile_card {
+    padding: 10px 10px !important;
+}
+.stuproheadtxt {
+    font-size: 14px;
+}
+.quicklauncheritem {
+    font-size: 11px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.quicklauncheritem i {
+    margin-right: 6px;
+    font-size: 13px;
+    top: 1px;
+}
+.studashlockicon
+{
+	    padding: 0px 12px 0px 0px;
+}
+.studashlock {
+   
+    top: 0px;
+    font-size: 13px;
+}
+.stuprofileitem {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.stuprofileitem i {
+    margin-right: 5px;
+    font-size: 11px;
+    top: 2px;
+}
+.studashlock1 {
+    text-align: right;
+    position: relative;
+    margin-top: 0px;
+    font-size: 13px;
+    right: 14px;
+	top:4px;
+}
+.mdnopdding
+{
+	padding:0px;
+}
+.posttitle {
+  
+    margin-top: 10px;
+	  font-size: 14px;
+}
+.postdesc {
+    font-size: 11px;
+}
+
+
+}
+@media all and (orientation:portrait) {  
+.landscapepopupdiv
+{
+	display:block;
+}  
+}  
+@media all and (orientation:landscape) {  
+    .landscapepopupdiv
+{
+	display:none;
+}
+}
+@media (min-width: 240px) and (max-width: 767px)
+{
+	
+.mbmb
+{
+	margin-bottom:20px;
+}
+.mbmb40
+{
+	margin-bottom:40px;
+}
+.displayblock
+{
+	display:block !important;
+}
+.xs10
+{
+	width:80%;
+}
+.xs2
+{
+	width:20%;
+}
+.threedot {
+    right: -31px;
+}
+.rocketicon
+{
+	top:170px;
+}
+.posttitle {
+    font-size: 15px;
+    margin-top: 14px;
+}
+.mbcircle
+{
+	text-align: center !important;
+    margin-top: 22px;
+}
+.headerborder, .displaynone
+{
+	display:none !important;
+}
+.dashmenuiconactive {
+    top: 174px;
+}
+}
