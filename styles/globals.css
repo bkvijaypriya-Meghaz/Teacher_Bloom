@@ -87,6 +87,9 @@
 *, ::after, ::before {
     box-sizing: border-box;
 }
+*, ::after, ::before {
+    box-sizing: border-box;
+}
 
 .progres.progressStyle {
     height: 12px;
@@ -105,6 +108,12 @@
     border: 1px solid #29cde3;
     border-radius: 7px;
 }
+.leftweight {
+    position: absolute;
+    right: 20px;
+    top: -8px;
+}
+
 /* .icon-calendar:before {
     content: "\e83a";
 } */
@@ -172,4 +181,77 @@
     padding: 10px 24px;
     padding: 10px 21px;
     font-size: 13px;
+}
+.chart-sizestyle{
+    position: absolute; 
+    left: 0px; 
+    top: 0px; 
+    right: 0px; 
+    bottom: 0px; 
+    overflow: hidden; 
+    pointer-events: none; 
+    visibility: hidden; z-index: -1;
+}
+.chart-monitorexpandstyle{
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    overflow:hidden;
+    pointer-events:none;
+    visibility:hidden;
+    z-index:-1;
+}
+
+.chart-monitorshrinkstyle{
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    overflow:hidden;
+    pointer-events:none;
+    visibility:hidden;
+    z-index:-1;
+}
+
+.highchart-containerstyle{
+    position: relative;
+    overflow: hidden;
+    width: 501px; 
+    height: 250px; 
+    text-align: left; 
+    line-height: normal; 
+    z-index: 0; 
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*
+lessonplan styles*/
+
+.createlesson {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #05bcc5;
+    padding: 2px 0px 12px 0px;
+}
+
+.lessonplanform {
+   
+    position: absolute;
+    z-index: 9;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 26px 22px;
+}
+
+.lessonplanform h6 {
+    text-align: center;
+    font-weight: 600;
+    color: #05bcc5;
+}
+
+.icon-plus:before {
+    content: "\e8b1";
 }

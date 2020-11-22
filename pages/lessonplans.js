@@ -1,5 +1,5 @@
 
-import { FiPlus } from 'react-icons/fi';
+import { FaPlus } from 'react-icons/fa';
 import TeacherLayout from '../layout/TeacherLayout';
 import UserCard from './lessonplans-usercard';
 
@@ -14,6 +14,16 @@ export default function Lessonplan(props){
         console.log(today.toTimeString);
         
     }
+
+    function createLessonDropdown() {
+        var x = document.getElementById("createlesson");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
     return(
     
 	<TeacherLayout {...props}>
@@ -81,6 +91,55 @@ export default function Lessonplan(props){
 								<div className="col-md-12 col-xl-3">
 									<UserCard title='Electricity' imageUrl="url('assets/images/lesson/electricity.png');"/>
                                 </div>
+                                <div className="col-md-12 col-xl-3">
+                                     <div className="card user-card"   onClick={createLessonDropdown}  >
+                                          <div className="card-block  lessonbg" style={{background: '#fff'}} >
+                                              <div className="row align-items-center justify-content-center">
+                                                   <div className="createlesson" >          
+                                                       <i className="feather icon-plus f-20" ><FaPlus/> </i>
+                                                            Create Lesson
+                                                   </div>
+                                             </div>        
+                                          </div>
+                                     </div>  
+                                     <div className="lessonplanform" id="createlesson" style={{ display: createLessonDropdown ? "block" : "none" }} >
+                                         <h6>Pick a topic to create a Lesson Plan</h6>
+                                         <div className="lessonfielddiv">
+                                             <label>Grade</label>
+                                             <select className="form-control">
+                                                 <option value="1st Grade" disabled>1st Grade</option>
+                                                 <option value="2nd Grade" disabled>2nd Grade</option>
+                                                 <option value="3rd Grade"disabled >3rd Grade</option>
+                                                 <option value="4th Grade" selected>4th Grade</option>
+                                                 <option value="5th Grade"  disabled>5th Grade</option>
+                                                 <option value="6th Grade"  disabled>6th Grade</option>
+                                                 <option value="7th Grade"  disabled>7th Grade</option>
+                                                 <option value="8th Grade"  disabled>8th Grade</option>
+                                                 <option value="9th Grade"  disabled>9th Grade</option>
+                                                 <option value="10th Grade" disabled>10th Grade</option>
+                                                 <option value="11th Grade" disabled>11th Grade</option>
+                                                 <option value="12th Grade" disabled>12th Grade</option>
+                                             </select>
+                                         </div>
+                                         <div className="lessonfielddiv">
+                                             <label>Title</label>
+                                             <select className="form-control">
+                                                 <option value="1st Grade" >4.5A Classifying Matter</option>
+                                                 <option value="2nd Grade" >4.5B Changes from Heat</option>
+                                                 <option value="3rd Grade" >4.5C Mixtures</option>
+                                                 <option value="Forms of Energy" >4.6A Forms of Energy</option>
+                                                 <option value="5th Grade" >4.6BC Electricity,Conductors, & Insulators</option>
+                                                 <option value="6th Grade" >4.6D Experimenting with Forces</option>
+                                                 <option value="7th Grade" >4.7A Properties of Soil</option>
+                                                 <option value="7th Grade" >4.7B Changes of Land</option>
+                                                 <option value="Energy" >4.7C Energy</option>
+                                                 <option value="7th Grade">4.8A Weather</option>
+                                                 <option value="7th Grade">4.8B The Sun and Water Cycle</option>
+                                                 <option value="7th Grade">4.8C Patterns on Earth</option>
+                                             </select>
+                                         </div>
+                                     </div>
+                                 </div>
                             </div>
                             {/* <!-- [ Main Content ] end --> */}
                         </div>
