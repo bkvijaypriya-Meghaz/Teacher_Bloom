@@ -1,7 +1,41 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
+import Modal from '../components/modal/Modal';
+
+import AssessmentDelete from '../components/modal_windows/AssessmentDelete'
+
+
+
+
 export default function assessmentCards({ title, numberofquestions,date}) {
+
+
+const [assessmentDeleteScreen1Visibility, setAssessmentDeleteScreen1Visibility] = useState(false);
+
+const showAssessmentDeleteModal1 = () => {
+	setAssessmentDeleteScreen1Visibility(true);
+};
+
+const hideAssessmentDeleteModal1 = () => {
+	
+	setAssessmentDeleteScreen1Visibility(false);
+};
+
+
+
+
     return (
-<div className="card user-card">
+		 <div>
+		
+		<Modal
+           isOpen={assessmentDeleteScreen1Visibility}
+		   hideModal={hideAssessmentDeleteModal1}
+            modalTitle= " "
+        >
+             <AssessmentDelete hideModal={hideAssessmentDeleteModal1}/> 
+        </Modal>
+        
+         <div className="card user-card">
                                         <div className="card-block">
 											<div className="row align-items-center justify-content-center">
 												<div className="col-auto">
@@ -37,13 +71,16 @@ export default function assessmentCards({ title, numberofquestions,date}) {
 														<div className="asstxt">Assign</div>
 													</div>
 													<div className="col-auto" data-toggle="modal" data-target="#deletepopup">
-														<div className="assicon"><i className="feather icon-trash-2"></i></div>
-														<div className="asstxt">Delete</div>
+														<div className="assicon"><i className="feather icon-trash-2" onClick={showAssessmentDeleteModal1}></i></div>
+														<div className="asstxt">
+															Delete
+														</div>
 													</div>
 												</div>
 											</div>
                                         </div>
                                     </div>
+				</div>				
     )
 }
                                     
