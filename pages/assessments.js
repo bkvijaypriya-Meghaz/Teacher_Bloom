@@ -23,8 +23,6 @@ export default function assessments(props){
                         { /*  [ Main Content ] start  */}
                             <div className="row">
                             { /* [ daily sales section ] start */}
-                                
-								
                              <div className="col-md-6 col-xl-4 col-sm-12 col-xs-12">
 							 <AssessmentCard title='Human Body Practice Test' numberofquestions='20 Questions' date='1st Jan 2020'/>          
 							 </div>
@@ -40,16 +38,6 @@ export default function assessments(props){
 							 <div className="col-md-6 col-xl-4 col-sm-12 col-xs-12">
 							 <AssessmentCard title='End of Year Test' numberofquestions='30 Questions' date='25th Dec 2019'/>          
 							 </div>
-                                
-								
-								
-														
-													
-                                
-							
-                                
-								
-								
 								<div className="col-md-6 col-xl-4 col-sm-12 col-xs-12">
                                 { /* <div className="card user-card" id="createlesson">
                                         <a href="">
@@ -61,7 +49,7 @@ export default function assessments(props){
 										</a>
                                 </div> */}
                                  <div className="card user-card" id="createlesson">
-                                        <a href="create_assessment.php">
+                                        <a href="create_assessment">
 										<div className="card-block " style={{background: '#fff'}} >
 											<div className="row align-items-center justify-content-center">
 												<div className="createassessment"><i className="feather icon-plus f-20"><FiPlus/></i> Create New Assessment</div>
@@ -71,12 +59,6 @@ export default function assessments(props){
                                     </div>
 									
                                 </div>
-								
-								
-                                
-                                
-
-                                
                             </div>
                             { /*   [ Main Content ] end */}
                         </div>
