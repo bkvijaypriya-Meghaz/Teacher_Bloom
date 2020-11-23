@@ -51,7 +51,7 @@ export default function assessments(props){
 										</a>
                                 </div> */}
                                  <div className="card user-card" id="createlesson">
-                                        <a href="create_assessment">
+                                        <a href="createAssessment">
 										<div className="card-block " style={{background: '#fff'}} >
 											<div className="row align-items-center justify-content-center">
 												<div className="createassessment"><i className="feather icon-plus f-20"><FiPlus/></i> Create New Assessment</div>
