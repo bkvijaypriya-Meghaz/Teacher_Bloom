@@ -18,26 +18,24 @@ export default function View(props)  {
         })
     }, [props.heading])
     return(
-        <div className="Recent-Users dashfirstrowheight">
-            <div className="tab-content nopadding" id="myTabContent">
-                <div className="tab-pane fade show active" id="topics" role="tabpanel" aria-labelledby="topics-tab">
-                    <div className="table-responsive">
-                        <table className="table table-hover dashcurrentass dashtopic">
-                            <tbody>
-                                {
-                                    topicList.map((topicItem) =>(
-                                        <tr className="unread">
-                                            <td><a href=""><img src="assets/images/lesson/energy.png"/></a></td>
-                                            <td>
-                                                <a href="" style={{color:'#888'}}><h6 className="mb-1">{topicItem.name}</h6>
-                                                <p className="m-0 f-12">Classifying Matter</p></a>
-                                            </td>
-                                        </tr>
-                                    ))
-                                }
-                            </tbody>
-                        </table>
-                    </div>
+        <div className="tab-content nopadding" style={{width: '940px'}}     id="myTabContent">
+            <div className="tab-pane fade show active" id="topics" role="tabpanel" aria-labelledby="topics-tab">
+                <div className="table-responsive">
+                    <table className="table table-hover dashcurrentass dashtopic">
+                        <tbody>
+                            {
+                                topicList.map((topicItem) =>(
+                                    <tr className="unread">
+                                        <td><a href=""><img src="assets/images/lesson/energy.png"/></a></td>
+                                        <td>
+                                            <a href="" style={{color:'#888'}}><h6 className="mb-1">{topicItem.name}</h6>
+                                            <p className="m-0 f-12">Classifying Matter</p></a>
+                                        </td>
+                                    </tr>
+                                ))
+                            }
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

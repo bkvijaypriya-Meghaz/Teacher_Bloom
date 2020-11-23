@@ -18,7 +18,7 @@ export default function Topics(props)  {
         "bookmarks": <View heading='bookmarks' />,
     };
     return(
-        <div className="card-block px-0 py-0">
+        <div className="Recent-Users dashfirstrowheight">
             <div className="dashcurrbtn">
                 <a href="curriculum">
                     <button className="btn">Curriculum</button>
