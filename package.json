@@ -16,7 +16,6 @@
     "chart.js": "^2.9.4",
     "echarts": "^4.9.0",
     "echarts-for-react": "^2.0.16",
-    "highcharts": "^8.2.2",
     "material-design-icons": "^3.0.1",
     "moment": "^2.29.0",
     "next": "9.5.2",
