@@ -3,6 +3,8 @@ import TeacherLayout from '../layout/TeacherLayout';
 import { useState, useEffect } from 'react';
 import Chart from 'chart.js';
 import {Bar} from 'react-chartjs-2';
+//import {getInfo} from '../services/GenricService';
+
 
 function attendanceTrackingBarChart() {
 
@@ -17,22 +19,14 @@ function attendanceTrackingBarChart() {
 					{
 						label:'Async. Time Spent',
 						data:[3.5],
-						
-						backgroundColor:[
-							'#62b64e',
-							],
-							borderWidth: 1
+						backgroundColor:['#62b64e'],
+						borderWidth: 1
 					},
 					{
 						label:'Sync. Time Spent',
 						data:[1.2],
-						
-						backgroundColor:[
-							
-							'#fa1f0f'],
-							borderWidth: 1	
-						
-
+						backgroundColor:['#fa1f0f'],
+						borderWidth: 1	
 					},
 				]
 			}
@@ -45,6 +39,15 @@ function attendanceTrackingBarChart() {
 
 	},[])
     
+    /*useEffect(() => { getInfo(`${ASSIGNMENT_TO_BE_GRADED}/786868/assignments/to-be-graded`).then((data) => {
+		//Todo : we have to assign refresh(sessionid) to dynamic URL
+        console.log("Attendence tracking",props.refresh)
+        console.log('bloom data is : ',data);
+        setAssignment(data);
+        setAssignmentList(data.Studentdata)
+
+    })
+	}, [props.refresh])*/
 
     
     return (

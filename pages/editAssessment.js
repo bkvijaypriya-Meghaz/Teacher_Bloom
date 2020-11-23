@@ -3,6 +3,22 @@ import TeacherLayout from '../layout/TeacherLayout';
 import {getInfo} from '../services/GenricService'
 
 function editAssessment(props) {
+
+    /*
+	 const [Studentdata, setStudentData] = useState(0);
+
+	 useEffect(() => { getInfo(`${ASSIGNMENT_TO_BE_GRADED}/786868/assignments/to-be-graded`).then((data) => {
+		//Todo : we have to assign refresh(sessionid) to dynamic URL
+        console.log("edit Assessment",props.refresh)
+        console.log('bloom data is : ',data);
+        setAssignment(data);
+        setAssignmentList(data.Studentdata)
+
+    })
+	}, [props.refresh])*/
+
+
+
     return (
 		<TeacherLayout {...props}>
        

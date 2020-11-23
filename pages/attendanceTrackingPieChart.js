@@ -2,6 +2,8 @@ import React from 'react'
 import TeacherLayout from '../layout/TeacherLayout';
 import Chart from 'chart.js';
 import  { useState, useEffect } from 'react';
+//import {getInfo} from '../services/GenricService';
+
 
 
 function attendanceTrackingPieChart(props) {
@@ -11,6 +13,16 @@ function attendanceTrackingPieChart(props) {
             console.log("After loading load---------------------")
         }
     })
+
+    /*useEffect(() => { getInfo(`${ASSIGNMENT_TO_BE_GRADED}/786868/assignments/to-be-graded`).then((data) => {
+		//Todo : we have to assign refresh(sessionid) to dynamic URL
+        console.log("Attendence tracking",props.refresh)
+        console.log('bloom data is : ',data);
+        setAssignment(data);
+        setAssignmentList(data.Studentdata)
+
+    })
+	}, [props.refresh])*/
 
     const loadPieChart = () =>{
         var bar = document.getElementById("chart-pie-1").getContext('2d');
