@@ -1,7 +1,25 @@
 import React from 'react'
 import TeacherLayout from '../layout/TeacherLayout';
-import {getInfo} from '../services/GenricService'
+import {getInfo} from '../services/GenricService';
+//import { useState, useEffect } from 'react';
+
 function copyAssessment(props) {
+
+     /*
+	 const [Studentdata, setStudentData] = useState(0);
+
+	 useEffect(() => { getInfo(`${ASSIGNMENT_TO_BE_GRADED}/786868/assignments/to-be-graded`).then((data) => {
+		//Todo : we have to assign refresh(sessionid) to dynamic URL
+        console.log("copy Assessment",props.refresh)
+        console.log('bloom data is : ',data);
+        setAssignment(data);
+        setAssignmentList(data.Studentdata)
+
+    })
+	}, [props.refresh])*/
+
+
+
     return (
 		<TeacherLayout {...props}>
         

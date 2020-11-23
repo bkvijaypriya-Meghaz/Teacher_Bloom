@@ -2,6 +2,8 @@ import React from 'react'
 import TeacherLayout from '../layout/TeacherLayout';
 import  { useState, useEffect } from 'react';
 
+//import {getInfo} from '../services/GenricService';
+
 function attendanceTrackingTable(props) {
 
     
@@ -68,9 +70,19 @@ function attendanceTrackingTable(props) {
             "Async. Time Spent":"1 Hrs 11 Mins",
             "Details":"icons"
         }
-    ]    
+    ] 
+    
+   /* const[studentData,setstudentData] = useState({})
 
+    useEffect(() => { getInfo(`${ASSIGNMENT_TO_BE_GRADED}/786868/assignments/to-be-graded`).then((data) => {
+		//Todo : we have to assign refresh(sessionid) to dynamic URL
+        console.log("student data",props.refresh)
+        console.log('bloom data is : ',data);
+        setAssignment(data);
+        setAssignmentList(data.Studentdata)
 
+    })
+	}, [props.refresh])*/
 
 
 
