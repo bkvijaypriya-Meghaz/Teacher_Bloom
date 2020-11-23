@@ -14,6 +14,8 @@ import '../styles/nav-and-view.css'
 import '../styles/teacher-setup-modal.css'    
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
+import 'bloom-chat-module/dist/index2.css'
+
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
