@@ -90,6 +90,10 @@
 *, ::after, ::before {
     box-sizing: border-box;
 }
+.icon-play:before {
+    content: "\e8ae";
+}
+
 
 .progres.progressStyle {
     height: 12px;

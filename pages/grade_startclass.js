@@ -7,6 +7,86 @@ import React from 'react'
 
 
 export default function GradeStartClass(props) {
+    const headerdata = ["Lesson Plan Name","Topic","Standard","Duration","Start Lesson"];
+    const lessondata=[
+        {
+            "Lesson Plan Name": "Energy", 
+            "Topic":"Energy",
+            "Standard":"TXK-1A",
+            "Duration":"1 Hr 30 Mins",
+            "Start Lesson":"icons"
+        },
+        {
+            "Lesson Plan Name": "Space", 
+            "Topic":"Universe",
+            "Standard":"TXK-2A",
+            "Duration":"2 Hr 0 Mins",
+            "Start Lesson":"icons"
+        },
+
+        {
+            "Lesson Plan Name": "Photosynthesis" ,
+            "Topic":"Plants",
+            "Standard":"TXK-2B",
+            "Duration":"1 Hr 30 Mins",
+            "Start Lesson":"icons"
+        },
+
+        {
+            "Lesson Plan Name": "Chemistry" ,
+            "Topic":"Chemistry",
+            "Standard":"TXK-3A",
+            "Duration":"1 Hr 30 Mins",
+            "Start Lesson":"icons"
+        },
+
+        {
+            "Lesson Plan Name": "IPC" ,
+            "Topic":"IPC",
+            "Standard":"TXK-2B",
+            "Duration":"1 Hr 0 Mins",
+            "Start Lesson":"icons"
+        },
+        {
+            "Lesson Plan Name": "Weight & Scale", 
+            "Topic":"Plants",
+            "Standard":"TXK-2A",
+            "Duration":"1 Hr 30 Mins",
+            "Start Lesson":"icons"
+        },
+
+        {
+            "Lesson Plan Name": "Photons" ,
+            "Topic":"Light",
+            "Standard":"TXK-3A",
+            "Duration":"1 Hr 30 Mins",
+            "Start Lesson":"icons"
+        },
+
+        {
+            "Lesson Plan Name": "Atoms" ,
+            "Topic":"Matter",
+            "Standard":"TXK-3A",
+            "Duration":"2 Hr 0 Mins",
+            "Start Lesson":"icons"
+        },
+
+        {
+            "Lesson Plan Name": "Time And Space", 
+            "Topic":"Time",
+            "Standard":"TXK-1A",
+            "Duration":"1 Hr 30 Mins",
+            "Start Lesson":"icons"
+        },
+
+        {
+            "Lesson Plan Name": "Electricity" ,
+            "Topic":"Electricity",
+            "Standard":"TXK-3A",
+            "Duration":"1 Hr 30 Mins",
+            "Start Lesson":"icons"
+        }]
+    
     return (
         <TeacherLayout {...props}>
           <div>
@@ -43,94 +123,70 @@ export default function GradeStartClass(props) {
                                         </div>
                                         <div className="card-block">
                                             <div className="table-responsive">
-                                                <table className="display table nowrap table-striped table-hover" style={{width:'100%'}}>
-                                                    <thead>
-                                                        
-														<tr>
-                                                            <th>Lesson Plan Name</th>
-                                                            <th className="textcenter">Topic</th>
-                                                            <th className="textcenter">Standard</th>
-                                                            <th className="textcenter">Duration</th>
-                                                            <th className="textcenter">Start Lesson</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-														<tr>
+                                               
+                                                    
+                                                <table id="" className="display table nowrap table-striped table-hover" style={{width:'100%'}}>
+                                    <thead>
+                                        <tr>
+                                            {
+                                              headerdata.map((headerList,i) =>(
+                                                (i===0) ? <th>{headerList}</th> : <th className="textcenter">{headerList}</th>
+                                             ))
+                                            }
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {
+                                            lessondata.map((lessonItem,j) => (
+                                                (j===0)?
+                                                <tr>
+                                                    
+                                                    <td key={lessonItem["Lesson Plan Name"]} style={{"vertical-align": "middle"}}>{lessonItem["Lesson Plan Name"]}</td>
+                                                   
+                                                       
+                                                    <td key={lessonItem["topic"]} className="textcenter" style={{"vertical-align": "middle"}}>{lessonItem["Topic"]}</td>
+                                                    <td key={lessonItem["Standard"]} className="textcenter" style={{"vertical-align": "middle"}}>{lessonItem["Standard"]}</td>
+                                                    <td key={lessonItem["Duration"]} className="textcenter" style={{"vertical-align": "middle"}}>{lessonItem["Duration"]}</td>
+                                                    <td key={lessonItem["Start Lesson"]} className="textcenter" style={{"vertical-align": "middle"}} >
+                                                    <button type="button" className="btn btn-icon btn-rounded btn-success"><i className="feather icon-play"></i></button></td>
+											
+                                                                        
+                                                </tr>:
+                                                   <tr>
+                                                  <td key={lessonItem["Lesson Plan Name"]} style={{verticalAlign: 'middle'}} ><i className="feather icon-lock f-20 tablelockicon"><FiLock/></i>{lessonItem["Lesson Plan Name"]}</td>
+                                            
+                                                      
+                                                   <td key={lessonItem["topic"]} className="textcenter" style={{"vertical-align": "middle"}}>{lessonItem["Topic"]}</td>
+                                                   <td key={lessonItem["Standard"]} className="textcenter" style={{"vertical-align": "middle"}}>{lessonItem["Standard"]}</td>
+                                                   <td key={lessonItem["Duration"]} className="textcenter" style={{"vertical-align": "middle"}}>{lessonItem["Duration"]}</td>
+                                                   <td key={lessonItem["Start Lesson"]} className="textcenter" style={{"vertical-align": "middle"}} >
+                                                   <button type="button" className="btn btn-icon btn-rounded btn-success"><i className="feather icon-play"></i></button></td>
+                                           
+                                                                       
+                                               </tr>
+
+
+                                        
+                                            
+                                            
+                                            ))
+                                        }
+                                    </tbody>
+                                   
+										
+                        </table>
+														 {/* <tr>
                                                             <td style={{verticalAlign: 'middle'}} >Energy</td>
                                                             <td style={{verticalAlign: 'middle'}}  className="textcenter">Energy</td>
                                                             <td style={{verticalAlign: 'middle'}}  className="textcenter">TXK-1A</td>
                                                             <td style={{verticalAlign: 'middle'}}  className="textcenter">1 Hr 30 Mins</td>
                                                             <td style={{verticalAlign: 'middle'}}  className="textcenter"><a href="startlesson"><button type="button" className="btn btn-icon btn-rounded btn-success"><i className="feather icon-play"></i></button></a></td>
-                                                        </tr>
-														<tr className="disablecursortable disablecolor">
-                                                            <td style={{verticalAlign: 'middle'}} ><i className="feather icon-lock f-20 tablelockicon"><FiLock/></i> Space</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">Universe</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">TXK-2A</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">2 Hrs 0 Mins</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter"><button type="button" className="btn btn-icon btn-rounded btn-success"><i className="feather icon-play"></i></button></td>
-                                                        </tr>
-														<tr className="disablecursortable disablecolor">
-                                                            <td style={{verticalAlign: 'middle'}} ><i className="feather icon-lock f-20 tablelockicon"><FiLock/></i> Photosynthesis</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">Plants</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">TXK-2B</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">1 Hr 30 Mins</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter"><button type="button" className="btn btn-icon btn-rounded btn-success"><i className="feather icon-play"></i></button></td>
-                                                        </tr>
-														<tr className="disablecursortable disablecolor">
-                                                            <td style={{verticalAlign: 'middle'}} ><i className="feather icon-lock f-20 tablelockicon"><FiLock/></i> Chemistry</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">Chemistry</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">TXK-3A</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">1 Hr 30 Mins</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter"><button type="button" className="btn btn-icon btn-rounded btn-success"><i className="feather icon-play"></i></button></td>
-                                                        </tr>
-														<tr className="disablecursortable disablecolor">
-                                                            <td style={{verticalAlign: 'middle'}} ><i className="feather icon-lock f-20 tablelockicon"><FiLock/></i> IPC</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">IPC</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">TXK-2B</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">1 Hr 0 Mins</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter"><button type="button" className="btn btn-icon btn-rounded btn-success"><i className="feather icon-play"></i></button></td>
-                                                        </tr>
-														<tr className="disablecursortable disablecolor">
-                                                            <td style={{verticalAlign: 'middle'}} ><i className="feather icon-lock f-20 tablelockicon"><FiLock/></i> Weight & Scale</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">Plants</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">TXK-2A</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">1 Hr 30 Mins</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter"><button type="button" className="btn btn-icon btn-rounded btn-success"><i className="feather icon-play"></i></button></td>
-                                                        </tr>
-														
-														<tr className="disablecursortable disablecolor">
-                                                            <td style={{verticalAlign: 'middle'}} ><i className="feather icon-lock f-20 tablelockicon"><FiLock/></i> Photons</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">Light</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">TXK-3A</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">1 Hr 30 Mins</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter"><button type="button" className="btn btn-icon btn-rounded btn-success"><i className="feather icon-play"></i></button></td>
-                                                        </tr>
-														
-														<tr className="disablecursortable disablecolor">
-                                                            <td style={{verticalAlign: 'middle'}} ><i className="feather icon-lock f-20 tablelockicon"><FiLock/></i> Atoms</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">Matter</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">TXK-3A</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">2 Hrs 0 Mins</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter"><a href="startlesson.php"><button type="button" className="btn btn-icon btn-rounded btn-success"><i className="feather icon-play"></i></button></a></td>
-                                                        </tr>
-														<tr className="disablecursortable disablecolor">
-                                                            <td style={{verticalAlign: 'middle'}} ><i className="feather icon-lock f-20 tablelockicon"><FiLock/></i> Time & Space</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">Time</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">TXK-1A</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">1 Hr 30 Mins</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter"><button type="button" className="btn btn-icon btn-rounded btn-success"><i className="feather icon-play"></i></button></td>
-                                                        </tr>
-														<tr className="disablecursortable disablecolor">
-                                                            <td style={{verticalAlign: 'middle'}} ><i className="feather icon-lock f-20 tablelockicon"><FiLock/></i> Electricity</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">Electricity</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">TXK-3A</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter">1 Hr 30 Mins</td>
-                                                            <td style={{verticalAlign: 'middle'}}  className="textcenter"><button type="button" className="btn btn-icon btn-rounded btn-success"><i className="feather icon-play"></i></button></td>
-                                                        </tr>
+                                                        </tr> */}
 														
 														
-                                                    </tbody>
-                                                </table>
+														
+                                                   
+                                           
                                             </div>
                                         </div>
                                     </div>
