@@ -28,7 +28,7 @@ const Modal = (props) => {
             onRequestClose={props.hideModal}
             className={{
                 base: "",
-                afterOpen: "modal-dialog",
+                afterOpen: "modal-dialog modal-lg",
                 beforeClose: "modalBeforeClose",
             }}
             overlayClassName={{

@@ -2,6 +2,8 @@ import React from 'react'
 import TeacherLayout from '../layout/TeacherLayout';
 import  { useState, useEffect } from 'react';
 
+import Modal from "../components/modal/Modal"
+import AttendanceCandleStick from "../components/modal_windows/AttendanceCandleStick"
 //import {getInfo} from '../services/GenricService';
 
 function attendanceTrackingTable(props) {
@@ -82,17 +84,30 @@ function attendanceTrackingTable(props) {
         setAssignmentList(data.Studentdata)
 
     })
-	}, [props.refresh])*/
+    }, [props.refresh])*/
+    
+    const [candleStickScreen1Visibility, setCandleStickScreenVisibility] = useState(false);
 
-
-
-
+const showCandleStickModal = () => {
+	setCandleStickScreenVisibility(true);
+};
+const hideCandleStickModal = () => {
+	
+	setCandleStickScreenVisibility(false);
+};
 
 
     
     return (
         
         <div>
+            <Modal
+           isOpen={candleStickScreen1Visibility}
+		   hideModal={hideCandleStickModal}
+            modalTitle= "Ann Doe"
+        >
+             <AttendanceCandleStick hideModal={hideCandleStickModal}/> 
+        </Modal>
             
                 <div className="card">
                     <div className="row" style={{borderBottom: '1px solid #f1f1f1'}}>
@@ -150,11 +165,16 @@ function attendanceTrackingTable(props) {
                                                     <td key={StudentItem["Sync. Time Spent"]} className="textcenter" style={{"vertical-align": "middle"}}>{StudentItem["Sync. Time Spent"]}</td>
                                                     <td key={StudentItem["Async. Time Spent"]} className="textcenter" style={{"vertical-align": "middle"}}>{StudentItem["Async. Time Spent"]}</td>
                                                     <td key={StudentItem.Details} className="textcenter" style={{"vertical-align": "middle"}} >
-                                                    <button type="button" className="btn btn-icon btn-rounded btn-success chartshow b1"><i className="ti-bar-chart student_tableicon"></i></button>
-											<button type="button" className="btn btn-icon btn-rounded btn-success b2" data-toggle="modal" data-target="#studentattchart"><i className="ti-bar-chart student_tableicon"></i></button>
-											<button type="button" className="btn btn-icon btn-rounded btn-success" data-toggle="modal" data-target="#reportpopup"><i className="ti-server student_tableicon"></i></button></td>
-                                                   
-                                                                        
+                                                            <button type="button" className="btn btn-icon btn-rounded btn-success chartshow b1">
+                                                                <i className="ti-bar-chart student_tableicon" onClick={showCandleStickModal}></i>
+                                                            </button>
+                                                            <button type="button" className="btn btn-icon btn-rounded btn-success b2" data-toggle="modal" data-target="#studentattchart">
+                                                                <i className="ti-bar-chart student_tableicon"></i>
+                                                            </button>
+                                                            <button type="button" className="btn btn-icon btn-rounded btn-success" data-toggle="modal" data-target="#reportpopup">
+                                                                <i className="ti-server student_tableicon"></i>
+                                                            </button>
+                                                    </td>               
                                                 </tr>
                                             ))
                                         }
