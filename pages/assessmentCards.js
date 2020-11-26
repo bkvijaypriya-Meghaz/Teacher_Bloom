@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Modal from '../components/modal/Modal';
 
 import AssessmentDelete from '../components/modal_windows/AssessmentDelete'
+import AssessmentAssign from '../components/modal_windows/AssessmentAssign'
 
 
 
@@ -11,7 +12,6 @@ export default function assessmentCards({ title, numberofquestions,date}) {
 
 
 const [assessmentDeleteScreen1Visibility, setAssessmentDeleteScreen1Visibility] = useState(false);
-
 const showAssessmentDeleteModal1 = () => {
 	setAssessmentDeleteScreen1Visibility(true);
 };
@@ -22,11 +22,29 @@ const hideAssessmentDeleteModal1 = () => {
 };
 
 
+const [assessmentAssignScreen1Visibility, setAssessmentAssignScreen1Visibility] = useState(false);
 
+const showAssessmentAssignModal1 = () => {
+	setAssessmentAssignScreen1Visibility(true);
+};
+const hideAssessmentAssignModal1 = () => {
+	
+	setAssessmentAssignScreen1Visibility(false);
+};
 
     return (
 		 <div>
 		
+		
+		
+		<Modal
+           isOpen={assessmentAssignScreen1Visibility}
+		   hideModal={hideAssessmentAssignModal1}
+            modalTitle=  "Assign Assessment :: Human Body Practice Test" 
+        >
+             <AssessmentAssign hideModal={hideAssessmentAssignModal1}/> 
+        </Modal>
+
 		<Modal
            isOpen={assessmentDeleteScreen1Visibility}
 		   hideModal={hideAssessmentDeleteModal1}
@@ -34,7 +52,7 @@ const hideAssessmentDeleteModal1 = () => {
         >
              <AssessmentDelete hideModal={hideAssessmentDeleteModal1}/> 
         </Modal>
-        
+		
          <div className="card user-card">
                                         <div className="card-block">
 											<div className="row align-items-center justify-content-center">
@@ -67,7 +85,7 @@ const hideAssessmentDeleteModal1 = () => {
 														</a>
 													</div>
 													<div className="col-auto" data-toggle="modal" data-target="#assignpopup">
-														<div className="assicon"><i className="feather icon-file-text"></i></div>
+														<div className="assicon"><i className="feather icon-file-text"onClick={showAssessmentAssignModal1}></i></div>
 														<div className="asstxt">Assign</div>
 													</div>
 													<div className="col-auto" data-toggle="modal" data-target="#deletepopup">
