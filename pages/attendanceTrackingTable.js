@@ -1,6 +1,8 @@
 import React from 'react'
 import TeacherLayout from '../layout/TeacherLayout';
 import  { useState, useEffect } from 'react';
+import Modal from '../components/modal/Modal';
+import AttendanceReportModal from '../components/modal_windows/AttendanceReportModal'
 
 //import {getInfo} from '../services/GenricService';
 
@@ -82,7 +84,17 @@ function attendanceTrackingTable(props) {
         setAssignmentList(data.Studentdata)
 
     })
-	}, [props.refresh])*/
+    }, [props.refresh])*/
+    const [attendanceReportModalScreenVisibility, setAttendanceReportModalScreenVisibility] = useState(false);
+
+const showAttendanceReportModal = () => {
+	setAttendanceReportModalScreenVisibility(true);
+};
+
+const hideAttendanceReportModal = () => {
+	
+	setAttendanceReportModalScreenVisibility(false);
+};
 
 
 
@@ -93,6 +105,15 @@ function attendanceTrackingTable(props) {
     return (
         
         <div>
+             
+		
+		<Modal
+           isOpen={attendanceReportModalScreenVisibility}
+		   hideModal={hideAttendanceReportModal}
+           modalTitle= "AttendanceReportModal"
+        >
+         <AttendanceReportModal  hideModal={hideAttendanceReportModal}/>
+        </Modal>
             
                 <div className="card">
                     <div className="row" style={{borderBottom: '1px solid #f1f1f1'}}>
@@ -152,7 +173,7 @@ function attendanceTrackingTable(props) {
                                                     <td key={StudentItem.Details} className="textcenter" style={{"vertical-align": "middle"}} >
                                                     <button type="button" className="btn btn-icon btn-rounded btn-success chartshow b1"><i className="ti-bar-chart student_tableicon"></i></button>
 											<button type="button" className="btn btn-icon btn-rounded btn-success b2" data-toggle="modal" data-target="#studentattchart"><i className="ti-bar-chart student_tableicon"></i></button>
-											<button type="button" className="btn btn-icon btn-rounded btn-success" data-toggle="modal" data-target="#reportpopup"><i className="ti-server student_tableicon"></i></button></td>
+											<button type="button" className="btn btn-icon btn-rounded btn-success" data-toggle="modal" data-target="#reportpopup"><i className="ti-server student_tableicon" onClick={showAttendanceReportModal}></i></button></td>
                                                    
                                                                         
                                                 </tr>

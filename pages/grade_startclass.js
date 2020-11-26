@@ -86,6 +86,23 @@ export default function GradeStartClass(props) {
             "Duration":"1 Hr 30 Mins",
             "Start Lesson":"icons"
         }]
+
+        
+       {/* 
+        const [lessons, setLessons] = useState(0);
+        const[lessonList,setLessonList]=useState([])
+    useEffect(() => { getInfo(`link`).then((data) => {
+		//Todo : we have to assign refresh(sessionid) to dynamic URL
+        console.log("grade:section id",props.refresh)
+        console.log('bloom data is : ',data);
+        setLesson(data);
+        setLessonList(data.lessons);
+
+    })
+	}, [props.refresh])
+*/}
+         
+        
     
     return (
         <TeacherLayout {...props}>
@@ -160,7 +177,8 @@ export default function GradeStartClass(props) {
                                                    <td key={lessonItem["Standard"]} className="textcenter" style={{"vertical-align": "middle"}}>{lessonItem["Standard"]}</td>
                                                    <td key={lessonItem["Duration"]} className="textcenter" style={{"vertical-align": "middle"}}>{lessonItem["Duration"]}</td>
                                                    <td key={lessonItem["Start Lesson"]} className="textcenter" style={{"vertical-align": "middle"}} >
-                                                   <button type="button" className="btn btn-icon btn-rounded btn-success"><i className="feather icon-play"></i></button></td>
+                                                   <button type="button" className="btn btn-icon btn-rounded btn-success">
+                                                       <i className="feather icon-play"></i></button></td>
                                            
                                                                        
                                                </tr>

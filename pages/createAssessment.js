@@ -5,18 +5,20 @@ import TeacherLayout from '../layout/TeacherLayout';
 export default function create_assessments(props){
 	  
 	
-	 /*
-	 const [Studentdata, setStudentData] = useState(0);
-
-	 useEffect(() => { getInfo(`${ASSIGNMENT_TO_BE_GRADED}/786868/assignments/to-be-graded`).then((data) => {
+	 {/* 
+        const [newAssessments, setNewAssessments] = useState(0);
+        const[newAssessmentList,setNewAssessmentList]=useState([])
+    useEffect(() => { getInfo(`link`).then((data) => {
 		//Todo : we have to assign refresh(sessionid) to dynamic URL
-        console.log("create Assessment",props.refresh)
+        console.log("grade:grade id",props.refresh)
         console.log('bloom data is : ',data);
-        setAssignment(data);
-        setAssignmentList(data.Studentdata)
+        setAssessments(data);
+        setAssessmentList(data.assessments);
 
     })
-	}, [props.refresh])*/
+	}, [props.refresh])
+*/}
+	 
 
     return(
         <div>
