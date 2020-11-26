@@ -5,7 +5,6 @@ import CreateCustomReport from '../components/modal_windows/CreateCustomReport'
 
 import TeacherLayout from '../layout/TeacherLayout';
 import  { useState, useEffect } from 'react';
-import Modal from '../components/modal/Modal';
 import AttendanceReportModal from '../components/modal_windows/AttendanceReportModal'
 
 //import {getInfo} from '../services/GenricService';
