@@ -13,6 +13,7 @@ import '../styles/teacher-dashboard.css'
 import '../styles/nav-and-view.css'    
 import '../styles/teacher-setup-modal.css'    
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import "../public/assets/plugins/multi-select/css/multi-select.css"
 
 import 'bloom-chat-module/dist/index2.css'
 

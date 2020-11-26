@@ -1,4 +1,8 @@
 import React from 'react'
+import {FiPlus} from 'react-icons/fi'
+import Modal from '../components/modal/Modal';
+import CreateCustomReport from '../components/modal_windows/CreateCustomReport'
+
 import TeacherLayout from '../layout/TeacherLayout';
 import  { useState, useEffect } from 'react';
 
@@ -84,13 +88,27 @@ function attendanceTrackingTable(props) {
     })
 	}, [props.refresh])*/
 
+    const [customReportScreen1Visibility, setCustomReportScreen1Visibility] = useState(false);
 
-
-
-
-
+    const showCustomReportModal1 = () => {
+        setCustomReportScreen1Visibility(true);
+    };
+    
+    const hideCustomReportModal1 = () => {
+        
+        setCustomReportScreen1Visibility(false);
+    };
     
     return (
+        <div>
+		
+		<Modal
+           isOpen={customReportScreen1Visibility}
+		   hideModal={hideCustomReportModal1}
+            modalTitle= "4th Grade Science Class Attendance Report "
+        >
+             <CreateCustomReport hideModal={hideCustomReportModal1}/> 
+        </Modal>
         
         <div>
             
@@ -103,7 +121,7 @@ function attendanceTrackingTable(props) {
 						</div>
 						<div className="col-7">
 							<div className="headrytbtn">
-								<button type="button" className="btn btn-success" data-toggle="modal" data-target="#customreportpopup"><i className="feather icon-plus"></i>Custom Report</button>
+								<button type="button" className="btn btn-success" data-toggle="modal" data-target="#customreportpopup" onClick={showCustomReportModal1}><i className="feather icon-plus"><FiPlus/></i>Custom Report</button>
 							</div>
 						</div>
 					</div>
@@ -179,6 +197,7 @@ function attendanceTrackingTable(props) {
                 </div>
             </div>
        
+        </div>
         </div>
        
     )
