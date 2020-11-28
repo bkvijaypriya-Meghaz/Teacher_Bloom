@@ -20,9 +20,7 @@ export default function Topics(props)  {
     return(
         <div className="Recent-Users dashfirstrowheight">
             <div className="dashcurrbtn">
-                <a href="curriculum">
-                    <button className="btn">Curriculum</button>
-                </a>
+                <div className="btn"><a href="curriculum">Curriculum</a></div>
             </div>
             <TopicsAndView
                 viewsList={viewsList}

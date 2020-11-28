@@ -129,7 +129,18 @@
     text-decoration: underline;
     font-weight: 600;
 }
-
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.btn {
+    padding: 10px 20px;
+    border-radius: 0.25rem;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
 
 /* Curriculum Topics Display in the dashboard */
 .dashtopic img {
@@ -247,4 +258,21 @@ lessonplan styles*/
 
 .icon-plus:before {
     content: "\e8b1";
+}
+
+/* TopicNavBar.js */
+
+.dropdownbuttonTopic
+{
+    margin-right: 20px;
+    /* height: 20x;
+    width: 70px; */
+}
+
+/* grade_book */
+.form-control.gradesort {
+    height: auto !important;
+    border-radius: 15px;
+    background: #149da7;
+    color: #fff;
 }

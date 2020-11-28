@@ -1,4 +1,3 @@
-import {FiLock} from 'react-icons/fi';
 import TeacherLayout from '../layout/TeacherLayout';
 
 export default function Grade_gradebook (props){
@@ -16,250 +15,380 @@ export default function Grade_gradebook (props){
              {/* <!-- [ Main Content ] start --> */}
     <div className="pcoded-main-container">
         <div className="pcoded-wrapper">
-            <div className="pcoded-content">
+        <div className="pcoded-content">
                 <div className="pcoded-inner-content">
-                    {/* <!-- [ breadcrumb ] start --> */}
-					<div className="page-header">
-                        <div className="page-block">							
-                            <div className="row align-items-center">
-                                <div className="col-md-12">                                    
-                                    <ul className="breadcrumb">
-                                        <li className="breadcrumb-item breadcrumb-itemStyle"><a href="#!">My Classes</a></li>
-                                        <li className="breadcrumb-item breadcrumb-itemStyle"><a href="#!">4th Grade Science</a></li>
-                                    </ul>
-                                </div>
-                                <div className="col-md-12">
-                                    <div className="card cardbreadcrum">
-                                        <div className="card-block nopadding">
-                                            <div className="row nomargin">
-                                                <div className="col text-right">
-                                                    <div className="card-header card-headerStyle" >
-                                                        <div className="card-header-right">
-                                                            <div className="btn-group card-option">
-                                                                <button type="button" className="btn dropdown-toggle"  onClick={openPopup} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                    <i className="feather icon-more-horizontal"></i>
-                                                                </button>
-                                                                <ul id="popupGradeBook" className="list-unstyled card-option dropdown-menu dropdown-menu-right">
-                                                                    <li className="dropdown-item disablecursoronly">
-                                                                        <a href="#!"><span>2nd Grade <i className="rytdropdownicon"><FiLock/></i></span></a>
-                                                                    </li>
-                                                                    <li className="dropdown-item disablecursoronly"><a href="#!"><span>3rd Grade <i className="rytdropdownicon"><FiLock/></i></span></a>
-                                                                    </li>															
-                                                                    <li className="dropdown-item"><a href="#!"><span>4th Grade</span></a></li>
-                                                                    <li className="dropdown-item disablecursoronly"><a href="#!"><span>5th Grade <i className="rytdropdownicon"><FiLock/></i></span></a></li>																													
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* <!-- [ breadcrumb ] end --> */}
+                     {/* [ breadcrumb ] start  */}
+
+                     {/* [ breadcrumb ] end  */}
                     <div className="main-body">
                         <div className="page-wrapper">
-                            {/* <!-- [ Main Content ] start --> */}
-							
+                             {/* [ Main Content ] start  */}
                             <div className="row">
-                                {/* <!-- [ daily sales section ] start --> */}
+                                {/* [ daily sales section ] start  */}
                                 
-								<div className="col-md-12">
-                                    <div className="card">
-                                        <div className="card-header">
-                                            <h5>Class Grade Summary</h5>
-                                        </div>
-                                        <div className="card-block">
-                                            
-											<div className="row">
-												<div className="col-2 text-center">
-													<div data-label="20%" className="radial-bar radial-bar-25 radial-bar-lg radial-bar-success gradecircle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="William Johnson<br>Denise Coso<br>Tanya Sharma<br>John Nokes"></div>
-													<div className="gradename">A</div>
-												</div>
-												<div className="col-2 text-center">
-													<div data-label="30%" className="radial-bar radial-bar-30 radial-bar-lg radial-bar-success gradecircle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Ann Doe<br>Mason Logan"></div>
-													<div className="gradename">B</div>
-												</div>
-												<div className="col-2 text-center">
-													<div data-label="25%" className="radial-bar radial-bar-25 radial-bar-lg radial-bar-success gradecircle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Brian Michaelis"></div>
-													<div className="gradename">C</div>
-												</div>
-												<div className="col-2 text-center">
-													<div data-label="15%" className="radial-bar radial-bar-15 radial-bar-lg radial-bar-success gradecircle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Evelyn Oliver"></div>
-													<div className="gradename">D</div>
-												</div>
-												<div className="col-2 text-center">
-													<div data-label="10%" className="radial-bar radial-bar-10 radial-bar-lg radial-bar-success gradecircle" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Eric Betteli<br>Sophia Brown"></div>
-													<div className="gradename">F</div>
-												</div>
-												<div className="col-2 text-center">
-													<div data-label="10" className="radial-bar radial-bar-100 radial-bar-lg radial-bar-success totalgradecircle"></div>
-													<div className="totalgradename">Total Students</div>
-												</div>
-												
+								<div className="col-xl-12 col-md-12 col-sm-12 col-xs-12">
+									<div className="card Recent-Users">
+										
+										<div className="card-header">
+											<h5>Grade Book Filter</h5>
+										</div>
+										<div className="card-block">
+											
+											<div className="table-responsive">
+												<table className="table table-hover table-striped table-bordered gradefiltertable" style={{overflow:"hidden"}}>
+													<thead>
+														<tr>
+															<th colspan="4" style={{transform:"none"}}>
+																<div className="gradingfrtth">
+																	<div className="input-group">
+																		<input type="text" className="form-control btn-sm gradesearch" placeholder="Search"/>
+																		<div className="input-group-append">
+																			<span className="input-group-text gradesearchicon" id="basic-addon2"><i className="feather icon-search"></i></span>
+																		</div>
+																	</div>
+																	<div className="text-center m-t-20 m-b-20">
+																		<div className="form-group">
+																			<select className="form-control btn-sm gradesort">
+																				<option>Sort By Highest Grade</option>
+																				<option>Sort By Lowest Grade</option>
+																			</select>
+																		</div>
+																	</div>
+																	<div className="">
+																		
+																		<div className="form-group d-inline">
+																			<div className="radio radio-primary d-inline">
+																				<input type="radio" name="passfail" id="pass" checked=""/>
+																				<label for="pass" className="cr">Pass</label>
+																			</div>
+																		</div>
+																		<div className="form-group d-inline m-l-10">
+																			<div className="radio radio-primary d-inline">
+																				<input type="radio" name="passfail" id="fail"/>
+																				<label for="fail" className="cr">Fail</label>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															
+															</th>
+															<th>Essay</th>
+															<th>Discussion</th>
+															<th>Grammer</th>
+															<th>Reading Log</th>
+															<th>Vocabulary</th>
+															<th>Story Problems</th>
+															<th>Assignment</th>
+															<th>Quiz</th>
+															<th>Project</th>
+															<th>Test</th>
+															<th>Quiz</th>
+															<th>Experiment</th>
+															<th>Discussion</th>
+															<th>Assignment</th>
+															<th>Test</th>
+															<th>Assignment</th>
+															<th><a href="assignment_grade">Geography Quiz</a></th>
+															<th>Homework</th>
+															<th>Project</th>
+															<th>Quiz</th>
+															
+															
+														</tr>
+													</thead><thead>
+													</thead><tbody>
+														
+														<tr>
+															<td colspan="4" className="gradetablesidehead">Due Date</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td></td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															<td>10/20</td>
+															
+															
+														</tr>
+														<tr style={{borderBottom: "4px solid #e2e2e2"}}>
+															<td colspan="4" className="gradetablesidehead">Points Possible</td>
+															<td>50</td>
+															<td>50</td>
+															<td>50</td>
+															<td></td>
+															<td>50</td>
+															<td>50</td>
+															<td>50</td>
+															<td>50</td>
+															<td>50</td>
+															<td>50</td>
+															<td>50</td>
+															<td>50</td>
+															<td>50</td>
+															<td>50</td>
+															<td>50</td>
+															<td>50</td>
+															<td>50</td>
+															<td>50</td>
+															<td>50</td>
+															<td>50</td>
+															
+															
+														</tr>
+														<tr>
+															<td colspan="4">Brian Orr</td>
+															<td>10</td>
+															<td>10</td>
+															<td>10</td>
+															<td></td>
+															<td>10</td>
+															<td>10</td>
+															<td>10</td>
+															<td>10</td>
+															<td>10</td>
+															<td>10</td>
+															<td>10</td>
+															<td>10</td>
+															<td>10</td>
+															<td>10</td>
+															<td>10</td>
+															<td>10</td>
+															<td>10</td>
+															<td>10</td>
+															
+															<td>10</td>
+															<td>10</td>
+															
+															
+														</tr>
+														<tr>
+															<td colspan="4">Derak Voltez</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td></td>
+															
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															
+														</tr>
+														<tr>
+															<td colspan="4">Rebbeca Woods</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td></td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															
+														</tr>
+														<tr>
+															<td colspan="4">David Hampton</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td></td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															
+														</tr>
+														<tr>
+															<td colspan="4">Johnathan Rabbe</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td></td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															
+														</tr>
+														<tr>
+															<td colspan="4">Elijah Johnson</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td></td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															
+														</tr>
+														<tr>
+															<td colspan="4">Roger Moore</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td></td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															
+														</tr>
+														<tr>
+															<td colspan="4">Stephen Orr</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td></td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															
+														</tr>
+														<tr>
+															<td colspan="4">David Stazinsky</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td></td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															<td>15</td>
+															
+														</tr>
+														
+													</tbody>
+												</table>
 											</div>
-                                        </div>
-                                    </div>
-                                </div>
-								{/* <!-- [ Fixed Header ] start --> */}
-                                <div className="col-sm-12">
-                                    <div className="card">
-                                        <div className="card-header">
-                                            <h5>Student Grades</h5>
-                                        </div>
-                                        <div className="card-block">
-                                            <div className="table-responsive">
-                                                <table id="fixed-columns-left" className="display table nowrap table-striped table-hover widthStyle">
-                                                    <thead>
-                                                        
-														<tr>
-                                                            <th>Name</th>
-                                                            <th className="textcenter">Energy Transfer Assessment</th>
-                                                            <th className="textcenter">Science Rock</th>
-                                                            <th className="textcenter">Energy CER</th>
-                                                            <th className="textcenter">Writing Science</th>
-                                                            <th className="textcenter">Concept Attainment Quiz</th>
-                                                            <th className="textcenter">Total</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-														<tr>
-                                                            <td>
-                                                                <h6 className="m-0">
-                                                                    <img className="rounded-circleStyle m-r-10" src="assets/images/user/avatar-2.jpg" 
-                                                                    alt="activity-user"/>William Johnson</h6>
-                                                            </td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : A<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : A<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-danger gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Not Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-warning gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Turned In, Not Graded"></button></td>
-															<td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-danger gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Not Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle">A</td>
-                                                        </tr>
-
-														<tr>
-                                                            <td>
-                                                                <h6 className="m-0"><img className="rounded-circleStyle m-r-10" src="assets/images/user/avatar-1.jpg" alt="activity-user"/>Ann Doe</h6>
-                                                            </td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : A<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : B<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-danger gradecolor" data-toggle="tooltip" data-placement="bottom" title="Not Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-warning gradecolor" data-toggle="tooltip" data-placement="bottom" title="Turned In, Not Graded"></button></td>
-															<td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-danger gradecolor" data-toggle="tooltip" data-placement="bottom" title="Not Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle">B</td>
-                                                        </tr>
-														<tr>
-															<td>
-                                                                <h6 className="m-0"><img className="rounded-circleStyle m-r-10" src="assets/images/user/avatar-2.jpg" alt="activity-user"/>John Nokes</h6>
-                                                            </td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : A<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : B<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-danger gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : A<br>Graded & Turned In"></button></td>
-															<td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-danger gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle">A</td>
-                                                        </tr>
-														<tr>
-															<td>
-                                                                <h6 className="m-0"><img className="rounded-circleStyle m-r-10"  src="assets/images/user/avatar-2.jpg" alt="activity-user"/>Brian Michaelis</h6>
-                                                            </td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : A<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : B<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : B<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-warning gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-warning gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle">C</td>
-                                                        </tr>
-														<tr>
-															<td>
-                                                                <h6 className="m-0"><img className="rounded-circleStyle m-r-10"  src="assets/images/user/avatar-1.jpg" alt="activity-user"/>Evelyn Oliver</h6>
-                                                            </td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : B<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : B<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-danger gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-warning gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : C<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle">D</td>
-                                                        </tr>
-														<tr>
-															<td>
-                                                                <h6 className="m-0"><img className="rounded-circleStyle m-r-10"  src="assets/images/user/avatar-1.jpg" alt="activity-user"/>Sophia Brown</h6>
-                                                            </td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : A<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : B<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-warning gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-danger gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-danger gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle">F</td>
-                                                        </tr>
-														<tr>
-															<td>
-                                                                <h6 className="m-0"><img className="rounded-circleStyle m-r-10"  src="assets/images/user/avatar-2.jpg" alt="activity-user"/>Eric Betteli</h6>
-                                                            </td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : A<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : C<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-danger gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-warning gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-warning gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle">F</td>
-                                                        </tr>
-														<tr>
-															<td>
-                                                                <h6 className="m-0"><img className="rounded-circleStyle m-r-10"  src="assets/images/user/avatar-1.jpg" alt="activity-user"/>Denise Coso</h6>
-                                                            </td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : A<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : B<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-danger gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : A<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-warning gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle">A</td>
-                                                        </tr>
-														<tr>
-															<td>
-                                                                <h6 className="m-0"><img className="rounded-circleStyle m-r-10"  src="assets/images/user/avatar-2.jpg" alt="activity-user"/>Mason Logan</h6>
-                                                            </td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : A<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-warning gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-danger gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : B<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : B<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle">B</td>
-                                                        </tr>
-														<tr>
-															<td>
-                                                                <h6 className="m-0"><img className="rounded-circleStyle m-r-10"  src="assets/images/user/avatar-1.jpg" alt="activity-user"/>Tanya Sharma</h6>
-                                                            </td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : A<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-warning gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-danger gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-danger gradecolor"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle"><button type="button" className="btn btn-icon btn-rounded btn-success gradecolor" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Grade : A<br>Graded & Turned In"></button></td>
-                                                            <td className="textcenter table-responsive-tdStyle">A</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* <!-- [ Fixed Header ] end --> */}
+										</div>
+									</div>
+								</div>
 								
-								
-								
-                                
-                                
-
-                                
                             </div>
-                            {/* <!-- [ Main Content ] end --> */}
+                             {/* [ Main Content ] end  */}
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
     </div>
     {/* <!-- [ Main Content ] end --> */}
         </TeacherLayout>

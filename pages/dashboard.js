@@ -610,7 +610,7 @@ export default function Dashboard (props){
                             {/* <!-- [ chat user list ] end --> */}
 
                             {/* <!-- [ chat message ] start --> */}
-                            <div className="header-chat">
+                            {/* <div className="header-chat">
                                 <div className="h-list-header">
                                     <h6>Josephin Doe</h6>
                                     <a href="#!" className="h-back-user-list"><i className="feather icon-chevron-left"></i></a>
@@ -660,7 +660,7 @@ export default function Dashboard (props){
                                         </button>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                             {/* <!-- [ chat message ] end --> */}
                             </div>
 						</div>
