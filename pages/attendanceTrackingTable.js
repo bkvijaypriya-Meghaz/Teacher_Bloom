@@ -1,8 +1,11 @@
 import React from 'react'
+import {FiPlus} from 'react-icons/fi'
+import Modal from '../components/modal/Modal';
+import CreateCustomReport from '../components/modal_windows/CreateCustomReport'
+
 import TeacherLayout from '../layout/TeacherLayout';
 import  { useState, useEffect } from 'react';
-
-import Modal from "../components/modal/Modal"
+import AttendanceReportModal from '../components/modal_windows/AttendanceReportModal'
 import AttendanceCandleStick from "../components/modal_windows/AttendanceCandleStick"
 //import {getInfo} from '../services/GenricService';
 
@@ -88,27 +91,60 @@ function attendanceTrackingTable(props) {
     
     const [candleStickScreen1Visibility, setCandleStickScreenVisibility] = useState(false);
 
-const showCandleStickModal = () => {
-	setCandleStickScreenVisibility(true);
-};
-const hideCandleStickModal = () => {
-	
-	setCandleStickScreenVisibility(false);
-};
+    const showCandleStickModal = () => {
+        setCandleStickScreenVisibility(true);
+    };
+    const hideCandleStickModal = () => {
+        setCandleStickScreenVisibility(false);
+    };
+    const [attendanceReportModalScreenVisibility, setAttendanceReportModalScreenVisibility] = useState(false);
 
+    const showAttendanceReportModal = () => {
+        setAttendanceReportModalScreenVisibility(true);
+    };
 
+    const hideAttendanceReportModal = () => {
+        setAttendanceReportModalScreenVisibility(false);
+    };
+
+    const [customReportScreen1Visibility, setCustomReportScreen1Visibility] = useState(false);
+
+    const showCustomReportModal1 = () => {
+        setCustomReportScreen1Visibility(true);
+    };
+    
+    const hideCustomReportModal1 = () => {
+        
+        setCustomReportScreen1Visibility(false);
+    };
     
     return (
-        
         <div>
-            <Modal
+		
+		<Modal
+           isOpen={customReportScreen1Visibility}
+		   hideModal={hideCustomReportModal1}
+            modalTitle= "4th Grade Science Class Attendance Report "
+        >
+             <CreateCustomReport hideModal={hideCustomReportModal1}/> 
+        </Modal>
+        
+        <Modal
            isOpen={candleStickScreen1Visibility}
 		   hideModal={hideCandleStickModal}
             modalTitle= "Ann Doe"
         >
              <AttendanceCandleStick hideModal={hideCandleStickModal}/> 
         </Modal>
-            
+		
+        <Modal
+           isOpen={attendanceReportModalScreenVisibility}
+		   hideModal={hideAttendanceReportModal}
+           modalTitle= "AttendanceReportModal"
+        >
+            <AttendanceReportModal  hideModal={hideAttendanceReportModal}/>
+        </Modal>
+            <div>
                 <div className="card">
                     <div className="row" style={{borderBottom: '1px solid #f1f1f1'}}>
 						<div className="col-5">
@@ -118,7 +154,7 @@ const hideCandleStickModal = () => {
 						</div>
 						<div className="col-7">
 							<div className="headrytbtn">
-								<button type="button" className="btn btn-success" data-toggle="modal" data-target="#customreportpopup"><i className="feather icon-plus"></i>Custom Report</button>
+								<button type="button" className="btn btn-success" data-toggle="modal" data-target="#customreportpopup" onClick={showCustomReportModal1}><i className="feather icon-plus"><FiPlus/></i>Custom Report</button>
 							</div>
 						</div>
 					</div>
@@ -172,7 +208,7 @@ const hideCandleStickModal = () => {
                                                                 <i className="ti-bar-chart student_tableicon"></i>
                                                             </button>
                                                             <button type="button" className="btn btn-icon btn-rounded btn-success" data-toggle="modal" data-target="#reportpopup">
-                                                                <i className="ti-server student_tableicon"></i>
+                                                                <i className="ti-server student_tableicon" onClick={showAttendanceReportModal}></i>
                                                             </button>
                                                     </td>               
                                                 </tr>
@@ -199,6 +235,7 @@ const hideCandleStickModal = () => {
                 </div>
             </div>
        
+        </div>
         </div>
        
     )

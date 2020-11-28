@@ -8,6 +8,19 @@ import AssessmentCard from './assessmentCards'
 
 
 export default function assessments(props){
+    {/* 
+        const [assessments, setAssessments] = useState(0);
+        const[assessmentList,setAssessmentList]=useState([])
+    useEffect(() => { getInfo(`link`).then((data) => {
+		//Todo : we have to assign refresh(sessionid) to dynamic URL
+        console.log("grade:grade id",props.refresh)
+        console.log('bloom data is : ',data);
+        setAssessments(data);
+        setAssessmentList(data.assessments);
+
+    })
+	}, [props.refresh])
+*/}
 
     
     return(
