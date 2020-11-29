@@ -1,4 +1,6 @@
 import TeacherLayout from '../layout/TeacherLayout';
+import Link from 'next/link';
+
 
 export default function Grade_gradebook (props){
 
@@ -88,7 +90,9 @@ export default function Grade_gradebook (props){
 															<th>Assignment</th>
 															<th>Test</th>
 															<th>Assignment</th>
-															<th><a href="assignment_grade">Geography Quiz</a></th>
+															<th><Link href="./geographyQuizGradeBookFilter" passHref>																
+                                                            Geography Quiz
+                                                            </Link></th>
 															<th>Homework</th>
 															<th>Project</th>
 															<th>Quiz</th>
