@@ -276,3 +276,17 @@ lessonplan styles*/
     background: #149da7;
     color: #fff;
 }
+
+
+/* Grade and Comment */
+
+.orangecolor {
+    color: #f3a413;
+}
+.greencolor {
+    color: #3ce23c;
+}
+
+.borderBottom{
+    border-bottom: 1px solid #f1f1f1 !important;
+}
