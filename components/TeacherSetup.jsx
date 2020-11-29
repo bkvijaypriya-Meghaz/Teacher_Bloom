@@ -47,7 +47,36 @@ export class TeacherSetup extends React.Component{
             grade2: this.state.grade2,
             grade3: this.state.grade3,
         };
-        let apiResponse = await dummyInvocation("google.com", data);
+        // hardcode data in Divya's json structure.
+        let teacherSetupPostData = {
+            grade: 
+            {
+                teacherId: "T000124",
+                firstName,
+                lastName,
+                dName:displayName,
+                section: [
+                    {
+                        sectionId: "5000002",
+                        sectionName: "period1",
+                        gradeLevel : "2nd Grade"
+                    },
+                
+                    {
+                        sectionId: "5000005",
+                        sectionName: "period2",
+                        gradeLevel : "5th Grade"
+                    },
+                    
+                    {
+                        sectionId: "5000007",
+                        sectionName: "period5",
+                        gradeLevel : "7th Grade"
+                    }
+                ]
+            }
+        }
+        let apiResponse = await dummyInvocation("google.com", teacherSetupPostData);
         console.log("dummyApiInvocation response is: ", apiResponse)
         this.props.hideModal();
     }
