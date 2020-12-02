@@ -29,7 +29,7 @@ function assignmentGraded(props){
 							assignmentList && assignmentList.map((response)=>{
 								return(
 									<tr className="unread">
-									<td><h6 className="mb-1">{response.name}</h6></td>
+									<a href="assignment_graded"><td><h6 className="mb-1">{response.name}</h6></td></a>
 									<td className="text-right">{response.dueDate}<i className="feather icon-calendar calendericon"></i></td>
 								</tr>
 								)
