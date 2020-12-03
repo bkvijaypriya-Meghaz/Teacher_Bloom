@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import {dummyInvocation} from '../services/GenricService'
-
+import {dummyInvocation,saveInfo} from '../services/GenricService'
+import {CreateTeacherSetup_URL} from './ConstFile'
 export class TeacherSetup extends React.Component{
     constructor(props) {
         super(props);
@@ -47,14 +47,15 @@ export class TeacherSetup extends React.Component{
             grade2: this.state.grade2,
             grade3: this.state.grade3,
         };
+        console.log("\n\nIn Teacher Setup, the value of data is ",data,"\n\n");
         // hardcode data in Divya's json structure.
         let teacherSetupPostData = {
             grade: 
             {
                 teacherId: "T000124",
-                firstName,
-                lastName,
-                dName:displayName,
+                "firstName":data.firstName,
+                "lastName":data.lastName,
+                dName:data.displayName,
                 section: [
                     {
                         sectionId: "5000002",
@@ -76,14 +77,15 @@ export class TeacherSetup extends React.Component{
                 ]
             }
         }
-        let apiResponse = await dummyInvocation("google.com", teacherSetupPostData);
+        // let apiResponse = await dummyInvocation("google.com", teacherSetupPostData);
+        let apiReponse = saveInfo(CreateTeacherSetup_URL,teacherSetupPostData)
         console.log("dummyApiInvocation response is: ", apiResponse)
         this.props.hideModal();
     }
 
     handleChange = (event) => {
-        // console.log("event.target.name --> ", event.target.name);
-        // console.log("event.target.value --> ", event.target.value);
+        //  console.log("event.target.name --> ", event.target.name);
+        //  console.log("event.target.value --> ", event.target.value);
         let name = event.target.name;
         let value = event.target.value;
         this.setState((prevState) => {

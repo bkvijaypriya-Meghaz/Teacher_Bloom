@@ -66,7 +66,7 @@ export default function TopicNavBar(props) {
                 <DropdownButton id="Engage" title="Engage" variant ="secondary" className="dropdownbuttonTopic">
                 {
                     engageList && engageList.map((engageItem,index) => (
-                        <Dropdown.Item as="button">
+                        <Dropdown.Item as="button" onClick={displayContentPage}>
                             {engageItem}
                         </Dropdown.Item>
                     ))
@@ -75,7 +75,7 @@ export default function TopicNavBar(props) {
                 <DropdownButton id="Explore" title="Explore" variant ="secondary" className="dropdownbuttonTopic">
                 {
                     exploreList && exploreList.map((exploreItem,index) => (
-                        <Dropdown.Item as="button">
+                        <Dropdown.Item as="button" onClick={displayContentPage}>
                             {exploreItem}
                         </Dropdown.Item>
                     ))
@@ -84,7 +84,7 @@ export default function TopicNavBar(props) {
                 <DropdownButton id="Explain" title="Explain" variant ="secondary" className="dropdownbuttonTopic">
                 {
                     explainList && explainList.map((explainItem,index) => (
-                        <Dropdown.Item as="button">
+                        <Dropdown.Item as="button" onClick={displayContentPage}>
                             {explainItem}
                         </Dropdown.Item>
                     ))
@@ -93,7 +93,7 @@ export default function TopicNavBar(props) {
                 <DropdownButton id="Elaborate" title="Elaborate" variant ="secondary" className="dropdownbuttonTopic">
                 {
                     elaborateList && elaborateList.map((elaborateItem,index) => (
-                        <Dropdown.Item as="button">
+                        <Dropdown.Item as="button" onClick={displayContentPage}>
                             {elaborateItem}
                         </Dropdown.Item>
                     ))
@@ -102,7 +102,7 @@ export default function TopicNavBar(props) {
                 <DropdownButton id="Evaluate" title="Evaluate" variant ="secondary" className="dropdownbuttonTopic">
                 {
                     evaluateList && evaluateList.map((evaluateItem,index) => (
-                        <Dropdown.Item as="button">
+                        <Dropdown.Item as="button" onClick={displayContentPage}>
                             {evaluateItem}
                         </Dropdown.Item>
                     ))
@@ -111,7 +111,7 @@ export default function TopicNavBar(props) {
                 <DropdownButton id="Boost" title="Boost" variant ="secondary" className="dropdownbuttonTopic">
                 {
                     boostList && boostList.map((boostItem,index) => (
-                        <Dropdown.Item as="button">
+                        <Dropdown.Item as="button" onClick={displayContentPage}>
                             {boostItem}
                         </Dropdown.Item>
                     ))
@@ -120,7 +120,7 @@ export default function TopicNavBar(props) {
                 <DropdownButton id="Advancement" title="Advancement" variant ="secondary" className="dropdownbuttonTopic">
                 {
                     advancementList && engageList.map((advancementItem,index) => (
-                        <Dropdown.Item as="button">
+                        <Dropdown.Item as="button" onClick={displayContentPage}>
                             {advancementItem}
                         </Dropdown.Item>
                     ))

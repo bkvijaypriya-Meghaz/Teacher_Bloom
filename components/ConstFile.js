@@ -12,3 +12,6 @@ export const STUDENT_ACTIVITY="https://bloomlms.azure-api.net/teacher/v1/3242434
 export const TEACHER_SECTIONS="https://bloomlms.azure-api.net/teacher/v1/23423424/sections"
 export const CURRICULUM_CARDS="https://bloomlms.azure-api.net/teacher/v1/1231312/2342342/topics"
 export const TOPICS_URL="https://bloomlms.azure-api.net/teacher/v1/1231312/2342342/"
+
+//Azure URLs
+export const CreateTeacherSetup_URL = "http://localhost:7071/api/teachersections-create"
