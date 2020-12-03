@@ -52,7 +52,7 @@ function attendanceTrackingBarChart() {
     
     return (
         <div>
-            <div className="card">
+            
                 <div className="card-header">
                     <h5>Average Sync/Async Attendance</h5>
                 </div>
@@ -120,7 +120,7 @@ function attendanceTrackingBarChart() {
                             />
                     </div>  
             </div>
-        </div>  
+          
     )
 }
 
