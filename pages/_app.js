@@ -16,6 +16,8 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import "../public/assets/plugins/multi-select/css/multi-select.css"
 
 import 'bloom-chat-module/dist/index2.css'
+ import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

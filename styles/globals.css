@@ -291,3 +291,55 @@ lessonplan styles*/
 .borderBottom{
     border-bottom: 1px solid #f1f1f1 !important;
 }
+
+
+/* slider */
+
+
+.slides .slick-prev,
+.slides .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+ 
+ 
+ }
+  
+
+.slides {
+  position: relative;
+}
+
+.slides .slick-prev,
+.slides .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index:1;
+  
+  
+}
+
+.slides .slick-prev {
+  left: 10px;
+  
+ 
+
+}
+
+.slides .slick-next {
+  right: 1%;
+  
+}
+
+.slick-prev:before {
+     
+    color:#888 !important;
+    font-weight: 40px;
+  }
+  
+  .slick-next:before {
+  
+    color: #888 !important;
+    font-weight: 40px;
+   
+  }
