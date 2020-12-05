@@ -38,6 +38,7 @@ export async function getInfo(url) {
         method: 'GET',
         headers: {
             'Ocp-Apim-Subscription-Key': 'a07e3fa63cca49d1bb4a6a4eb29fc527'
+            
         },
     })
     return await response.json();

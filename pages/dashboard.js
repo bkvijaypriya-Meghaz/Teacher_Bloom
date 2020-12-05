@@ -20,16 +20,22 @@ import {TEACHER_SECTIONS} from '../components/ConstFile';
 import BarChart from './dashboardBarChart';
 
 export default function Dashboard (props){
-    
+
+    const [sections, setSections] = useState([]);
+    const [dname,setDname]=useState(0)
     const[sectionsList,setSectionsList]=useState([])
    // here you have to pass default sectionid
     const [refresh, doRefresh] = useState('2342342');
     useEffect(() => {
         getInfo(TEACHER_SECTIONS).then((data) => {
-            console.log('bloom data is : ',data.sections);
-            setSectionsList(data.sections)
+            
+            // console.log('bloom data is : ',data.sections);
+            setDname(data[0].dName);
+            setSections(data[0]);
+            setSectionsList(data[0].section);
         })
     }, [])
+    
   
     // useEffect(() => {
     //     loadAreaChart()
@@ -314,7 +320,7 @@ export default function Dashboard (props){
                                 <div className="col-md-12">
                                 <div className="col text-right">                                    
                                     <ul className="breadcrumb">
-                                        <li className="breadcrumb-item dashtopname"><h5>Ms Jane Doe's Science Class</h5></li>
+                                        <li className="breadcrumb-item dashtopname"><h5>{dname}'s Science Class</h5></li>
                                     </ul>
                                     </div>
                                 </div>
@@ -330,18 +336,18 @@ export default function Dashboard (props){
 																	<i className="feather icon-more-horizontal" onClick={openPopup}></i>		
 																</button>	
                                                                 <ul id="popup" className="list-unstyled card-option dropdown-menu dropdown-menu-right">
-                                                                {sectionsList && sectionsList.map((sections)=>{
+                                                                {sectionsList && sectionsList.map((sectionListItem)=>{
                                                                      let  clickevent  = (event) => {
-                                                                         const section = event.currentTarget.getAttribute("sectionid")
+                                                                         const sectionId = event.currentTarget.getAttribute("sectionId")
                                                                         //  Todo : we have to assign section to refresh
-                                                                         doRefresh(refresh => section) 
-                                                                         console.log("refresh value",section)
-                                                                    
+                                                                         doRefresh(refresh => sectionListItem.sectionId) 
+                                                                         //console.log("refresh value",sectionListItem.sectionId)
+                                                                         
                                                                         
                                                                       };
                                                                  return (								
 																
-																	<li className="dropdown-item disablecursoronly"><a href="#!" sectionid ={sections.id}  onClick={clickevent} ><span>{sections.name}  <i className="feather icon-lock rytdropdownicon"></i></span> </a> </li>															
+																	<li className="dropdown-item disablecursoronly"><a href="#!" sectionid ={sectionListItem.sectionId}  onClick={clickevent} ><span>{sectionListItem.sectionName}  <i className="feather icon-lock rytdropdownicon"></i></span> </a> </li>															
                                                                     // doRefresh(refresh => {handleClick}) 
                                                                 )}	)}
                                                                  </ul>										
