@@ -64,8 +64,8 @@ return(
 												<div className="col-md-5 col-sm-12 col-xs-12">
 													<div className="m-t-10">
 														<div className="row align-items-center justify-content-center">
-															<div className="col-auto">
-																<a href="grade.php" style={{color:"#888"}}>
+															<div className="col-auto"> 
+																<a href="./gradePostAssessment" style={{color:"#888"}}>
 																<div className="assicon1"><i className="feather icon-file-text"></i></div>
 																<div className="asstxt1">Grade</div>
 																</a>
