@@ -1,5 +1,8 @@
-import React from 'react'
+import React , { useState } from 'react'
 import TeacherLayout from '../layout/TeacherLayout';
+import Modal from '../components/modal/Modal';
+import CreateAssessmentAssign from '../components/modal_windows/CreateAssessmentAssign'
+import { useForm } from "react-hook-form";
 //import { useState, useEffect } from 'react';
 //import {getInfo} from '../services/GenricService';
 export default function create_assessments(props){
@@ -18,12 +21,31 @@ export default function create_assessments(props){
     })
 	}, [props.refresh])
 */}
-	 
+const { register, handleSubmit ,errors } = useForm({
+	mode:"onChange"})
+	const onCreateAssessmentSubmit = data => console.log(data);
+
+	const [createAssessmentAssignScreen1Visibility, setCreateAssessmentAssignScreen1Visibility] = useState(false);
+
+const showCreateAssessmentAssignModal1 = () => {
+	setCreateAssessmentAssignScreen1Visibility(true);
+};
+const hideCreateAssessmentAssignModal1 = () => {
+	
+	setCreateAssessmentAssignScreen1Visibility(false);
+};
 
     return(
-        <div>
+        <React.Fragment>
+			<Modal
+           isOpen={createAssessmentAssignScreen1Visibility}
+		   hideModal={hideCreateAssessmentAssignModal1}
+            modalTitle=  " " 
+            >
+             <CreateAssessmentAssign hideModal={hideCreateAssessmentAssignModal1}/> 
+            </Modal>
         <TeacherLayout {...props}>
-<div className="pcoded-content">
+            <div className="pcoded-content">
                 <div className="pcoded-inner-content">
                    {/*[ breadcrumb ] start */}
 					
@@ -40,9 +62,10 @@ export default function create_assessments(props){
                                             <h5>New Assessment</h5>
                                         </div>
                                         <div className="card-block">
+										<form onSubmit={handleSubmit(onCreateAssessmentSubmit)}>
                                           <div className="form-group">
 												<label for="">Assessment Name</label>
-												<input type="text" className="form-control" id="" placeholder=""/>
+												<input type="text" className="form-control" name="assessmentName" id="" placeholder="Name" ref={register ({ required: true}) }/>
 										  </div>
 										  <h5 className="m-t-10">Filter Questions</h5>
 										  <hr/>
@@ -51,38 +74,40 @@ export default function create_assessments(props){
 											<div className="col-md-6 col-sm-12 col-xs-12">
 												<div className="form-group">
 													<label for="">Curriculum areas</label>
-													<select className="form-control">
-														<option></option>
+													<select className="form-control"  name="curriculamAreas" ref={register ({ required: true}) }>
+													{errors.curriculamAreas && <span>Must select one option</span>}
+														<option>quiz</option>
 													</select>
 											  </div>
 											</div>
 											<div className="col-md-6 col-sm-12 col-xs-12">
 											  <div className="form-group">
 													<label for="">Standards or Lessons</label>
-													<select className="form-control">
-														<option></option>
+													<select className="form-control" ref={register ({ required: true}) }>
+														<option>3.5A</option>
 													</select>
 											  </div>
 											</div>
 											<div className="col-md-4 col-sm-12 col-xs-12">
 												<div className="form-group">
 													<label for="">Keyword Search</label>
-													<input type="text" className="form-control" id="" placeholder=""/>
+													<input type="text" className="form-control" name="keywordSearch" id="" placeholder="Keyword Search"  ref={register ({ required: true}) }/>
+												    
 												</div>
 											</div>
 											<div className="col-md-4 col-sm-12 col-xs-12">
 												<div className="form-group">
 													<label for="">Grade levels</label>
-													<select className="form-control">
-														<option></option>
+													<select className="form-control"  name="gradeLevels" ref={register ({ required: true}) }>
+														<option>Third Grade</option>
 													</select>
 												</div>
 											</div>
 											<div className="col-md-4 col-sm-12 col-xs-12">
 												<div className="form-group">
 													<label for="">Topics</label>
-													<select className="form-control">
-														<option></option>
+													<select className="form-control"  ref={register ({ required: true}) }>
+														<option>Heat</option>
 													</select>
 												</div>
 											</div>
@@ -93,33 +118,33 @@ export default function create_assessments(props){
 											<div className="col-md-4 col-sm-12 col-xs-12 m-t-10">
 												<div className="form-group d-inline">
 													<div className="radio radio-primary d-inline">
-														<input type="radio" name="perpoint" id="radio-p-fill-5"/>
+														<input type="radio" name="perpoint" id="radio-p-fill-5" ref={register ({ required: true}) }/>
 														<label for="radio-p-fill-5" className="cr">Percentage</label>
 													</div>
 												</div>
 												<div className="form-group d-inline">
                                                         <div className="radio radio-primary d-inline">
-                                                            <input type="radio" name="perpoint" id="radio-p-fill-6" checked=""/>
+                                                            <input type="radio" name="perpoint" id="radio-p-fill-6" checked  ref={register ({ required: true}) }/>
                                                             <label for="radio-p-fill-6" className="cr">Points</label>
                                                         </div>
                                                     </div>
 											</div>
 											<div className="col-md-4 col-sm-12 col-xs-12">
 												<div className="form-group">
-													<input type="text" className="form-control" id="points" placeholder="Total Points"/>
-													<input type="hidden" value="4" id="totalques"/>
+													<input type="number" className="form-control" id="points" placeholder="Total Points"  ref={register ({ required: true}) }/>
+													<input type="hidden" value="4" id="totalques" ref={register ({ required: true}) }/>
 												</div>
 											</div>
 											<div className="col-md-4 col-sm-12 col-xs-12 m-t-10">
 												<div className="form-group d-inline">
 													<div className="radio radio-primary d-inline">
-														<input type="radio" name="divide" id="radio-p-fill-7" checked=""/>
+														<input type="radio" name="divide" id="radio-p-fill-7" checked  ref={register ({ required: true}) }/>
 														<label for="radio-p-fill-7" className="cr">Distribute Weight Evenly</label>
 													</div>
 												</div>
 												<div className="form-group d-inline">
                                                         <div className="radio radio-primary d-inline">
-                                                            <input type="radio" name="divide" id="radio-p-fill-8"/>
+                                                            <input type="radio" name="divide" id="radio-p-fill-8" ref={register ({ required: true}) }/>
                                                             <label for="radio-p-fill-8" className="cr">Custom Weight</label>
                                                         </div>
                                                     </div>
@@ -236,29 +261,21 @@ export default function create_assessments(props){
 											<div className="col-md-6 col-sm-12 col-xs-12">
 												<h6>Selected Questions</h6>
 												<hr/>
-												<div className="leftweight">Points Left <input type="text" className="form-control btn-sm" id="leftweight" readonly=""/></div>
-												<div className="section2" id="selectedques">
-													
+												<div className="leftweight">Points Left <input type="number" className="form-control btn-sm" id="leftweight" readonly="" ref={register ({ required: true}) }/></div>
+												<div className="section2" id="selectedques">													
 												</div>
 											</div>
 											<div className="col-md-12 col-sm-12 col-xs-12 m-t-20">
 												<div className="form-group">
-													<input type="button" value="Create Assessment" className="btn btn-primary btn-sm" data-toggle="modal" data-target="#createbtnpopup"/>
+													<button  className="btn btn-primary btn-sm" data-toggle="modal" data-target="#createbtnpopup" onClick={showCreateAssessmentAssignModal1} ref={register}>Create Assessment</button>
 												</div>
-											</div>
+											</div>										
 										  </div>
-										  
-                                        </div>
-                                    </div>
+										  </form>
+                                        </div>                                  
+								    </div>									
                                 </div>
-                               {/*[ Fixed Header ] end */}
-								
-								
-								
-                                
-                                
-
-                                
+                               {/*[ Fixed Header ] end */}    
                             </div>
                            {/*[ Main Content ] end */}
                         </div>
@@ -266,7 +283,7 @@ export default function create_assessments(props){
                 </div>
             </div>
             </TeacherLayout>
-            </div>
+            </React.Fragment>
             )
             }
             
